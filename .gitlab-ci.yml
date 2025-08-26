@@ -1,0 +1,85 @@
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "trigger"
+      when: always
+    - when: never
+
+stages:
+  - Validation
+  - AI Agent
+  - Configuration
+  - ServiceNow
+  - Reports
+
+validateFile:
+  stage: Validation
+  image: python:3.11-slim
+  script:
+    - echo "Validate File code"
+  artifacts:
+    paths: [validation.log, validated.json]
+    expire_in: 30 days
+  when: always
+
+generateSuggestions:
+  stage: AI Agent
+  needs: [validateFile]
+  image: python:3.11-slim
+  script:
+    - echo  "Code for generating suggesstions"
+  artifacts:
+    paths: [suggestions.json, ai.log]
+    expire_in: 30 days
+  rules:
+    - if: '$RUN_AI_AGENT == "true"'
+    - when: never
+
+configureSaviynt:
+  stage: Configuration
+  needs: [validateFile]
+  image: python:3.11-slim
+  script:
+    - echo "code for configuration"
+  artifacts:
+    paths: [config.log, saviynt_output.json]
+    expire_in: 30 days
+  rules:
+    - if: '$RUN_CONFIGURE == "true"'
+    - when: never
+
+createSCTasks:
+  stage: ServiceNow
+  needs: [configureSaviynt]
+  image: python:3.11-slim
+  script:
+    - echo "code to create sc_task"
+  artifacts:
+    paths: [sc_tasks.json]
+    expire_in: 30 days
+  rules:
+    - if: '$RUN_SC_TASKS == "true"'
+    - when: never
+
+waitForSCTasks:
+  stage: ServiceNow
+  needs: [createSCTasks]
+  image: python:3.11-slim
+  script:
+    - echo "Code for polling "
+  artifacts:
+    paths: [task_status.json]
+    expire_in: 30 days
+  rules:
+    - if: '$RUN_SC_TASKS == "true"'
+      when: always
+
+generateReports:
+  stage: Reports
+  needs: [waitForSCTasks]
+  image: python:3.11-slim
+  script:
+    - echo "code for reports and artifacts"
+  artifacts:
+    paths: [final_report.json, reports.log]
+    expire_in: 90 days
+  when: always
