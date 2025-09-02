@@ -1,0 +1,18 @@
+auth:
+  login: "/ECM/api/login"
+  logout: "/ECM/api/logout"
+
+users:
+  get_user: "/ECM/api/v5/getUser"
+  create_user: "/ECM/api/v5/createUser"
+  update_user: "/ECM/api/v5/updateUser"
+
+roles:
+  list_roles: "/ECM/api/v5/getRoles"
+  assign_role: "/ECM/api/v5/assignRole"
+  remove_role: "/ECM/api/v5/removeRole"
+
+entitlements:
+  list_entitlements: "/ECM/api/v5/getEntitlements"
+  add_entitlement: "/ECM/api/v5/addEntitlement"
+  remove_entitlement: "/ECM/api/v5/removeEntitlement"
