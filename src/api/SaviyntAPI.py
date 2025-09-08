@@ -86,11 +86,17 @@ class SaviyntAPI(BaseAPI):
     def uploadAccountsFile(self, payload: dict, **kwargs):
         return self._request("POST","get_connection", **kwargs)
     
+    def getUsers(self, payload={}, **kwargs):
+        return self._request("POST","get_user", **kwargs)
+    
+    def getEntitlements(self, payload={}, **kwargs):
+        return self._request("POST","get_user", **kwargs)
+    
 
 if __name__=="__main__":
     api = SaviyntAPI()
     trigger = {
                 "connectionname":"Active Directory Rapid"
     }
-    res = api.getConnection(trigger,verify=False)
-    print(res)
+    # res = api.getUser()
+    # print(res)

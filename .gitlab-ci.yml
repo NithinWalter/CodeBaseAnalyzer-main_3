@@ -25,6 +25,21 @@ extractFiles:
     expire_in: 30 days
   when: always
 
+scheduledDataExtract:
+  stage: Pre-Processing
+  image: python:latest
+  rules:
+    - if: $IS_SCHEDULED =="true" 
+  script:
+    - pip install -r requirements.txt
+    - python3 src/jobs/extractDB.py
+  artifacts:
+    paths:
+      - logs/
+      - artifacts/
+    expire_in: 30 days
+  when: always
+
 validateFile:
   stage: Validation
   image: python:latest
