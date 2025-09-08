@@ -2,6 +2,8 @@ workflow:
   rules:
     - if: $CI_PIPELINE_SOURCE == "trigger"
       when: always
+    - if: $IS_SCHEDULED == "true"
+      when: always
     - when: never
 
 stages:
