@@ -13,9 +13,9 @@ stages:
 
 validateFile:
   stage: Validation
-  image: python:3.11-slim
+  image: python:latest
   script:
-    - python3 install -r requirements.txt
+    - pip install -r requirements.txt
     - python3 src/jobs/validate.py
   artifacts:
     paths: [validation.log, validated.json]
