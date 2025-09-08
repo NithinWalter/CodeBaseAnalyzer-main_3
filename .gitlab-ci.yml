@@ -15,6 +15,7 @@ validateFile:
   stage: Validation
   image: python:3.11-slim
   script:
+    - python3 install -r requirements.txt
     - python3 src/jobs/validate.py
   artifacts:
     paths: [validation.log, validated.json]
