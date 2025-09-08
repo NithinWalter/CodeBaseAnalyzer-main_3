@@ -1,0 +1,101 @@
+# ============================================================
+# Master Configuration File (settings.yaml)
+# ============================================================
+# This file holds all environment-agnostic configs.
+# Secrets (like passwords, tokens, client secrets) are NOT stored here,
+# they are injected as environment variables by GitLab CI/CD.
+# ============================================================
+
+environment: ${ENVIRONMENT}   # e.g., dev, uat, prod
+# GitLab injects ENVIRONMENT as an environment variable.
+# Example: ENVIRONMENT=dev
+
+logging:
+  config_file: "config/logging.yml"  # Path to logging configuration
+  log_dir: "logs"                     # Directory where logs are stored
+  artifact_dir: "artifacts"           # Directory for pipeline artifacts
+  level: "DEBUG"                       # Default log level (DEBUG, INFO, ERROR)
+  # Note: The actual logging behavior is defined in logging.yaml
+  #       This section just centralizes log-related paths/settings.
+
+saviynt:
+  base_url: "https://tcs-partner.saviyntcloud.com/"
+  # base_url changes depending on ENVIRONMENT (dev/uat/prod)
+  auth_type: "oauth2"   # Supported: oauth2, basic, apikey
+  client_id: "Admin_IAMCOE"       # Injected from env
+  client_secret: "Password@2025" # Injected from env
+  username: "${SAVIYNT_USERNAME}"         # Optional (basic auth only)
+  password: "${SAVIYNT_PASSWORD}"         # Optional (basic auth only)
+  api_key: "${SAVIYNT_API_KEY}"           # Optional (apikey only)
+  endpoints_file: "config/endpoints.json"
+  timeout: 30  # Request timeout in seconds
+  retries: 3   # Retry attempts on failure
+  # Example usage:
+  # - Call createUser → POST to {base_url}/ECM/api/v5/createUser
+
+servicenow:
+  base_url: "https://servicenow.${ENVIRONMENT}.example.com"
+  auth_type: "basic"   # Typically basic or oauth2
+  username: "${SNOW_USERNAME}"
+  password: "${SNOW_PASSWORD}"
+  endpoints_file: "config/servicenow_endpoints.json"
+  timeout: 20
+  retries: 2
+  # Example usage:
+  # - Create SC Task: POST {base_url}/api/now/table/sc_task
+  # - Poll Task: GET {base_url}/api/now/table/sc_task?sys_id=XYZ
+
+gitlab:
+  base_url: "https://gitlab.com/api/v4"
+  auth_type: "token"
+  personal_access_token: "${GITLAB_TOKEN}"   # Injected by GitLab
+  project_id: "12345678"                     # GitLab project ID
+  endpoints_file: "config/gitlab_endpoints.json"
+  timeout: 15
+  retries: 2
+  # Example usage:
+  # - Trigger pipeline: POST {base_url}/projects/{project_id}/trigger/pipeline
+  # - Update variable: PUT {base_url}/projects/{project_id}/variables/{key}
+
+pipeline:
+  job_name: "dynamic_job"         # Job name (overridden by CI/CD env var in GitLab)
+  job_id: "${CI_JOB_ID}"          # GitLab job ID injected by pipeline
+  ci_cd: "gitlab"                 # Current CI/CD platform
+  store_logs_as_artifacts: true   # Archive logs for later use (AI Agent, reports)
+
+schedules:
+  # GitLab schedules for automated pipeline triggers
+  nightly_validation:
+    cron: "0 2 * * *"   # Run every day at 2AM
+    description: "Nightly validation of Saviynt and ServiceNow sync"
+    variables:
+      ENVIRONMENT: "uat"
+      JOB_TYPE: "validateFile"
+  weekly_reports:
+    cron: "0 7 * * 1"   # Run every Monday at 7AM
+    description: "Weekly report generation for auditors"
+    variables:
+      ENVIRONMENT: "prod"
+      JOB_TYPE: "generateReports"
+  # Notes:
+  # - These schedules are configured in GitLab UI under "CI/CD → Schedules"
+  # - Here we document them so all devs know what’s running automatically.
+  # - Variables set here override pipeline defaults.
+
+# ============================================================
+# Example Usage Scenarios:
+# ============================================================
+# 1. Developer runs locally:
+#    $ export ENVIRONMENT=dev
+#    $ export SAVIYNT_CLIENT_ID=abc123
+#    $ export SAVIYNT_CLIENT_SECRET=xyz456
+#    $ python -m src.jobs.config
+#
+# 2. GitLab pipeline (UAT):
+#    - ENVIRONMENT=uat is injected
+#    - Correct secrets automatically injected from GitLab CI/CD
+#    - Logs are saved to artifacts for AI Agent analysis
+#
+# 3. ServiceNow integration:
+#    - Job triggers pipeline with ENVIRONMENT=prod
+#    - Creates SC Task → waits for closure → continues

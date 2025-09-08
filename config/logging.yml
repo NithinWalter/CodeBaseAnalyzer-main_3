@@ -1,0 +1,102 @@
+# ===============================
+# Centralized Logging Configuration (YAML)
+# ===============================
+# This file defines how logging behaves for the entire pipeline.
+# It is designed for:
+#   - Consistency across all jobs
+#   - Easy modification without changing Python code
+#   - Clear separation of normal logs vs error logs
+#   - Compatibility with AI analysis / monitoring tools
+#
+# NOTE: Logging is configured once in BaseAPI and reused across all classes/jobs.
+
+version: 1
+
+# -------------------------------
+# FORMATTERS (how logs are displayed)
+# -------------------------------
+formatters:
+  detailed:
+    # A human-readable format, good for developers
+    format: "%(asctime)s | %(levelname)-8s | %(name)s | %(funcName)s:%(lineno)d | %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+
+  simple:
+    # Short format, useful for console/log streaming
+    format: "%(asctime)s | %(levelname)s : %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+
+  json:
+    # JSON format, machine-readable (good for AI/ML log analysis, ELK, Splunk, etc.)
+    format: |
+      {
+        "time": "%(asctime)s",
+        "level": "%(levelname)s",
+        "logger": "%(name)s",
+        "function": "%(funcName)s",
+        "line": "%(lineno)d",
+        "message": "%(message)s"
+      }
+    datefmt: "%Y-%m-%dT%H:%M:%S"   # ISO-8601 timestamp
+
+# -------------------------------
+# HANDLERS (where logs go)
+# -------------------------------
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: simple
+    stream: ext://sys.stdout   # Send logs to STDOUT (useful for CI/CD job console)
+
+  file_handler:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: detailed
+    filename: logs/pipeline.log
+    maxBytes: 10485760         # 10 MB rotation
+    backupCount: 5             # Keep last 5 logs
+    encoding: utf8
+
+  error_file_handler:
+    class: logging.handlers.RotatingFileHandler
+    level: ERROR
+    formatter: json
+    filename: logs/pipeline_errors.log
+    maxBytes: 5242880          # 5 MB rotation
+    backupCount: 3
+    encoding: utf8
+
+  # Example: A dedicated audit log (for sensitive API calls, compliance, etc.)
+  audit_file_handler:
+    class: logging.FileHandler
+    level: INFO
+    formatter: json
+    filename: logs/audit.log
+    encoding: utf8
+
+# -------------------------------
+# LOGGERS (named loggers per class/module)
+# -------------------------------
+loggers:
+  BaseAPI:
+    level: DEBUG
+    handlers: [console, file_handler]
+    propagate: no
+
+  SaviyntAPI:
+    level: DEBUG
+    handlers: [console, file_handler, audit_file_handler]
+    propagate: no
+
+  Jobs:
+    level: INFO
+    handlers: [console, file_handler]
+    propagate: no
+
+# -------------------------------
+# ROOT LOGGER (catch-all fallback)
+# -------------------------------
+root:
+  level: INFO
+  handlers: [console, file_handler, error_file_handler]

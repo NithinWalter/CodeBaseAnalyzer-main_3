@@ -1,0 +1,38 @@
+{
+  "saviynt": {
+    "login": "/ECM/api/login",
+    "logout": "/ECM/api/logout",
+    "get_user": "/ECM/api/v5/getUser",
+    "get_connection_details":"/ECM/api/v5/getConnectionDetails",
+    "create_endpoint":"/ECM/api/v5/createEndpoint",
+    "create_security_system":"/ECM/api/v5/createSecuritySystem",
+    "run_job_trigger":"/ECM/api/v5/runJobTrigger",
+    "update_endpoint":"/ECM/api/v5/updateEndpoint",
+    "upload_schema_file":"/ECM/api/v5/uploadSchemaFile",
+    "create_triggers":"/ECM/api/v5/createTriggers",
+    "create_user": "/ECM/api/v5/createUser",
+    "update_user": "/ECM/api/v5/updateUser",
+    "list_roles": "/ECM/api/v5/getRoles",
+    "assign_role": "/ECM/api/v5/assignRole",
+    "remove_role": "/ECM/api/v5/removeRole",
+    "get_entitlements": "/ECM/api/v5/getEntitlements",
+    "add_entitlement": "/ECM/api/v5/addEntitlement",
+    "remove_entitlement": "/ECM/api/v5/removeEntitlement"
+  },
+  "servicenow": {
+    "login": "/api/now/v2/table/sys_user_session",
+    "get_incident": "/api/now/table/incident",
+    "create_incident": "/api/now/table/incident",
+    "update_incident": "/api/now/table/incident/{sys_id}",
+    "get_user": "/api/now/table/sys_user",
+    "create_user": "/api/now/table/sys_user"
+  },
+  "gitlab": {
+    "login": "/oauth/token",
+    "get_project": "/api/v4/projects/{project_id}",
+    "list_variables": "/api/v4/projects/{project_id}/variables",
+    "create_variable": "/api/v4/projects/{project_id}/variables",
+    "update_variable": "/api/v4/projects/{project_id}/variables/{key}",
+    "delete_variable": "/api/v4/projects/{project_id}/variables/{key}"
+  }
+}
