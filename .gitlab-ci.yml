@@ -1,7 +1,14 @@
+variables:
+  scheduleJob: ""
+  operation: "config"
+  RUN_AI_AGENT: "false"
+
 workflow:
+  name: "Testing PipeLine"
   rules:
-    - if: $CI_PIPELINE_SOURCE == "trigger"
-    - if: $IS_SCHEDULED == "true"
+    - if: $operation == "validate"
+    - if: $operation == "config"
+    - if: $RUN_AI_AGENT == "true"
     - when: never
 
 stages:
@@ -15,6 +22,9 @@ stages:
 extractFiles:
   stage: Pre-Processing
   image: python:latest
+  rules:
+    - if: $operation == "validate"
+    - if: $operation == "config"
   script:
     - pip install -r requirements.txt
     - python3 src/jobs/extract.py
@@ -29,7 +39,7 @@ scheduledDataExtract:
   stage: Pre-Processing
   image: python:latest
   rules:
-    - if: $IS_SCHEDULED =="true"
+    - if: $scheduleJob =="true"
       when: always
   script:
     - pip install -r requirements.txt
@@ -39,13 +49,14 @@ scheduledDataExtract:
       - logs/
       - artifacts/
     expire_in: 30 days
-  when: never
+  when: always
 
 validateFile:
   stage: Validation
   image: python:latest
   rules:
-    - $operation == "validate"
+    - if: $operation == "validate"
+    - if: $operation == "config"
   script:
     - pip install -r requirements.txt
     - python3 src/jobs/validate.py
@@ -58,31 +69,39 @@ validateFile:
 
 generateSuggestions:
   stage: AI Agent
-  needs: [validateFile]
+  needs: [validateFile,extractFiles]
+  rules:
+    - if: '$RUN_AI_AGENT == "true"'
   image: python:3.11-slim
-  script:
-    - echo  "Code for generating suggesstions"
   artifacts:
     paths:
       - logs/
       - artifacts/
     expire_in: 30 days
-  rules:
-    - if: '$RUN_AI_AGENT == "true"'
-    - when: never
+  script:
+    - echo  "Code for generating suggesstions"
 
 configureSaviynt:
   stage: Configuration
-  needs: [validateFile]
+  rules:
+  - if: '$operation == "config"'
+  - when: never
+  needs:
+    - job: extractFiles
+      artifacts: true
+    - job: validateFile
+      artifacts: true
+      optional: true
+  parallel: 5
   image: python:3.11-slim
+  artifacts:
+    paths:
+      - logs/
+      - artifacts/
+    expire_in: 30 days
   script:
     - echo "code for configuration"
-  artifacts:
-    paths: [config.log, saviynt_output.json]
-    expire_in: 30 days
-  rules:
-    - if: '$RUN_CONFIGURE == "true"'
-    - when: never
+
 
 # createSCTasks:
 #   stage: ServiceNow
