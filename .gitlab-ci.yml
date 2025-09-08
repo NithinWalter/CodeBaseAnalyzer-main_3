@@ -1,9 +1,7 @@
 workflow:
   rules:
     - if: $CI_PIPELINE_SOURCE == "trigger"
-      when: always
     - if: $IS_SCHEDULED == "true"
-      when: always
     - when: never
 
 stages:
@@ -31,7 +29,8 @@ scheduledDataExtract:
   stage: Pre-Processing
   image: python:latest
   rules:
-    - if: $IS_SCHEDULED =="true" 
+    - if: $IS_SCHEDULED =="true"
+      when: always
   script:
     - pip install -r requirements.txt
     - python3 src/jobs/extractDB.py
@@ -40,7 +39,7 @@ scheduledDataExtract:
       - logs/
       - artifacts/
     expire_in: 30 days
-  when: always
+  when: never
 
 validateFile:
   stage: Validation
