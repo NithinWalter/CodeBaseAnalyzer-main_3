@@ -5,11 +5,25 @@ workflow:
     - when: never
 
 stages:
+  - Pre-Processing
   - Validation
   - AI Agent
   - Configuration
   - ServiceNow
   - Reports
+
+extractFiles:
+  stage: Pre-Processing
+  image: python:latest
+  script:
+    - pip install -r requirements.txt
+    - python3 src/jobs/extract.py
+  artifacts:
+    paths:
+      - logs/
+      - artifacts/
+    expire_in: 30 days
+  when: always
 
 validateFile:
   stage: Validation
