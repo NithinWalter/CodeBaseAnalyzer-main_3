@@ -18,7 +18,9 @@ validateFile:
     - pip install -r requirements.txt
     - python3 src/jobs/validate.py
   artifacts:
-    paths: [validation.log, validated.json]
+    paths:
+      - logs/
+      - artifacts/
     expire_in: 30 days
   when: always
 
@@ -29,7 +31,9 @@ generateSuggestions:
   script:
     - echo  "Code for generating suggesstions"
   artifacts:
-    paths: [suggestions.json, ai.log]
+    paths:
+      - logs/
+      - artifacts/
     expire_in: 30 days
   rules:
     - if: '$RUN_AI_AGENT == "true"'
