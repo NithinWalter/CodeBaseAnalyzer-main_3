@@ -15,7 +15,7 @@ validateFile:
   stage: Validation
   image: python:3.11-slim
   script:
-    - echo "Validate File code"
+    - python3 src/jobs/validate.py
   artifacts:
     paths: [validation.log, validated.json]
     expire_in: 30 days
