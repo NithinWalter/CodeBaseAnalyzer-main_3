@@ -11,12 +11,15 @@ from src.api.ServicenowAPI import ServicenowAPI
 logger = logging.getLogger("ExtractFile")  # Use named logger
 
 if __name__=="__main__":
+    repo_root = Path(__file__).resolve().parents[2]
+    artifacts_dir = repo_root / "artifacts"
+    artifacts_dir.mkdir(parents=True, exist_ok=True)
     base64file = os.environ.get("FILE")
     # Decode to bytes
     excel_bytes = base64.b64decode(base64file)
 
     # Save to disk
-    out_path = Path("artifacts/master.xlsx")
+    out_path = artifacts_dir / "master.xlsx"
     out_path.write_bytes(excel_bytes)
 
     # Read with pandas (requires openpyxl for .xlsx)
