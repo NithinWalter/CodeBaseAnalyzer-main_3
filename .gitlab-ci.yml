@@ -47,35 +47,35 @@ configureSaviynt:
     - if: '$RUN_CONFIGURE == "true"'
     - when: never
 
-createSCTasks:
-  stage: ServiceNow
-  needs: [configureSaviynt]
-  image: python:3.11-slim
-  script:
-    - echo "code to create sc_task"
-  artifacts:
-    paths: [sc_tasks.json]
-    expire_in: 30 days
-  rules:
-    - if: '$RUN_SC_TASKS == "true"'
-    - when: never
+# createSCTasks:
+#   stage: ServiceNow
+#   needs: [configureSaviynt]
+#   image: python:3.11-slim
+#   script:
+#     - echo "code to create sc_task"
+#   artifacts:
+#     paths: [sc_tasks.json]
+#     expire_in: 30 days
+#   rules:
+#     - if: '$RUN_SC_TASKS == "true"'
+#     - when: never
 
-waitForSCTasks:
-  stage: ServiceNow
-  needs: [createSCTasks]
-  image: python:3.11-slim
-  script:
-    - echo "Code for polling "
-  artifacts:
-    paths: [task_status.json]
-    expire_in: 30 days
-  rules:
-    - if: '$RUN_SC_TASKS == "true"'
-      when: always
+# waitForSCTasks:
+#   stage: ServiceNow
+#   needs: [createSCTasks]
+#   image: python:3.11-slim
+#   script:
+#     - echo "Code for polling "
+#   artifacts:
+#     paths: [task_status.json]
+#     expire_in: 30 days
+#   rules:
+#     - if: '$RUN_SC_TASKS == "true"'
+#       when: always
 
 generateReports:
   stage: Reports
-  needs: [waitForSCTasks]
+  # needs: [waitForSCTasks]
   image: python:3.11-slim
   script:
     - echo "code for reports and artifacts"
