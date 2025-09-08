@@ -77,3 +77,5 @@
 2025-09-08 09:59:33 | INFO     | src.api.BaseAPI | __init__:66 | Initialized API client for servicenow → https://servicenow.${ENVIRONMENT}.example.com
 2025-09-08 09:59:34 | INFO     | src.api.SaviyntAPI | getToken:32 | Saviynt token retrieved successfully
 2025-09-08 09:59:34 | INFO     | configuration | <module>:16 | Configuration Initiated..
+2025-09-08 10:42:53 | INFO     | src.api.BaseAPI | __init__:66 | Initialized API client for saviynt → https://tcs-partner.saviyntcloud.com/
+2025-09-08 10:42:53 | INFO     | src.api.BaseAPI | __init__:66 | Initialized API client for servicenow → https://servicenow.${ENVIRONMENT}.example.com

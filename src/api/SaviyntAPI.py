@@ -14,7 +14,7 @@ class SaviyntAPI(BaseAPI):
 
 
     def getToken(self):
-        endPointURL = f"{self.base_url}{self.endpoints["login"]}"
+        endPointURL = f"{self.base_url}{self.endpoints['login']}"
         payload = json.dumps({
             "username": self.clientID,
             "password": self.clientSecret
