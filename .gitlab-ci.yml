@@ -1,5 +1,5 @@
 variables:
-  scheduleJob: ""
+  scheduleJob: "false"
   operation: "config"
   RUN_AI_AGENT: "false"
 
@@ -81,6 +81,20 @@ generateSuggestions:
   script:
     - echo  "Code for generating suggesstions"
 
+generateRoleRecommodation:
+  stage: AI Agent
+  needs: [validateFile,extractFiles]
+  rules:
+    - if: '$RUN_AI_AGENT == "true"'
+  image: python:3.11-slim
+  artifacts:
+    paths:
+      - logs/
+      - artifacts/
+    expire_in: 30 days
+  script:
+    - echo  "Code for generating Role suggesstions"
+
 configureSaviynt:
   stage: Configuration
   rules:
@@ -92,7 +106,6 @@ configureSaviynt:
     - job: validateFile
       artifacts: true
       optional: true
-  parallel: 5
   image: python:3.11-slim
   artifacts:
     paths:
@@ -100,7 +113,8 @@ configureSaviynt:
       - artifacts/
     expire_in: 30 days
   script:
-    - echo "code for configuration"
+    - python3 src/jobs/config.py
+  when: always
 
 
 # createSCTasks:
@@ -131,11 +145,19 @@ configureSaviynt:
 
 generateReports:
   stage: Reports
-  # needs: [waitForSCTasks]
+  needs:
+  - job: extractFiles
+    artifacts: true
+  - job: validateFile
+    artifacts: true
+  - job: configureSaviynt
+    artifacts: true
   image: python:3.11-slim
   script:
     - echo "code for reports and artifacts"
   artifacts:
-    paths: [final_report.json, reports.log]
+    paths:
+      - logs/
+      - artifacts/
     expire_in: 90 days
   when: always
