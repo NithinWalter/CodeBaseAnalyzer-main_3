@@ -5,7 +5,7 @@ variables:
   ROLE_MINING: "true"
 
 workflow:
-  name: "Testing PipeLine"
+  name: "$APPLICAION PipeLine"
   rules:
     - if: $CI_PIPELINE_TRIGGERED == "true"
     - if: $operation == "validate"
@@ -86,7 +86,7 @@ generateSuggestions:
     - python3 src/jobs/extractDB.py
   when: always
 
-generateRoleRecommodation:
+generateRoleRecommendation:
   stage: AI Agent
   needs: [validateFile,extractFiles]
   rules:
@@ -124,31 +124,29 @@ configureSaviynt:
   when: always
 
 
-# createSCTasks:
-#   stage: ServiceNow
-#   needs: [configureSaviynt]
-#   image: python:3.11-slim
-#   script:
-#     - echo "code to create sc_task"
-#   artifacts:
-#     paths: [sc_tasks.json]
-#     expire_in: 30 days
-#   rules:
-#     - if: '$RUN_SC_TASKS == "true"'
-#     - when: never
+createSCTasks:
+  stage: ServiceNow
+  needs: [configureSaviynt]
+  image: python:3.11-slim
+  rules:
+  - if: '$operation == "config"'
+  script:
+    - echo "code to create sc_task"
+  artifacts:
+    paths: [sc_tasks.json]
+    expire_in: 30 days
+  when: never
 
-# waitForSCTasks:
-#   stage: ServiceNow
-#   needs: [createSCTasks]
-#   image: python:3.11-slim
-#   script:
-#     - echo "Code for polling "
-#   artifacts:
-#     paths: [task_status.json]
-#     expire_in: 30 days
-#   rules:
-#     - if: '$RUN_SC_TASKS == "true"'
-#       when: always
+waitForSCTasks:
+  stage: ServiceNow
+  needs: [createSCTasks]
+  image: python:3.11-slim
+  script:
+    - echo "Code for polling "
+  artifacts:
+    paths: [task_status.json]
+    expire_in: 30 days
+  when: always
 
 generateReports:
   stage: Reports
