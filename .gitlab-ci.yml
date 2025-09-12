@@ -146,6 +146,8 @@ waitForSCTasks:
   artifacts:
     paths: [task_status.json]
     expire_in: 30 days
+  rules:
+  - if: '$operation == "config"'
   when: always
 
 generateReports:
