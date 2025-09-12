@@ -135,7 +135,7 @@ createSCTasks:
   artifacts:
     paths: [sc_tasks.json]
     expire_in: 30 days
-  when: never
+  when: always
 
 waitForSCTasks:
   stage: ServiceNow
