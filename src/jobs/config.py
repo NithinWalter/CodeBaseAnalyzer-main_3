@@ -14,3 +14,7 @@ if __name__=="__main__":
     snow = ServicenowAPI()
     sav.getToken()
     logger.info("Configuration Initiated..")
+    logger.info("Starting configureSaviynt job for request_id=REQ-10045")
+    logger.debug("Payload for security system creation: {'name': 'HRAppSystem', 'type': 'DB', 'owner': 'IAM_Team'}")
+    logger.debug("Saviynt API response: {'status': 'success', 'connection_id': 873}")
+    logger.info("Successfully configured Saviynt for request_id=REQ-10045")

@@ -1,14 +1,16 @@
 variables:
   scheduleJob: "false"
   operation: "config"
-  RUN_AI_AGENT: "false"
+  GENERATE_SUGGESTIONS: "false"
+  ROLE_MINING: "true"
 
 workflow:
   name: "Testing PipeLine"
   rules:
     - if: $operation == "validate"
     - if: $operation == "config"
-    - if: $RUN_AI_AGENT == "true"
+    - if: $GENERATE_SUGGESTIONS == "true"
+    - if: $ROLE_MINING == "true"
     - when: never
 
 stages:
@@ -71,7 +73,7 @@ generateSuggestions:
   stage: AI Agent
   needs: [validateFile,extractFiles]
   rules:
-    - if: '$RUN_AI_AGENT == "true"'
+    - if: '$GENERATE_SUGGESTIONS == "true"'
   image: python:3.11-slim
   artifacts:
     paths:
@@ -79,13 +81,14 @@ generateSuggestions:
       - artifacts/
     expire_in: 30 days
   script:
-    - echo  "Code for generating suggesstions"
+    - python3 src/jobs/extractDB.py
+  when: always
 
 generateRoleRecommodation:
   stage: AI Agent
   needs: [validateFile,extractFiles]
   rules:
-    - if: '$RUN_AI_AGENT == "true"'
+    - if: $ROLE_MINING == "true"
   image: python:3.11-slim
   artifacts:
     paths:
@@ -93,7 +96,7 @@ generateRoleRecommodation:
       - artifacts/
     expire_in: 30 days
   script:
-    - echo  "Code for generating Role suggesstions"
+    - python3 src/jobs/roleMining.py
 
 configureSaviynt:
   stage: Configuration
@@ -154,7 +157,7 @@ generateReports:
     artifacts: true
   image: python:3.11-slim
   script:
-    - echo "code for reports and artifacts"
+    - python3 src/jobs/reports.py
   artifacts:
     paths:
       - logs/

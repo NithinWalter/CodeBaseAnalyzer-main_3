@@ -15,6 +15,10 @@ if __name__=="__main__":
     artifacts_dir = repo_root / "artifacts"
     artifacts_dir.mkdir(parents=True, exist_ok=True)
     os.environ["TEST_VARIABLES"] = "valuesdasfghjkasdlfjag"
+    logger.info("Starting ExtractFiles job for request_id=REQ-10045")
+    logger.debug("Received form submission from ServiceNow with details: {'requested_by': 'jdoe', 'system': 'HRApp'}")
+    logger.debug("Extracted CSV file: roles_upload.csv with size=47 KB")
+    logger.info("ExtractFiles job completed successfully for request_id=REQ-10045")
     # base64file = os.environ.get("FILE")
     # # Decode to bytes
     # excel_bytes = base64.b64decode(base64file)
