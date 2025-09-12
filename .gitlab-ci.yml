@@ -7,6 +7,7 @@ variables:
 workflow:
   name: "Testing PipeLine"
   rules:
+    - if: $CI_PIPELINE_TRIGGERED == "true"
     - if: $operation == "validate"
     - if: $operation == "config"
     - if: $GENERATE_SUGGESTIONS == "true"
@@ -81,6 +82,7 @@ generateSuggestions:
       - artifacts/
     expire_in: 30 days
   script:
+    - pip install -r requirements.txt
     - python3 src/jobs/extractDB.py
   when: always
 
@@ -96,6 +98,7 @@ generateRoleRecommodation:
       - artifacts/
     expire_in: 30 days
   script:
+    - pip install -r requirements.txt
     - python3 src/jobs/roleMining.py
 
 configureSaviynt:
@@ -116,6 +119,7 @@ configureSaviynt:
       - artifacts/
     expire_in: 30 days
   script:
+    - pip install -r requirements.txt
     - python3 src/jobs/config.py
   when: always
 
@@ -159,6 +163,7 @@ generateReports:
   - if: $operation == "config"
   image: python:3.11-slim
   script:
+    - pip install -r requirements.txt
     - python3 src/jobs/reports.py
   artifacts:
     paths:
