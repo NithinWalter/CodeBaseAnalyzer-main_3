@@ -25,7 +25,3 @@ if __name__=="__main__":
     ent_path = artifacts_dir / "entitlementData.json"
     with json_path.open("w", encoding="utf-8") as f:
         json.dump(entJson, f, ensure_ascii=False, indent=2)
-
-   
-
-
