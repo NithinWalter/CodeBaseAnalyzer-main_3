@@ -1,14 +1,17 @@
 variables:
-  scheduleJob: ""
+  scheduleJob: "false"
   operation: "config"
-  RUN_AI_AGENT: "false"
+  GENERATE_SUGGESTIONS: "false"
+  ROLE_MINING: "true"
 
 workflow:
-  name: "Testing PipeLine"
+  name: "$APPLICAION PipeLine"
   rules:
+    - if: $CI_PIPELINE_TRIGGERED == "true"
     - if: $operation == "validate"
     - if: $operation == "config"
-    - if: $RUN_AI_AGENT == "true"
+    - if: $GENERATE_SUGGESTIONS == "true"
+    - if: $ROLE_MINING == "true"
     - when: never
 
 stages:
@@ -71,7 +74,7 @@ generateSuggestions:
   stage: AI Agent
   needs: [validateFile,extractFiles]
   rules:
-    - if: '$RUN_AI_AGENT == "true"'
+    - if: '$GENERATE_SUGGESTIONS == "true"'
   image: python:3.11-slim
   artifacts:
     paths:
@@ -79,7 +82,24 @@ generateSuggestions:
       - artifacts/
     expire_in: 30 days
   script:
-    - echo  "Code for generating suggesstions"
+    - pip install -r requirements.txt
+    - python3 src/jobs/extractDB.py
+  when: always
+
+generateRoleRecommendation:
+  stage: AI Agent
+  needs: [validateFile,extractFiles]
+  rules:
+    - if: $ROLE_MINING == "true"
+  image: python:3.11-slim
+  artifacts:
+    paths:
+      - logs/
+      - artifacts/
+    expire_in: 30 days
+  script:
+    - pip install -r requirements.txt
+    - python3 src/jobs/roleMining.py
 
 configureSaviynt:
   stage: Configuration
@@ -92,7 +112,6 @@ configureSaviynt:
     - job: validateFile
       artifacts: true
       optional: true
-  parallel: 5
   image: python:3.11-slim
   artifacts:
     paths:
@@ -100,42 +119,55 @@ configureSaviynt:
       - artifacts/
     expire_in: 30 days
   script:
-    - echo "code for configuration"
+    - pip install -r requirements.txt
+    - python3 src/jobs/config.py
+  when: always
 
 
-# createSCTasks:
-#   stage: ServiceNow
-#   needs: [configureSaviynt]
-#   image: python:3.11-slim
-#   script:
-#     - echo "code to create sc_task"
-#   artifacts:
-#     paths: [sc_tasks.json]
-#     expire_in: 30 days
-#   rules:
-#     - if: '$RUN_SC_TASKS == "true"'
-#     - when: never
+createSCTasks:
+  stage: ServiceNow
+  needs: [configureSaviynt]
+  image: python:3.11-slim
+  rules:
+  - if: '$operation == "config"'
+  script:
+    - echo "code to create sc_task"
+  artifacts:
+    paths: [sc_tasks.json]
+    expire_in: 30 days
+  when: always
 
-# waitForSCTasks:
-#   stage: ServiceNow
-#   needs: [createSCTasks]
-#   image: python:3.11-slim
-#   script:
-#     - echo "Code for polling "
-#   artifacts:
-#     paths: [task_status.json]
-#     expire_in: 30 days
-#   rules:
-#     - if: '$RUN_SC_TASKS == "true"'
-#       when: always
+waitForSCTasks:
+  stage: ServiceNow
+  needs: [createSCTasks]
+  image: python:3.11-slim
+  script:
+    - echo "Code for polling "
+  artifacts:
+    paths: [task_status.json]
+    expire_in: 30 days
+  rules:
+  - if: '$operation == "config"'
+  when: always
 
 generateReports:
   stage: Reports
-  # needs: [waitForSCTasks]
+  needs:
+  - job: extractFiles
+    artifacts: true
+  - job: validateFile
+    artifacts: true
+  - job: configureSaviynt
+    artifacts: true
+  rules:
+  - if: $operation == "config"
   image: python:3.11-slim
   script:
-    - echo "code for reports and artifacts"
+    - pip install -r requirements.txt
+    - python3 src/jobs/reports.py
   artifacts:
-    paths: [final_report.json, reports.log]
+    paths:
+      - logs/
+      - artifacts/
     expire_in: 90 days
   when: always
