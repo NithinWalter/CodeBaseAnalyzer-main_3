@@ -53,6 +53,7 @@ gitlab:
   endpoints_file: "config/gitlab_endpoints.json"
   timeout: 15
   retries: 2
+  trigger_token: "glptt-0523fe2c34f50d5d6f446464f90ce79ecce405a9"
   # Example usage:
   # - Trigger pipeline: POST {base_url}/projects/{project_id}/trigger/pipeline
   # - Update variable: PUT {base_url}/projects/{project_id}/variables/{key}
