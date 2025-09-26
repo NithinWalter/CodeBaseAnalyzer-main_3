@@ -13,7 +13,7 @@ def updateGitlabVariable(variable,result):
     endPointURL = f"https://gitlab.com/api/v4/projects/73818692/variables/{variable}"
     payload = {'value': result}
     headers = {
-    'PRIVATE-TOKEN': 'glpat-on_2NZiqnGcCzkqPE3MhmW86MQp1Omk1YmV4Cw.01.120ju947z'
+    'PRIVATE-TOKEN': 'glpat-td97Auue0qrkNiu3frFO6W86MQp1Omk2OW92Cw.01.1209nj5ko'
     }
     try:
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -38,7 +38,7 @@ def createGitlabVariable(variable,result):
     payload = {'key': variable,
     'value': result}
     headers = {
-    'PRIVATE-TOKEN': 'glpat-on_2NZiqnGcCzkqPE3MhmW86MQp1Omk1YmV4Cw.01.120ju947z'
+    'PRIVATE-TOKEN': 'glpat-td97Auue0qrkNiu3frFO6W86MQp1Omk2OW92Cw.01.1209nj5ko'
     }
     try:
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
