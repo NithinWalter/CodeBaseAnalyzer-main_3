@@ -33,7 +33,7 @@ if __name__=="__main__":
         sys.exit(1)
 
     with open(ExtractedFile, "r") as f:
-        validation_data=json.load(f)
+        Extracted_data=json.load(f)
     logger.info(f"Extracted data are Loaded")
 
     #Load entitlement data from extractDB.py
@@ -76,7 +76,13 @@ if __name__=="__main__":
     valid_entitlements = []
     invalid_entitlements = []
 
-    for entitlement in ExtractedFile.get("Entitlements", []):
+    ad_groups_entitlements = [
+    group.get("Group name")
+    for group in Extracted_data.get("AllADGroupsInformation", [])
+    ]
+
+
+    for entitlement in ad_groups_entitlements:
         if entitlement in all_entitlements:
             valid_entitlements.append(entitlement)
             logger.debug(f"Entitlement valid: {entitlement}")
@@ -88,7 +94,7 @@ if __name__=="__main__":
     valid_roles = []
     invalid_roles = []
 
-    for role in validation_data.get("Roles", []):
+    for role in Extracted_data.get("Roles", []):
         if role in all_roles:
             valid_roles.append(role)
             logger.debug(f"Role valid: {role}")
