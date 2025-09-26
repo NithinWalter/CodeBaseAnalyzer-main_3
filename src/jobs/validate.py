@@ -18,29 +18,23 @@ if __name__=="__main__":
     sav = SaviyntAPI() 
     snow = ServicenowAPI()
 
-    logger.info("Starting ValidateJob for file=roles_upload.csv, request_id=REQ-10045")
-    logger.debug("Validating role=Finance_Manager, entitlement=SAP_GL_ACCESS")
-    logger.debug("Validating role=HR_Admin, entitlement=Workday_Full")
-    logger.debug("API Response: {'status': 'success', 'invalid_roles': []}")
-    logger.info("File validation successful for request_id=REQ-10045")
-
     #Get pipeline ID
     pipeline_id=os.getenv("CI_PIPELINE_ID","local")
 
     #Report File format
-    reportFileFormat = f"Validation_result_{pipeline_id}.json"
+    reportFileFormat = f"ValidationResult.json"
     reportFile= artifacts_dir/ reportFileFormat
 
     #Input file (validateData.json)
-    validationFile = artifacts_dir / "Validatedata.json"
+    ExtractedFile = artifacts_dir / "ExtractedData.json"
 
-    if not validationFile.exists():
+    if not ExtractedFile.exists():
         logger.error(f"File for validation not Found")
         sys.exit(1)
 
-    with open(validationFile, "r") as f:
+    with open(ExtractedFile, "r") as f:
         validation_data=json.load(f)
-    logger.info(f"Validation data are Loaded")
+    logger.info(f"Extracted data are Loaded")
 
     #Load entitlement data from extractDB.py
     entitlement_data_file = artifacts_dir / "entitlementsData.json"
@@ -63,9 +57,12 @@ if __name__=="__main__":
     
     all_entitlements = [
         {
-            "value": ent.get("entitlement_value"),
-            "type": ent.get("entitlementType"),
-            "owner": ent.get("entitlementOwner", [])
+            "Entitlement value": ent.get("entitlement_value"),
+            "Entitlement type": ent.get("entitlementType"),
+            "Entitlement ID" : ent.get("entitlementID"),
+            "DisplayName" : ent.get("displayname"),
+            "Status" :ent.get("status"),
+            "Entitlement owner": ent.get("entitlementOwner", [])
         }
         for ent in all_entitlements_full.get("Entitlementdetails", [])
     ]
@@ -79,7 +76,7 @@ if __name__=="__main__":
     valid_entitlements = []
     invalid_entitlements = []
 
-    for entitlement in validation_data.get("Entitlements", []):
+    for entitlement in ExtractedFile.get("Entitlements", []):
         if entitlement in all_entitlements:
             valid_entitlements.append(entitlement)
             logger.debug(f"Entitlement valid: {entitlement}")
