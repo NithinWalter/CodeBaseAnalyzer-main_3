@@ -32,7 +32,7 @@ if __name__=="__main__":
     reportFile= artifacts_dir/ reportFileFormat
 
     #Input file (validateData.json)
-    validationFile = artifacts_dir / "validateData.json"
+    validationFile = artifacts_dir / "Validatedata.json"
 
     if not validationFile.exists():
         logger.error(f"File for validation not Found")
