@@ -22,12 +22,14 @@ if __name__=="__main__":
     json_path = artifacts_dir / "userData.json"
     with json_path.open("w", encoding="utf-8") as f:
         json.dump(userJson, f, ensure_ascii=False, indent=2)
+    logger.info(f"User data are Loaded")
 
     ent_path = artifacts_dir / "entitlementsData.json"
     with ent_path.open("w", encoding="utf-8") as f:
         json.dump(entJson, f, ensure_ascii=False, indent=2)
-
+    logger.info(f"entitlement data are Loaded")
     
     role_path = artifacts_dir / "rolesData.json"
     with role_path.open("w", encoding="utf-8") as f:
         json.dump(roleJson, f, ensure_ascii=False, indent=2)
+    logger.info(f"Role data are Loaded")
