@@ -7,6 +7,5 @@ setuptools==72.1.0
 urllib3==2.5.0
 pandas==2.3.2
 openpyxl==3.1.5 
-sentence-transformers
-torch
+
 

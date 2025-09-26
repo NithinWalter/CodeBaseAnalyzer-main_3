@@ -84,6 +84,7 @@ generateSuggestions:
     expire_in: 30 days
   script:
     - pip install -r requirements.txt
+    - pip install sentence-transformers  torch
     - python3 src/jobs/extractDB.py
   when: always
 
