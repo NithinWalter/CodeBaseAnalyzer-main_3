@@ -62,6 +62,7 @@ validateFile:
     - if: $operation == "config"
   script:
     - pip install -r requirements.txt
+    - python3 src/jobs/extractDB.py
     - python3 src/jobs/validate.py
   artifacts:
     paths:
