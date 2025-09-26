@@ -47,7 +47,7 @@ def createGitlabVariable(variable,result):
             jsonData = json.loads(response.text)
             return "Created"
         else:
-            print("Request Failed (Status Code) : " + str(response.status_code))
+            print("Create Request Failed (Status Code) : " + str(response.status_code))
             return "Failed"
     except Exception as e:
         print("Exception has Occured : " + str(e))
