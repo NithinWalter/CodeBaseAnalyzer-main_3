@@ -21,9 +21,6 @@ if __name__=="__main__":
     #Get pipeline ID
     pipeline_id=os.getenv("CI_PIPELINE_ID","local")
 
-    #Report File format
-    reportFileFormat = f"ValidationResult.json"
-    reportFile= artifacts_dir/ reportFileFormat
 
     #Input file (validateData.json)
     ExtractedFile = artifacts_dir / "ExtractedData.json"
@@ -104,25 +101,41 @@ if __name__=="__main__":
             invalid_roles.append(role)
             logger.warning(f"Role invalid: {role}")
 
-    # Final result
-    result = {
-        "pipeline_id": pipeline_id,
-        "total_roles": len(Extracted_data.get("Roles", [])),
-        "valid_roles": valid_roles,
-        "invalid_roles": invalid_roles,
-        "total_entitlements": len(Extracted_data.get("Entitlements", [])),
-        "valid_entitlements": valid_entitlements,
-        "invalid_entitlements": invalid_entitlements,
-        "status": "success" if not (invalid_roles or invalid_entitlements) else "failed"
-    }
-    print(json.dumps(result, indent=2))  
+    # Final result - entitlement
+   entitlement_summary = (
+    f"Total number of Entitlements : {len(ad_groups_entitlements)}.\n"
+    f"Entitlements present in Saviynt : {valid_entitlements}.\n"
+    f"Entitlements not present in Saviynt : {invalid_entitlements}.\n"
+    )
+    if invalid_entitlements:
+        entitlement_summary += "Entitlements Validation Failed"
+    else:
+        entitlement_summary += "Entitlements Validation Passed"
+   
+   role_summary = (
+    f"Total number of Roles : {len(Extracted_data.get('Roles', []))}.\n"
+    f"Roles present in Saviynt : {valid_roles}.\n"
+    f"Roles not present in Saviynt : {invalid_roles}.\n"
+    )
 
+    if invalid_roles:
+        role_summary += "Roles Validation Failed"
+    else:
+        role_summary += "Roles Validation Passed"
+
+    Extracted_data["ValidationResults"] = {
+    "EntitlementValidationResult": entitlement_summary,
+    "RoleValidationResult": role_summary,
+    "ValidationResult": "success" if not (invalid_roles or invalid_entitlements) else "failed"
+    }
+    
+    reportFile = artifacts_dir / "ValidationResult.json"
     with open(reportFile, "w") as f:
-        json.dump(result, f, indent=2)
+        json.dump(Extracted_data, f, indent=2)
 
     if invalid_roles or invalid_entitlements:
         logger.error(f"Validation failed with {len(invalid_roles)} invalid roles and {len(invalid_entitlements)} invalid entitlements. Report: {reportFile}")
-        sys.exit(1)
+        
     else:
         logger.info(f"Validation successful. Report: {reportFile}")
-        sys.exit(0)
+    
