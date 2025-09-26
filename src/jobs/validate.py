@@ -61,13 +61,13 @@ if __name__=="__main__":
     with open(entitlement_data_file, "r") as f:
         all_entitlements_full = json.load(f)
     
-   all_entitlements = [
-    {
-        "value": ent.get("entitlement_value"),
-        "type": ent.get("entitlementType"),
-        "owner": ent.get("entitlementOwner", [])
-    }
-    for ent in all_entitlements_full.get("Entitlementdetails", [])
+    all_entitlements = [
+        {
+            "value": ent.get("entitlement_value"),
+            "type": ent.get("entitlementType"),
+            "owner": ent.get("entitlementOwner", [])
+        }
+        for ent in all_entitlements_full.get("Entitlementdetails", [])
     ]
     print(json.dumps(all_entitlements, indent=2))
 
