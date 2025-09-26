@@ -69,7 +69,8 @@ if __name__=="__main__":
 
     with open(roles_data_file, "r") as f:
         all_roles = json.load(f)
-    print(json.dumps(all_roles, indent=2))    #Validate
+    print(json.dumps(all_roles, indent=2))  
+    
 
      # Validate roles
     valid_entitlements = []
@@ -114,6 +115,7 @@ if __name__=="__main__":
         "invalid_entitlements": invalid_entitlements,
         "status": "success" if not (invalid_roles or invalid_entitlements) else "failed"
     }
+    print(json.dumps(result, indent=2))  
 
     with open(reportFile, "w") as f:
         json.dump(result, f, indent=2)
