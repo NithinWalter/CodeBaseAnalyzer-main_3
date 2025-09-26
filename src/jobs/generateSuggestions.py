@@ -25,6 +25,7 @@ if __name__=="__main__":
     entitlements = getEntitlements()
     embeddings = model.encode(entitlements, convert_to_tensor=True)
     results ={}
+    ad_groups = ['R02_UG_DEEP_User_BusApp_MDM_Consumer', 'DIA-MDM-EBXAdmin', 'R02_UG_DEEP_SDLC_MDM-mdm-PRD_Analyst_SPI']
     for ent in ad_groups:
         query_embedding = model.encode(ent, convert_to_tensor=True)
         cos_scores = cos_sim(query_embedding, embeddings)[0]
