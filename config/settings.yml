@@ -48,8 +48,8 @@ servicenow:
 gitlab:
   base_url: "https://gitlab.com/api/v4"
   auth_type: "token"
-  personal_access_token: "${GITLAB_TOKEN}"   # Injected by GitLab
-  project_id: "12345678"                     # GitLab project ID
+  personal_access_token: "glpat-td97Auue0qrkNiu3frFO6W86MQp1Omk2OW92Cw.01.1209nj5ko"   # Injected by GitLab
+  project_id: "73818692"                     # GitLab project ID
   endpoints_file: "config/gitlab_endpoints.json"
   timeout: 15
   retries: 2
