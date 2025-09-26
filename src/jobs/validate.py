@@ -9,6 +9,50 @@ from src.api.ServicenowAPI import ServicenowAPI
 # Logger Setup
 logger = logging.getLogger("Validate")  # Use named logger
 
+def updateGitlabVariable(variable,result):
+    endPointURL = "https://gitlab.com/api/v4/projects/73818692/variables/"+variable
+    payload = {'value': result}
+    headers = {
+    'PRIVATE-TOKEN': 'glpat-on_2NZiqnGcCzkqPE3MhmW86MQp1Omk1YmV4Cw.01.120ju947z'
+    }
+    try:
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        response = requests.request("PUT", endPointURL, headers=headers, data=payload)
+        if(response.status_code == 200):
+            jsonData = json.loads(response.text)     
+            return "Updated"
+        else:
+            print("Request Failed (Status Code) : " + str(response.status_code))
+            jsonData = json.loads(response.text)
+            print(jsonData)
+            if "Variable Not Found" in response.text:
+                created_response = createGitlabVariable(variable,result)
+                return created_response
+            return "Failed"
+    except Exception as e:
+        print("Exception has Occured : " + str(e))
+
+
+def createGitlabVariable(variable,result):
+    endPointURL = "https://gitlab.com/api/v4/projects/73818692/variables"
+    payload = {'key': variable,
+    'value': result}
+    headers = {
+    'PRIVATE-TOKEN': 'glpat-on_2NZiqnGcCzkqPE3MhmW86MQp1Omk1YmV4Cw.01.120ju947z'
+    }
+    try:
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        response = requests.request("POST", endPointURL, headers=headers, data=payload)
+        if(response.status_code == 201):
+            jsonData = json.loads(response.text)
+            return "Created"
+        else:
+            print("Request Failed (Status Code) : " + str(response.status_code))
+            return "Failed"
+    except Exception as e:
+        print("Exception has Occured : " + str(e))
+
+
 if __name__=="__main__":
     repo_root = Path(__file__).resolve().parents[2]
     artifacts_dir = repo_root / "artifacts"
@@ -78,9 +122,8 @@ if __name__=="__main__":
     for group in Extracted_data.get("AllADGroupsInformation", [])
     ]
 
-
     for entitlement in ad_groups_entitlements:
-        if entitlement in all_entitlements:
+        if any(entitlement == e["Entitlement value"] for e in all_entitlements):
             valid_entitlements.append(entitlement)
             logger.debug(f"Entitlement valid: {entitlement}")
         else:
@@ -130,7 +173,7 @@ if __name__=="__main__":
     }
 
     reportFile = artifacts_dir / "ValidationResult.json"
-    
+
     with open(reportFile, "w") as f:
         json.dump(Extracted_data, f, indent=2)
 
@@ -139,4 +182,7 @@ if __name__=="__main__":
         
     else:
         logger.info(f"Validation successful. Report: {reportFile}")
+    
+
+    final_validation_result=updateGitLabVariable(f"ValidationResult{pipeline_id}", json.dumps(Extracted_data))
     
