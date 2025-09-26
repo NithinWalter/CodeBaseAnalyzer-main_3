@@ -10,10 +10,10 @@ from src.api.ServicenowAPI import ServicenowAPI
 logger = logging.getLogger("Validate")  # Use named logger
 
 def updateGitlabVariable(variable,result):
-    endPointURL = f"https://gitlab.com/api/v4/projects/73818692/variables/{variable}"
+    endPointURL = f"https://gitlab.com/api/v4/projects/74778875/variables/{variable}"
     payload = {'value': result}
     headers = {
-    'PRIVATE-TOKEN': 'glpat-td97Auue0qrkNiu3frFO6W86MQp1Omk2OW92Cw.01.1209nj5ko'
+    'PRIVATE-TOKEN': 'glpat-wHe150FpKb06wJICGp1cfW86MQp1Omc0OXNxCw.01.120nsrzri'
     }
     try:
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -34,11 +34,11 @@ def updateGitlabVariable(variable,result):
 
 
 def createGitlabVariable(variable,result):
-    endPointURL = "https://gitlab.com/api/v4/projects/73818692/variables"
+    endPointURL = "https://gitlab.com/api/v4/projects/74778875/variables"
     payload = {'key': variable,
     'value': result}
     headers = {
-    'PRIVATE-TOKEN': 'glpat-td97Auue0qrkNiu3frFO6W86MQp1Omk2OW92Cw.01.1209nj5ko'
+    'PRIVATE-TOKEN': 'glpat-wHe150FpKb06wJICGp1cfW86MQp1Omc0OXNxCw.01.120nsrzri'
     }
     try:
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
