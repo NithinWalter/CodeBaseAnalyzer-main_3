@@ -10,7 +10,7 @@ workflow:
     - if: $CI_PIPELINE_TRIGGERED == "true"
     - if: $operation == "validate"
     - if: $operation == "config"
-    - if: $GENERATE_SUGGESTIONS == "true"
+    - if: $GENERATE_SUGGESTIONS == "false"
     - if: $ROLE_MINING == "true"
     - when: never
 
@@ -85,7 +85,7 @@ generateSuggestions:
   script:
     - pip install -r requirements.txt
     - pip install sentence-transformers  torch
-    - python3 src/jobs/extractDB.py
+    - python3 src/jobs/generateSuggestions.py
   when: always
 
 generateRoleRecommendation:
