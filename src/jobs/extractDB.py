@@ -17,11 +17,17 @@ if __name__=="__main__":
     sav = SaviyntAPI() 
     userJson = sav.getUsers()
     entJson = sav.getEntitlements()
+    roleJson=sav.getRoles()
 
     json_path = artifacts_dir / "userData.json"
     with json_path.open("w", encoding="utf-8") as f:
         json.dump(userJson, f, ensure_ascii=False, indent=2)
 
-    ent_path = artifacts_dir / "entitlementData.json"
-    with json_path.open("w", encoding="utf-8") as f:
+    ent_path = artifacts_dir / "entitlementsData.json"
+    with ent_path.open("w", encoding="utf-8") as f:
         json.dump(entJson, f, ensure_ascii=False, indent=2)
+
+    
+    role_path = artifacts_dir / "rolesData.json"
+    with role_path.open("w", encoding="utf-8") as f:
+        json.dump(roleJson, f, ensure_ascii=False, indent=2)

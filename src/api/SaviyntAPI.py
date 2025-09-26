@@ -90,7 +90,10 @@ class SaviyntAPI(BaseAPI):
         return self._request("POST","get_user", **kwargs)
     
     def getEntitlements(self, payload={}, **kwargs):
-        return self._request("POST","get_user", **kwargs)
+        return self._request("POST","get_entitlements", **kwargs)
+    
+    def getRoles(self, payload={}, **kwargs):
+        return self._request("POST", "list_roles", json=payload,**kwargs)
     
 
 if __name__=="__main__":

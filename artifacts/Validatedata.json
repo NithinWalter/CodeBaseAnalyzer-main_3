@@ -1,0 +1,30 @@
+{
+  "Roles": [
+    "Standarad User",
+    "Read Only",
+    "Administration",
+    "Write Only",
+    "Read-Write Only",
+    "Privileges User",
+    "Business User",
+    "App Tester",
+    "Requester",
+    "Approver"
+  ],
+  "Entitlements": [
+    "Finance",
+    "Broker Grouping",
+    "AXA XL-EBX-Governance Coordinator",
+    "AXA XL-EBS-Financial Systems Solutions and COE",
+    "RefDataAdmin",
+    "Oracle EBS support-Formerly FinOps STP",
+    "Cognizant L 1.5",
+    "MDM TechAdmin",
+    "EBX Admin",
+    "Self Service Users",
+    "Service Request Users (Duplicate - see matrix)",
+    "Client Hierarchy team (Duplicate - see matrix)",
+    "Service Request Users",
+    "Client Hierarchy team"
+  ]
+}
