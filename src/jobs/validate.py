@@ -66,10 +66,10 @@ if __name__=="__main__":
         }
         for ent in all_entitlements_full.get("Entitlementdetails", [])
     ]
-    print(json.dumps(all_entitlements, indent=2))
 
     with open(roles_data_file, "r") as f:
         all_roles = json.load(f)
+    print(all_roles)
     #Validate
 
      # Validate roles
