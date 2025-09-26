@@ -102,20 +102,20 @@ if __name__=="__main__":
             logger.warning(f"Role invalid: {role}")
 
     # Final result - entitlement
-   entitlement_summary = (
-    f"Total number of Entitlements : {len(ad_groups_entitlements)}.\n"
-    f"Entitlements present in Saviynt : {valid_entitlements}.\n"
-    f"Entitlements not present in Saviynt : {invalid_entitlements}.\n"
-    )
+    entitlement_summary = (
+        f"Total number of Entitlements : {len(ad_groups_entitlements)}.\n"
+        f"Entitlements present in Saviynt : {valid_entitlements}.\n"
+        f"Entitlements not present in Saviynt : {invalid_entitlements}.\n"
+        )
     if invalid_entitlements:
         entitlement_summary += "Entitlements Validation Failed"
     else:
         entitlement_summary += "Entitlements Validation Passed"
    
-   role_summary = (
-    f"Total number of Roles : {len(Extracted_data.get('Roles', []))}.\n"
-    f"Roles present in Saviynt : {valid_roles}.\n"
-    f"Roles not present in Saviynt : {invalid_roles}.\n"
+    role_summary = (
+        f"Total number of Roles : {len(Extracted_data.get('Roles', []))}.\n"
+        f"Roles present in Saviynt : {valid_roles}.\n"
+        f"Roles not present in Saviynt : {invalid_roles}.\n"
     )
 
     if invalid_roles:
@@ -124,12 +124,13 @@ if __name__=="__main__":
         role_summary += "Roles Validation Passed"
 
     Extracted_data["ValidationResults"] = {
-    "EntitlementValidationResult": entitlement_summary,
-    "RoleValidationResult": role_summary,
-    "ValidationResult": "success" if not (invalid_roles or invalid_entitlements) else "failed"
+        "EntitlementValidationResult": entitlement_summary,
+        "RoleValidationResult": role_summary,
+        "ValidationResult": "success" if not (invalid_roles or invalid_entitlements) else "failed"
     }
-    
+
     reportFile = artifacts_dir / "ValidationResult.json"
+    
     with open(reportFile, "w") as f:
         json.dump(Extracted_data, f, indent=2)
 
