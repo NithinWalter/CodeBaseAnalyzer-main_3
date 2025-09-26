@@ -1,7 +1,7 @@
 variables:
   scheduleJob: "false"
   operation: "config"
-  GENERATE_SUGGESTIONS: "false"
+  GENERATE_SUGGESTIONS: "true"
   ROLE_MINING: "true"
 
 workflow:
