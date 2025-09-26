@@ -29,8 +29,6 @@ if __name__=="__main__":
     with ent_path.open("w", encoding="utf-8") as f:
         json.dump(entJson, f, ensure_ascii=False, indent=2)
     logger.info(f"entitlement data are Loaded")
-    print("Entitlements JSON:")
-    print(json.dumps(entJson, indent=2, ensure_ascii=False))
     
     role_path = artifacts_dir / "rolesData.json"
     with role_path.open("w", encoding="utf-8") as f:

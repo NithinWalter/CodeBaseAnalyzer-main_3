@@ -49,15 +49,27 @@ if __name__=="__main__":
         logger.error("Entitlements DB file not found")
         sys.exit(1)
     
-    #load roles
+    
+    #load roles 
     roles_data_file = artifacts_dir / "rolesData.json"
 
     if not roles_data_file.exists():
         logger.error("Roles DB file not found")
         sys.exit(1)
 
+    #specific json format
     with open(entitlement_data_file, "r") as f:
-        all_entitlements = json.load(f)
+        all_entitlements_full = json.load(f)
+    
+   all_entitlements = [
+    {
+        "value": ent.get("entitlement_value"),
+        "type": ent.get("entitlementType"),
+        "owner": ent.get("entitlementOwner", [])
+    }
+    for ent in all_entitlements_full.get("Entitlementdetails", [])
+    ]
+    print(json.dumps(all_entitlements, indent=2))
 
     with open(roles_data_file, "r") as f:
         all_roles = json.load(f)
