@@ -106,10 +106,10 @@ if __name__=="__main__":
     # Final result
     result = {
         "pipeline_id": pipeline_id,
-        "total_roles": len(validation_data.get("Roles", [])),
+        "total_roles": len(Extracted_data.get("Roles", [])),
         "valid_roles": valid_roles,
         "invalid_roles": invalid_roles,
-        "total_entitlements": len(validation_data.get("Entitlements", [])),
+        "total_entitlements": len(Extracted_data.get("Entitlements", [])),
         "valid_entitlements": valid_entitlements,
         "invalid_entitlements": invalid_entitlements,
         "status": "success" if not (invalid_roles or invalid_entitlements) else "failed"
