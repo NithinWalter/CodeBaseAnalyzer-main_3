@@ -5,53 +5,10 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[2]))
 from src.api.SaviyntAPI import SaviyntAPI
 from src.api.ServicenowAPI import ServicenowAPI
+from src.jobs.updateGitlabVariable import update_gitlab_variable
 
 # Logger Setup
 logger = logging.getLogger("Validate")  # Use named logger
-
-def updateGitlabVariable(variable,result):
-    endPointURL = f"https://gitlab.com/api/v4/projects/74778875/variables/{variable}"
-    payload = {'value': result}
-    headers = {
-    'PRIVATE-TOKEN': 'glpat-wHe150FpKb06wJICGp1cfW86MQp1Omc0OXNxCw.01.120nsrzri'
-    }
-    try:
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        response = requests.request("PUT", endPointURL, headers=headers, data=payload)
-        if(response.status_code == 200):
-            jsonData = json.loads(response.text)     
-            return "Updated"
-        else:
-            print("Request Failed (Status Code) : " + str(response.status_code))
-            jsonData = json.loads(response.text)
-            print(jsonData)
-            if "Variable Not Found" in response.text:
-                created_response = createGitlabVariable(variable,result)
-                return created_response
-            return "Failed"
-    except Exception as e:
-        print("Exception has Occured : " + str(e))
-
-
-def createGitlabVariable(variable,result):
-    endPointURL = "https://gitlab.com/api/v4/projects/74778875/variables"
-    payload = {'key': variable,
-    'value': result}
-    headers = {
-    'PRIVATE-TOKEN': 'glpat-wHe150FpKb06wJICGp1cfW86MQp1Omc0OXNxCw.01.120nsrzri'
-    }
-    try:
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        response = requests.request("POST", endPointURL, headers=headers, data=payload)
-        if(response.status_code == 201):
-            jsonData = json.loads(response.text)
-            return "Created"
-        else:
-            print("Create Request Failed (Status Code) : " + str(response.status_code))
-            return "Failed"
-    except Exception as e:
-        print("Exception has Occured : " + str(e))
-
 
 if __name__=="__main__":
     repo_root = Path(__file__).resolve().parents[2]
@@ -184,5 +141,5 @@ if __name__=="__main__":
         logger.info(f"Validation successful. Report: {reportFile}")
     
 
-    final_validation_result= updateGitlabVariable(f"ValidationResult_{pipeline_id}", json.dumps(Extracted_data))
+    final_validation_result= update_gitlab_variable(f"ValidationResult_{pipeline_id}", json.dumps(Extracted_data))
     
