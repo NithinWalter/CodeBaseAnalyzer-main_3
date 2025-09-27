@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[2]))
 from src.api.SaviyntAPI import SaviyntAPI
 from src.api.ServicenowAPI import ServicenowAPI
-from src.jobs.updateGitlabVariable import update_gitlab_variable
+from src.jobs.UpdateGitVariable import update_gitlab_variable
 
 # Logger Setup
 logger = logging.getLogger("Validate")  # Use named logger

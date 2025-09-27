@@ -18,13 +18,15 @@ logger = logging.getLogger("configuration")  # Use named logger
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 if __name__=="__main__":
-    sav = SaviyntAPI() 
-    snow = ServicenowAPI()
-    sav = SaviyntAPI() 
-    snow = ServicenowAPI()
-    
+
+    repo_root = Path(__file__).resolve().parents[2]
+    artifacts_dir = repo_root / "artifacts"
+    artifacts_dir.mkdir(parents=True, exist_ok=True)
+        
     # 1. Fetch the JSON response (dictionary)
-    full_response = sav.getEntitlements()
+    full_response_path = artifacts_dir / "entitlementsData.json"
+    with open(full_response_path, "r") as f:
+    full_response = json.load(f)
     
     # --- FIX implemented here: Extracting the list of entitlement strings ---
     
@@ -71,5 +73,4 @@ if __name__=="__main__":
             "index": (top_idx.int()).item()
         }
         
-    print("results")
-    print(results)
+    print(json.dumps(results, indent=4))
