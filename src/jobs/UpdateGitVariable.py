@@ -1,5 +1,6 @@
 import os
 import logging
+import json
 import requests
 
 logger = logging.getLogger("GitLabUtils")
