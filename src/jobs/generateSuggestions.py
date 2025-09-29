@@ -53,8 +53,24 @@ if __name__=="__main__":
     embeddings = model.encode(entitlements, convert_to_tensor=True)
     
     results ={}
-    ad_groups = ['R02_UG_DEEP_User_BusApp_MDM_Consumer', 'DIA-MDM-EBXAdmin', 'R02_UG_DEEP_SDLC_MDM-mdm-PRD_Analyst_SPI', 'Network Team Managers']
-    
+    extracted_file = artifacts_dir / "ExtractedData.json"
+    if not extracted_file.exists():
+        logger.error("ExtractedData.json not found. Cannot load AD groups.")
+        sys.exit(1)
+
+    with open(extracted_file, "r") as f:
+        extracted_data = json.load(f)
+
+    # ✅ Get AD groups dynamically
+    ad_groups = [
+        group.get("Group name")
+        for group in extracted_data.get("AllADGroupsInformation", [])
+        if isinstance(group, dict) and group.get("Group name")
+    ]
+
+    if not ad_groups:
+        logger.warning("No AD groups found in ExtractedData.json. Nothing to process.")
+        sys.exit(0)
     for ent in ad_groups:
         query_embedding = model.encode(ent, convert_to_tensor=True)
         

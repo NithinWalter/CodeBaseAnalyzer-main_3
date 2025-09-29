@@ -65,6 +65,14 @@ if __name__=="__main__":
         for ent in all_entitlements_full.get("Entitlementdetails", [])
     ]
 
+    # Save entitlement details as artifact
+    specifi_entitlements_file = artifacts_dir / "SpecificEntitlement.json"
+    with open(specifi_entitlements_file, "w") as f:
+        json.dump(all_entitlements, f, indent=2)
+
+    logger.info(f"Specifi entitlement details saved at {specifi_entitlements_file}")
+
+
     with open(roles_data_file, "r") as f:
         all_roles = json.load(f)
     print(json.dumps(all_roles, indent=2))  
