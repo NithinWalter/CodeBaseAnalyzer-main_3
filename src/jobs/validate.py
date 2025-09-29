@@ -74,9 +74,7 @@ if __name__=="__main__":
 
 
     with open(roles_data_file, "r") as f:
-        all_roles = json.load(f)
-    print(json.dumps(all_roles, indent=2))  
-    
+        all_roles = json.load(f)    
 
      # Validate roles
     valid_entitlements = []

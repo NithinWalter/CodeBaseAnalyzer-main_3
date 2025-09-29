@@ -11,6 +11,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[2]))
 from src.api.SaviyntAPI import SaviyntAPI
 from src.api.ServicenowAPI import ServicenowAPI
+from src.jobs.UpdateGitVariable import update_gitlab_variable
 
 # Logger Setup
 logger = logging.getLogger("configuration")  # Use named logger
@@ -26,7 +27,7 @@ if __name__=="__main__":
     # 1. Fetch the JSON response (dictionary)
     full_response_path = artifacts_dir / "entitlementsData.json"
     with open(full_response_path, "r") as f:
-    full_response = json.load(f)
+        full_response = json.load(f)
     
     # --- FIX implemented here: Extracting the list of entitlement strings ---
     
@@ -90,3 +91,6 @@ if __name__=="__main__":
         }
         
     print(json.dumps(results, indent=4))
+    pipeline_id=os.getenv("CI_PIPELINE_ID","local")
+    update_gitlab_variable(f"ValidationResult_{pipeline_id}", json.dumps(results))
+    
