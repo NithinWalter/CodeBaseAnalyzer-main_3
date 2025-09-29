@@ -144,5 +144,5 @@ if __name__=="__main__":
         logger.info(f"Validation successful. Report: {reportFile}")
     
 
-    final_validation_result= update_gitlab_variable(f"ValidationResult_{pipeline_id}", json.dumps(Extracted_data))
+    final_validation_result= update_gitlab_variable(f"ValidationResult_{pipeline_id}", json.dumps(Extracted_data),false)
     
