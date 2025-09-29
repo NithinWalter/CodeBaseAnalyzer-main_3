@@ -145,4 +145,5 @@ if __name__=="__main__":
     
 
     final_validation_result= update_gitlab_variable(f"ValidationResult_{pipeline_id}", Extracted_data,False)
+    print(Extracted_data)
     
