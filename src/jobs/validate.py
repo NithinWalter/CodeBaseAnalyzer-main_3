@@ -108,7 +108,7 @@ if __name__=="__main__":
     entitlement_summary = (
         f"Total number of Entitlements : {len(ad_groups_entitlements)}.\n"
         f"Entitlements present in Saviynt : {valid_entitlements}.\n"
-        f"Entitlements not present in Saviynt : {invalid_entitlements}.\n"
+        f"Entitlements not present in Saviynt : {invalid_entitlements}\n"
         )
     if invalid_entitlements:
         entitlement_summary += "Entitlements Validation Failed"
@@ -117,7 +117,7 @@ if __name__=="__main__":
    
     role_summary = (
         f"Total number of Roles : {len(Extracted_data.get('Roles', []))}.\n"
-        f"Roles present in Saviynt : {valid_roles}.\n"
+        f"Roles already present in Saviynt : {valid_roles}\n"
         f"Roles not present in Saviynt : {invalid_roles}.\n"
     )
 
