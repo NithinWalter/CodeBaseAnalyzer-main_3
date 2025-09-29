@@ -92,5 +92,5 @@ if __name__=="__main__":
         
     print(json.dumps(results, indent=4))
     pipeline_id=os.getenv("CI_PIPELINE_ID","local")
-    update_gitlab_variable(f"ValidationResult_{pipeline_id}", json.dumps(results),true)
+    update_gitlab_variable(f"ValidationResult_{pipeline_id}", json.dumps(results),True)
     
