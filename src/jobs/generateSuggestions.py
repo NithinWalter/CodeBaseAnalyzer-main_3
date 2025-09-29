@@ -14,8 +14,9 @@ from src.api.ServicenowAPI import ServicenowAPI
 from src.jobs.UpdateGitVariable import update_gitlab_variable
 
 # Logger Setup
-logger = logging.getLogger("configuration")  # Use named logger
+logger = logging.getLogger("configuration")  
 
+# Use named logger
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 if __name__=="__main__":
@@ -48,7 +49,6 @@ if __name__=="__main__":
         logger.warning("The extracted entitlements list is empty. Nothing to process.")
         sys.exit(0)
         
-    # --- End of FIX ---
 
     # Encode all valid entitlement strings into embeddings (This line now works)
     embeddings = model.encode(entitlements, convert_to_tensor=True)
@@ -92,5 +92,5 @@ if __name__=="__main__":
         
     print(json.dumps(results, indent=4))
     pipeline_id=os.getenv("CI_PIPELINE_ID","local")
-    update_gitlab_variable(f"ValidationResult_{pipeline_id}", json.dumps(results))
+    update_gitlab_variable(f"ValidationResult_{pipeline_id}", json.dumps(results),true)
     

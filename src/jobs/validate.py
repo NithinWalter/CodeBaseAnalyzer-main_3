@@ -22,7 +22,6 @@ if __name__=="__main__":
     #Get pipeline ID
     pipeline_id=os.getenv("CI_PIPELINE_ID","local")
 
-
     #Input file (validateData.json)
     ExtractedFile = artifacts_dir / "ExtractedData.json"
 
@@ -40,8 +39,7 @@ if __name__=="__main__":
     if not entitlement_data_file.exists():
         logger.error("Entitlements DB file not found")
         sys.exit(1)
-    
-    
+     
     #load roles 
     roles_data_file = artifacts_dir / "rolesData.json"
 
@@ -71,7 +69,6 @@ if __name__=="__main__":
         json.dump(all_entitlements, f, indent=2)
 
     logger.info(f"Specifi entitlement details saved at {specifi_entitlements_file}")
-
 
     with open(roles_data_file, "r") as f:
         all_roles = json.load(f)    
