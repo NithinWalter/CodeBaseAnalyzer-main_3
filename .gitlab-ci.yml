@@ -84,7 +84,7 @@ generateSuggestions:
     expire_in: 30 days
   script:
     - pip install -r requirements.txt
-    - pip install sentence-transformers  torch
+    # pip install sentence-transformers  torch
     - python3 src/jobs/generateSuggestions.py
   when: always
 
