@@ -1,5 +1,5 @@
-import os
-import json
+import os, sys, logging, requests
+import json, base64, urllib3
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
