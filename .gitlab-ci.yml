@@ -120,6 +120,7 @@ generateRoleRecommendation:
     expire_in: 30 days
   script:
     - pip install -r requirements.txt
+    - pip install scikit-learn
     - python3 src/jobs/roleMining.py
 
 configureSaviynt:
