@@ -6,7 +6,8 @@ from sklearn.metrics import silhouette_score
 from pathlib import Path
 import logging
 
-# Import GitLab variable updater
+# class file imports
+sys.path.append(str(Path(__file__).resolve().parents[2]))
 from src.jobs.UpdateGitVariable import update_gitlab_variable
 
 logger = logging.getLogger("role_mining")
