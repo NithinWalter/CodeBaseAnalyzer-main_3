@@ -1,8 +1,9 @@
 variables:
-  scheduleJob: "false"
+  scheduleJob: "true"
   operation: "config"
-  GENERATE_SUGGESTIONS: "true"
-  ROLE_MINING: "true"
+  GENERATE_SUGGESTIONS: "false"
+  ROLE_MINING: "false"
+  REPOSITORY_URL: ""
 
 workflow:
   name: "$APPLICAION PipeLine"
@@ -44,13 +45,31 @@ scheduledDataExtract:
   rules:
     - if: $scheduleJob =="true"
       when: always
+  before_script:
+    - apt-get update && apt-get install -y git
+    # Configure Git identity for CI commits
+    - git config --global user.email "ci-bot@example.com"
+    - git config --global user.name "CI Bot"
+    # Reset remote URL to use CI_JOB_TOKEN for authentication
+    - git remote set-url origin https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
   script:
     - pip install -r requirements.txt
-    - python3 src/jobs/extractDB.py
+    - python3 src/jobs/extractDB.py   # generates artifacts/userData.json etc.
+
+    # Stage artifact changes
+    - git add artifacts/*.json
+
+    # Commit & push only if changes are present
+    - |
+      if ! git diff --cached --quiet; then
+        git commit -m "chore: update extracted artifacts [CI skip]"
+        git push origin HEAD:developnment
+      else
+        echo "No changes detected in artifacts, skipping commit."
+      fi
   artifacts:
     paths:
-      - logs/
-      - artifacts/
+        - artifacts/
     expire_in: 30 days
   when: always
 
