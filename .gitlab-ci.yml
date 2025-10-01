@@ -51,7 +51,7 @@ scheduledDataExtract:
     - git config --global user.email "ci-bot@example.com"
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
-    - git remote set-url origin https://$CI_DEPLOY_USER:$CI_DEPLOY_PASSWORD@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
+    - git remote set-url origin https://seleniumautomation9702015:$CI_PAT_TOKEN@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
   script:
     - pip install -r requirements.txt
     - python3 src/jobs/extractDB.py   # generates artifacts/userData.json etc.
