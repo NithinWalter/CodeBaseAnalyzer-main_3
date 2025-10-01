@@ -86,6 +86,10 @@ def generate_roles_from_json(json_path, validation_json_path, pipeline_id,
     )
 
     logger.info("Appended MRVS role mining results to ValidationResult.json and updated GitLab variable.")
+    
+    # Print final JSON 
+    print("\n===== Final ValidationResult.json =====\n")
+    print(json.dumps(validation_data, indent=2))
 
 if __name__ == "__main__":
     repo_root = Path(__file__).resolve().parents[2]
