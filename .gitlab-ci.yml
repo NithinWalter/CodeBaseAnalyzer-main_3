@@ -1,9 +1,9 @@
 variables:
-  scheduleJob: "true"
+  scheduleJob: "false"
   operation: "config"
   GENERATE_SUGGESTIONS: "false"
   ROLE_MINING: "false"
-  REPOSITORY_URL: ""
+  
 
 workflow:
   name: "$APPLICAION PipeLine"
