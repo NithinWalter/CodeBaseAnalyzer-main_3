@@ -63,7 +63,8 @@ scheduledDataExtract:
     - |
       if ! git diff --cached --quiet; then
         git commit -m "chore: update extracted artifacts [CI skip]"
-        git push origin HEAD:developnment
+        git push origin HEAD:refs/heads/developnment
+
       else
         echo "No changes detected in artifacts, skipping commit."
       fi
