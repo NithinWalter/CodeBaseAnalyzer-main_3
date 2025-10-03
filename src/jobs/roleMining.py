@@ -19,10 +19,19 @@ def generate_roles_from_json(json_path, validation_json_path, pipeline_id,
         data = json.load(f)
 
     users = data["users"]
-    matrix = data["matrix"]
+    matrix_dict = data["matrix"]
 
-    df = pd.DataFrame(matrix)
-    df.index = users
+    for key, values in matrix_dict.items():
+        if len(values) < len(users):
+        # pad with zeros
+            matrix_dict[key] = values + [0] * (len(users) - len(values))
+        elif len(values) > len(users):
+        # trim extras
+            matrix_dict[key] = values[:len(users)]
+
+    df = pd.DataFrame(matrix_dict, index=users)
+
+   
 
     # Determine best number of clusters
     X = df.values
