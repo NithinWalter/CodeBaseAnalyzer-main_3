@@ -1,5 +1,6 @@
 variables:
   APPLICAION: "Scheduled"
+  scheduleJob: "true"
   
 
 workflow:
@@ -10,7 +11,7 @@ workflow:
     - if: $operation == "config"
     - if: $GENERATE_SUGGESTIONS == "false"
     - if: $ROLE_MINING == "true"
-    - if: $scheduledJob =="true"
+    - if: $scheduleJob =="true"
     - when: never
 
 stages:
@@ -42,7 +43,6 @@ scheduledDataExtract:
   image: python:latest
   rules:
     - if: $scheduleJob =="true"
-      when: always
   script:
     - apt-get update && apt-get install -y git
     # Configure Git identity for CI commits
