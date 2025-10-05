@@ -1,6 +1,9 @@
 variables:
   APPLICAION: "Scheduled"
   scheduleJob: "false"
+  operation: "validate"
+  GENERATE_SUGGESTIONS: "false"
+  ROLE_MINING: "false"
   
 
 workflow:
