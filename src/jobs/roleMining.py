@@ -23,15 +23,13 @@ def generate_roles_from_json(json_path, validation_json_path, pipeline_id,
 
     for key, values in matrix_dict.items():
         if len(values) < len(users):
-        # pad with zeros
+            # pad with zeros
             matrix_dict[key] = values + [0] * (len(users) - len(values))
         elif len(values) > len(users):
-        # trim extras
+            # trim extras
             matrix_dict[key] = values[:len(users)]
 
     df = pd.DataFrame(matrix_dict, index=users)
-
-   
 
     # Determine best number of clusters
     X = df.values
@@ -65,10 +63,16 @@ def generate_roles_from_json(json_path, validation_json_path, pipeline_id,
         role_entitlements = density_series[density_series >= role_granularity]
 
         if not role_entitlements.empty:
+            # Format like "EntitlementA (85%)"
+            entitlement_with_density = [
+                f"{ent_name} ({round(density * 100)}%)"
+                for ent_name, density in role_entitlements.items()
+            ]
+
             role_obj = {
                 "role_name": role_name,
-                "entitlements": role_entitlements.index.tolist(),
-                "density": role_entitlements.round(2).tolist(),
+                "role_description": "Null",
+                "entitlements with density": entitlement_with_density,
                 "users": cluster_users.index.tolist(),
                 "popularity": total_users
             }
