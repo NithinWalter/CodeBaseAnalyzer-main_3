@@ -1,5 +1,4 @@
 variables:
-  APPLICAION: "Scheduled"
   scheduleJob: "false"
   operation: "validate"
   GENERATE_SUGGESTIONS: "true"
