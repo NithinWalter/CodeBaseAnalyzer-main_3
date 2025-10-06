@@ -19,7 +19,8 @@ workflow:
 stages:
   - Pre-Processing
   - Validation
-  - AI Agent
+  - AI Suggestions
+  - AI Role Mining 
   - Configuration
   - ServiceNow
   - Reports
@@ -90,7 +91,7 @@ validateFile:
   when: always
 
 generateSuggestions:
-  stage: AI Agent
+  stage: AI Suggestions
   needs: [validateFile,extractFiles]
   rules:
     - if: '$GENERATE_SUGGESTIONS == "true"'
@@ -107,7 +108,7 @@ generateSuggestions:
   when: always
 
 generateRoleRecommendation:
-  stage: AI Agent
+  stage: AI Role Mining
   needs: [validateFile,extractFiles]
   rules:
     - if: $ROLE_MINING == "true"
