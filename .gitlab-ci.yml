@@ -109,7 +109,11 @@ generateSuggestions:
 
 generateRoleRecommendation:
   stage: AI Role Mining
-  needs: [validateFile,extractFiles]
+  needs:  
+    - job: validateFile
+    - job: extractFiles
+    - job: generateSuggestions
+      optional: true 
   rules:
     - if: $ROLE_MINING == "true"
   image: python:3.11-slim
