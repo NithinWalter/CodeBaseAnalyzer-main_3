@@ -120,8 +120,7 @@ if __name__ == "__main__":
     # Save back to ValidationResult.json
     with open(reportFile, "w") as f:
         json.dump(validation_data, f, indent=2)
-
-     print(json.dumps(validation_data, indent=2))
+    print(json.dumps(validation_data, indent=2))
     # Update GitLab variable
     final_validation_result = update_gitlab_variable(
         f"ValidationResult_{pipeline_id}", validation_data, False
