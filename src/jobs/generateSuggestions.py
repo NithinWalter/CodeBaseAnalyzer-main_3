@@ -115,7 +115,12 @@ if __name__ == "__main__":
         validation_data = {"ValidationResults": {}}
 
     # Append SuggestedEntitlement under ValidationResults
-    validation_data.setdefault("ValidationResults", {})["SuggestedEntitlement"] = results
+    if "ValidationResults" not in validation_data:
+        validation_data["ValidationResults"] = {}
+
+    validation_data["ValidationResults"].update({
+        "SuggestedEntitlement": results
+    })
 
     # Save back to ValidationResult.json
     with open(reportFile, "w") as f:
@@ -123,7 +128,7 @@ if __name__ == "__main__":
     print(json.dumps(validation_data, indent=2))
     # Update GitLab variable
     final_validation_result = update_gitlab_variable(
-        f"ValidationResult_{pipeline_id}", validation_data, False
+        f"ValidationResult_{pipeline_id}", validation_data, True
     )
 
     logger.info("Suggested entitlements appended to ValidationResult.json and GitLab variable.")

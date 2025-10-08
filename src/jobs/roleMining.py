@@ -86,7 +86,11 @@ def generate_roles_from_json(json_path, validation_json_path, pipeline_id,
         validation_data = {"ValidationResults": {}}
 
     # Add MRVS data as a list of role objects
-    validation_data.setdefault("ValidationResults", {})["RoleMiningRecommendationResult"] = mined_roles
+    if "ValidationResults" not in validation_data:
+        validation_data["ValidationResults"] = {}
+
+    validation_data["ValidationResults"].update({
+        "RoleMiningRecommendationResult": mined_roles})
 
     # Save updated ValidationResult.json
     with open(validation_json_path, "w") as f:
@@ -96,7 +100,7 @@ def generate_roles_from_json(json_path, validation_json_path, pipeline_id,
     update_gitlab_variable(
         f"ValidationResult_{pipeline_id}",
         validation_data,
-        False
+        True
     )
 
     logger.info("Appended MRVS role mining results to ValidationResult.json and updated GitLab variable.")
