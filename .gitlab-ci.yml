@@ -1,8 +1,8 @@
 variables:
   scheduleJob: "false"
-  operation: "validate"
-  GENERATE_SUGGESTIONS: "true"
-  ROLE_MINING: "true"
+  operation: "config"
+  GENERATE_SUGGESTIONS: "false"
+  ROLE_MINING: "false"
   
 
 workflow:

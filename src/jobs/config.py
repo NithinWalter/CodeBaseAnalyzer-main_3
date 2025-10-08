@@ -1,20 +1,58 @@
-import os,sys,logging
+import os
+import sys
+import logging
 from pathlib import Path
 
-# class file imports 
-sys.path.append(str(Path(__file__).resolve().parents[2]))
+# Add project root to sys.path
+sys.path.append(str(Path(_file_).resolve().parents[2]))
+
 from src.api.SaviyntAPI import SaviyntAPI
 from src.api.ServicenowAPI import ServicenowAPI
 
 # Logger Setup
-logger = logging.getLogger("configuration")  # Use named logger
 
-if __name__=="__main__":
-    sav = SaviyntAPI() 
-    snow = ServicenowAPI()
-    sav.getToken()
-    logger.info("Configuration Initiated..")
-    logger.info("Starting configureSaviynt job for request_id=REQ-10045")
-    logger.debug("Payload for security system creation: {'name': 'HRAppSystem', 'type': 'DB', 'owner': 'IAM_Team'}")
-    logger.debug("Saviynt API response: {'status': 'success', 'connection_id': 873}")
-    logger.info("Successfully configured Saviynt for request_id=REQ-10045")
+logger = logging.getLogger("configuration")
+
+if _name_ == "_main_":
+    # Initialize ServiceNow API with credentials
+    username = "admin"
+    password = "jSsW$6aRd$E8"
+    snow = ServicenowAPI(username, password)
+    ritm_sys_id = "bed16448c324f210d0d2f64d05013161"
+
+    # --- Create SC Task Configuration ---
+    task_id_1 = snow.create_sctask(
+        ritm_sys_id,
+        "Configuration Auto Sc task",
+        "This SC Task was created via external script"
+    )
+
+    if task_id_1:
+        logger.info(f"SC Task created successfully: {task_id}")
+    else:
+        logger.info(f"SC Task Creation Failed")
+
+        # --- Close SC Task ---
+    result_1 = snow.close_sctask(task_id, "Closing SC Task after test")
+        if result_1:
+            logger.info(f"SC Task {task_id} closed successfully")
+        else:
+            logger.error(f"Failed to close SC Task {task_id}")
+
+    task_id_1 = snow.create_sctask(
+        ritm_sys_id,
+        "Configuration Auto Sc task",
+        "This SC Task was created via external script"
+    )
+
+    if task_id_1:
+        logger.info(f"SC Task created successfully: {task_id}")
+    else:
+        logger.info(f"SC Task Creation Failed")
+
+        # --- Close SC Task ---
+    result_1 = snow.close_sctask(task_id, "Closing SC Task after test")
+        if result_1:
+            logger.info(f"SC Task {task_id} closed successfully")
+        else:
+            logger.error(f"Failed to close SC Task {task_id}")
