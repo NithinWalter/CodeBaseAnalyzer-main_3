@@ -31,7 +31,6 @@ extractFiles:
   image: python:latest
   rules:
     - if: $operation == "validate"
-    - if: $operation == "config"
   script:
     - pip install -r requirements.txt
     - python3 src/jobs/extract.py
@@ -79,7 +78,6 @@ validateFile:
   image: python:latest
   rules:
     - if: $operation == "validate"
-    - if: $operation == "config"
   script:
     - pip install -r requirements.txt
     - python3 src/jobs/extractDB.py

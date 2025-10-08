@@ -39,20 +39,21 @@ if _name_ == "_main_":
         else:
             logger.error(f"Failed to close SC Task {task_id}")
 
-    task_id_1 = snow.create_sctask(
+    # --- Create SC Task reconcile ---
+    task_id_2 = snow.create_sctask(
         ritm_sys_id,
         "Configuration Auto Sc task",
         "This SC Task was created via external script"
     )
 
-    if task_id_1:
+    if task_id_2:
         logger.info(f"SC Task created successfully: {task_id}")
     else:
         logger.info(f"SC Task Creation Failed")
 
         # --- Close SC Task ---
-    result_1 = snow.close_sctask(task_id, "Closing SC Task after test")
-        if result_1:
+    result_2 = snow.close_sctask(task_id, "Closing SC Task after test")
+        if result_2:
             logger.info(f"SC Task {task_id} closed successfully")
         else:
             logger.error(f"Failed to close SC Task {task_id}")
