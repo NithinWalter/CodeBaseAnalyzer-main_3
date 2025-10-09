@@ -28,5 +28,11 @@
         "pipeline_id": "2089898955",
         "sc_task_sys_id": "8b031928c320b610d0d2f64d05013186",
         "Time_stamp": "2025-10-09 08:52:21"
+    },
+    {
+        "task_name": "batTesting",
+        "pipeline_id": "2089920672",
+        "sc_task_sys_id": "b3a5d92cc320b610d0d2f64d050131c8",
+        "Time_stamp": "2025-10-09 09:03:51"
     }
 ]
