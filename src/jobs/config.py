@@ -27,7 +27,7 @@ if __name__ == "__main__":
     
 
     # --- First SC Task ---
-    task1_sys_id = snow.create_sctask(ritm_sys_id, "Configuration Auto SC Task", "Configuration SC Task description")
+    task1_sys_id = snow.create_sctask(ritm_sys_id, "AOBAuto Configuration", "Configuration SC Task description")
     if task1_sys_id:
         logger.info(f"SC Task created Successfully with sys id: {task1_sys_id}")        
         snow.close_sctask(task1_sys_id, "Closing after creation")

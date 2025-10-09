@@ -24,6 +24,8 @@ stages:
   - Configuration
   - Reports
   - ServiceNow
+  - Post Prod Sign Off
+
   
 
 extractFiles:
@@ -161,7 +163,7 @@ generateReports:
     optional: true
   - job: configureSaviynt
     artifacts: true
-    
+
   rules:
   - if: $operation == "config"
   image: python:3.11-slim
@@ -183,22 +185,24 @@ createSCTasks:
   rules:
   - if: '$operation == "config"'
   script:
-    - echo "code to create sc_task"
+    - pip install -r requirements.txt
+    - python3 src/jobs/snowtask.py
   artifacts:
     paths: [sc_tasks.json]
     expire_in: 30 days
-  when: manual
+  when: always
 
-waitForSCTasks:
-  stage: ServiceNow
+signOff:
+  stage: Post Prod Sign Off
   needs: [createSCTasks]
   image: python:3.11-slim
   script:
-    - echo "Code for polling "
+    - pip install -r requirements.txt
+    - python3 src/jobs/reports.py
   artifacts:
     paths: [task_status.json]
     expire_in: 30 days
   rules:
   - if: '$operation == "config"'
-  when: always
+  when: manual
 
