@@ -161,6 +161,7 @@ generateReports:
     optional: true
   - job: configureSaviynt
     artifacts: true
+    
   rules:
   - if: $operation == "config"
   image: python:3.11-slim
