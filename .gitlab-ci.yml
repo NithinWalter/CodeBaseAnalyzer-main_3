@@ -1,6 +1,6 @@
 variables:
-  scheduleJob: "true"
-  operation: ""
+  scheduleJob: "false"
+  operation: "config"
   GENERATE_SUGGESTIONS: ""
   ROLE_MINING: ""
   
@@ -192,6 +192,7 @@ configResidual:
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
     - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
+    - export nextjob="batTesting"
     - pip install -r requirements.txt
     - python3 src/jobs/snowtask.py  
 
@@ -226,6 +227,7 @@ batTesting:
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
     - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
+    - export nextjob="signOff"
     - pip install -r requirements.txt
     - python3 src/jobs/snowtask.py  
 

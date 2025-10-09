@@ -44,12 +44,14 @@ if __name__=="__main__":
     ritm_sys_id = "bed16448c324f210d0d2f64d05013161"
 
     snow = ServicenowAPI(username, password)
+    job_name = os.getenv("CI_JOB_NAME")
+    next_job = os.getenv("nextjob")
    
     json_file = artifacts_dir / "sc_tasks.json"
    
-    task3_sys_id = snow.create_sctask(ritm_sys_id, "AOBManual-{}", "Manual task description")
+    task3_sys_id = snow.create_sctask(ritm_sys_id, f"AOBManual-{job_name}", "Manual task description")
     if task3_sys_id:
         logger.info(f"SC Task {task3_sys_id} created successfully")      
-        update_json(json_file, "createSCTasks", task3_sys_id)
+        update_json(json_file, next_job, task3_sys_id)
 
     # if job name as argument CI_JOB_NAME
