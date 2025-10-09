@@ -178,7 +178,7 @@ generateReports:
   when: always
 
 
-createSCTasks:
+configResidual:
   stage: ServiceNow
   needs: [generateReports]
   image: python:3.11-slim
