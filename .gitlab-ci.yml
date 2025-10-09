@@ -22,8 +22,8 @@ stages:
   - AI Suggestions
   - AI Role Mining 
   - Configuration
-  - ServiceNow
   - Reports
+  - ServiceNow
   
 
 extractFiles:
@@ -150,33 +150,6 @@ configureSaviynt:
     - python3 src/jobs/config.py
   when: always
 
-
-createSCTasks:
-  stage: ServiceNow
-  needs: [configureSaviynt]
-  image: python:3.11-slim
-  rules:
-  - if: '$operation == "config"'
-  script:
-    - echo "code to create sc_task"
-  artifacts:
-    paths: [sc_tasks.json]
-    expire_in: 30 days
-  when: manual
-
-waitForSCTasks:
-  stage: ServiceNow
-  needs: [createSCTasks]
-  image: python:3.11-slim
-  script:
-    - echo "Code for polling "
-  artifacts:
-    paths: [task_status.json]
-    expire_in: 30 days
-  rules:
-  - if: '$operation == "config"'
-  when: always
-
 generateReports:
   stage: Reports
   needs:
@@ -201,3 +174,31 @@ generateReports:
       - artifacts/
     expire_in: 90 days
   when: always
+
+
+createSCTasks:
+  stage: ServiceNow
+  needs: [generateReports]
+  image: python:3.11-slim
+  rules:
+  - if: '$operation == "config"'
+  script:
+    - echo "code to create sc_task"
+  artifacts:
+    paths: [sc_tasks.json]
+    expire_in: 30 days
+  when: manual
+
+waitForSCTasks:
+  stage: ServiceNow
+  needs: [createSCTasks]
+  image: python:3.11-slim
+  script:
+    - echo "Code for polling "
+  artifacts:
+    paths: [task_status.json]
+    expire_in: 30 days
+  rules:
+  - if: '$operation == "config"'
+  when: always
+
