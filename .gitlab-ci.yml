@@ -58,7 +58,7 @@ scheduledDataExtract:
     - pip install -r requirements.txt
     #- python3 src/jobs/extractDB.py 
     - python3 src/jobs/polling.py   
-
+    - git pull 
     - git add artifacts/*
 
     # Commit & push only if changes are present
@@ -194,7 +194,7 @@ configResidual:
     - export nextjob="batTesting"
     - pip install -r requirements.txt
     - python3 src/jobs/snowtask.py  
-
+    - git pull
     - git add artifacts/*
 
     # Commit & push only if changes are present
@@ -229,7 +229,7 @@ batTesting:
     - export nextjob="signOff"
     - pip install -r requirements.txt
     - python3 src/jobs/snowtask.py  
-
+    - git pull
     - git add artifacts/*
 
     # Commit & push only if changes are present
@@ -253,7 +253,6 @@ signOff:
   image: python:3.11-slim
   script:
     - pip install -r requirements.txt
-    - python3 src/jobs/reports.py
   artifacts:
     paths:
       - artifacts/*.json
