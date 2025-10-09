@@ -1,6 +1,6 @@
 variables:
   scheduleJob: "false"
-  operation: "config"
+  operation: "validate"
   GENERATE_SUGGESTIONS: ""
   ROLE_MINING: ""
   
@@ -30,7 +30,7 @@ stages:
 
 extractFiles:
   stage: Pre-Processing
-  image: python:latest
+  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
   rules:
     - if: $operation == "validate"
   script:
@@ -80,7 +80,7 @@ scheduledDataExtract:
 
 validateFile:
   stage: Validation
-  image: python:latest
+  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
   rules:
     - if: $operation == "validate"
   script:
