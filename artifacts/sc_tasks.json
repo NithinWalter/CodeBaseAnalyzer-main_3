@@ -4,5 +4,11 @@
         "pipeline_id": "2089717271",
         "sc_task_sys_id": "e5ad746cc3ac7610d0d2f64d0501316d",
         "Time_stamp": "2025-10-09 07:18:50"
+    },
+    {
+        "task_name": "createSCTasks",
+        "pipeline_id": "2089719789",
+        "sc_task_sys_id": "801eb06cc3ac7610d0d2f64d05013134",
+        "Time_stamp": "2025-10-09 07:20:39"
     }
 ]
