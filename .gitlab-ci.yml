@@ -1,22 +1,20 @@
 variables:
-  scheduleJob: "false"
-  operation: "config"
-  GENERATE_SUGGESTIONS: "false"
-  ROLE_MINING: "false"
+  scheduleJob: "true"
+  operation: ""
+  GENERATE_SUGGESTIONS: ""
+  ROLE_MINING: ""
   
 
 workflow:
   name: "$APPLICAION PipeLine"
   rules:
     - if: $CI_PIPELINE_TRIGGERED == "true"
+      when: always
     - if: $operation == "validate"
     - if: $operation == "config"
     - if: $GENERATE_SUGGESTIONS == "false"
     - if: $ROLE_MINING == "true"
     - if: $scheduleJob =="true"
-      variables:
-        operation: ""    
-
     - when: never
 
 stages:
