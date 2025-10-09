@@ -5,8 +5,8 @@ from pathlib import Path
 
 # GitLab configuration
 GITLAB_API_URL = "https://gitlab.com/api/v4"
-PRIVATE_TOKEN = "glpat-td97Auue0qrkNiu3frFO6W86MQp1Omk2OW92Cw.01.1209nj5ko"
-MAIN_PROJECT_ID = "73818692"
+PRIVATE_TOKEN = "glpat-wHe150FpKb06wJICGp1cfW86MQp1Omc0OXNxCw.01.120nsrzri"
+MAIN_PROJECT_ID = "74778875"
 HEADERS = {"PRIVATE-TOKEN": PRIVATE_TOKEN}
 
 # ServiceNow configuration
