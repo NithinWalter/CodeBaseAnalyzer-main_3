@@ -18,7 +18,7 @@ if __name__=="__main__":
     sav = SaviyntAPI() 
     username = "admin"
     password = "jSsW$6aRd$E8"
-    ritm_sys_id = "bed16448c324f210d0d2f64d05013161"
+    ritm_sys_id = os.getenv("RITM_SYS_ID")
 
     snow = ServicenowAPI(username, password)
    
