@@ -25,7 +25,10 @@
     "create_incident": "/api/now/table/incident",
     "update_incident": "/api/now/table/incident/{sys_id}",
     "get_user": "/api/now/table/sys_user",
-    "create_user": "/api/now/table/sys_user"
+    "create_user": "/api/now/table/sys_user",
+    "create_sctask": "/api/now/table/sc_task",
+    "close_sctask": "/api/now/table/sc_task/{task_sys_id}",
+    "get_task": "/api/now/table/sc_task/{task_sys_id}"
   },
   "gitlab": {
     "login": "/oauth/token",

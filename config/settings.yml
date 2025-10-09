@@ -34,11 +34,11 @@ saviynt:
   # - Call createUser → POST to {base_url}/ECM/api/v5/createUser
 
 servicenow:
-  base_url: "https://servicenow.${ENVIRONMENT}.example.com"
+  base_url: "https://dev225989.service-now.com"
   auth_type: "basic"   # Typically basic or oauth2
-  username: "${SNOW_USERNAME}"
-  password: "${SNOW_PASSWORD}"
-  endpoints_file: "config/servicenow_endpoints.json"
+  username: "admin"
+  password: "jSsW$6aRd$E8"
+  endpoints_file: "config/endpoints.json"
   timeout: 20
   retries: 2
   # Example usage:

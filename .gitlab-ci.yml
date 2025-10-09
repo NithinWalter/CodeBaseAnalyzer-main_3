@@ -54,7 +54,8 @@ scheduledDataExtract:
     # Reset remote URL to use CI_JOB_TOKEN for authentication
     - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
     - pip install -r requirements.txt
-    - python3 src/jobs/extractDB.py   
+    - python3 src/jobs/extractDB.py 
+    - python3 src/jobs/polling.py   
 
     - git add artifacts/*
 
@@ -161,7 +162,7 @@ createSCTasks:
   artifacts:
     paths: [sc_tasks.json]
     expire_in: 30 days
-  when: always
+  when: manual
 
 waitForSCTasks:
   stage: ServiceNow

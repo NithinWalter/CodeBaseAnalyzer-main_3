@@ -17,21 +17,29 @@ class ServicenowAPI(BaseAPI):
         self.username = username
         self.password = password
 
-    def _request(self, method: str, endpoint_key: str, **kwargs):
-        url = f"{self.base_url}{self.endpoints[endpoint_key]}"
+    def _request(self, method: str, endpoint_key_or_url: str, **kwargs):
+    # If the key exists in endpoints, use it
+        if endpoint_key_or_url in self.endpoints:
+            url = f"{self.base_url}{self.endpoints[endpoint_key_or_url]}"
+        else:
+        # Otherwise, assume it's a full URL path already
+            url = f"{self.base_url}{endpoint_key_or_url}"
+
         headers = kwargs.pop("headers", {})
         headers["Content-Type"] = "application/json"
-
-        auth = (self.username, self.password)
+        auth = (self.username, self.password) if hasattr(self, "username") else None
 
         try:
+            import urllib3
             urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+            import requests
             response = requests.request(method, url, headers=headers, auth=auth, **kwargs)
             response.raise_for_status()
             return response.json()
         except Exception as e:
             logger.error(f"{method} {url} failed: {e}")
             return None
+
 
     def create_sctask(self, ritm_sys_id: str, short_description: str, description: str) -> str:
         payload = {
@@ -44,11 +52,15 @@ class ServicenowAPI(BaseAPI):
             return res["result"]["sys_id"]
         return None
 
-    def close_sctask(self, task_sys_id: str, close_notes: str = "Closed via automation"):
+    def close_sctask(self, task_sys_id: str, close_notes):
         payload = {
-            "sys_id": task_sys_id,
-            "close_notes": close_notes,
-            "state": "Closed"
+        "work_notes": close_notes,
+        "state": "3"
         }
-        res = self._request("POST", "close_sctask", json=payload)
+
+    # Replace placeholder in URL
+        endpoint = self.endpoints["close_sctask"].format(task_sys_id=task_sys_id)
+
+        # Make the request with PUT
+        res = self._request("PUT", endpoint, json=payload)
         return res
