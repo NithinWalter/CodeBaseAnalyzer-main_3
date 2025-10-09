@@ -134,6 +134,7 @@ configureSaviynt:
   needs:
     - job: extractFiles
       artifacts: true
+      optional: true
     - job: validateFile
       artifacts: true
       optional: true
@@ -180,10 +181,13 @@ generateReports:
   needs:
   - job: extractFiles
     artifacts: true
+    optional: true
   - job: validateFile
     artifacts: true
+    optional: true
   - job: configureSaviynt
     artifacts: true
+    optional: true
   rules:
   - if: $operation == "config"
   image: python:3.11-slim
