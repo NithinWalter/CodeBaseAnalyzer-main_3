@@ -3,36 +3,42 @@
         "task_name": "createSCTasks",
         "pipeline_id": "2089717271",
         "sc_task_sys_id": "e5ad746cc3ac7610d0d2f64d0501316d",
-        "Time_stamp": "2025-10-09 07:18:50"
+        "Time_stamp": "2025-10-09 07:18:50",
+        "status": "Open"
     },
     {
         "task_name": "createSCTasks",
         "pipeline_id": "2089719789",
         "sc_task_sys_id": "801eb06cc3ac7610d0d2f64d05013134",
-        "Time_stamp": "2025-10-09 07:20:39"
+        "Time_stamp": "2025-10-09 07:20:39",
+        "status": "Open"
     },
     {
         "task_name": "createSCTasks",
         "pipeline_id": "2089723523",
         "sc_task_sys_id": "b37e30acc3ac7610d0d2f64d0501317a",
-        "Time_stamp": "2025-10-09 07:22:33"
+        "Time_stamp": "2025-10-09 07:22:33",
+        "status": "Open"
     },
     {
         "task_name": "createSCTasks",
         "pipeline_id": "2089729552",
         "sc_task_sys_id": "996fb0ecc3ac7610d0d2f64d0501312b",
-        "Time_stamp": "2025-10-09 07:26:29"
+        "Time_stamp": "2025-10-09 07:26:29",
+        "status": "Open"
     },
     {
         "task_name": "batTesting",
         "pipeline_id": "2089898955",
         "sc_task_sys_id": "8b031928c320b610d0d2f64d05013186",
-        "Time_stamp": "2025-10-09 08:52:21"
+        "Time_stamp": "2025-10-09 08:52:21",
+        "status": "Open"
     },
     {
         "task_name": "batTesting",
         "pipeline_id": "2089920672",
         "sc_task_sys_id": "b3a5d92cc320b610d0d2f64d050131c8",
-        "Time_stamp": "2025-10-09 09:03:51"
+        "Time_stamp": "2025-10-09 09:03:51",
+        "status": "Open"
     }
 ]
