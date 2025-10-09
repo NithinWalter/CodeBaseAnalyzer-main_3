@@ -247,7 +247,7 @@ batTesting:
 
 signOff:
   stage: Post Prod Sign Off
-  needs: [createSCTasks]
+  needs: [batTesting]
   image: python:3.11-slim
   script:
     - pip install -r requirements.txt
