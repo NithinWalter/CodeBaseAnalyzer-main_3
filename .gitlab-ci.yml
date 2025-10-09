@@ -9,7 +9,6 @@ workflow:
   name: "$APPLICAION PipeLine"
   rules:
     - if: $CI_PIPELINE_TRIGGERED == "true"
-      when: always
     - if: $operation == "validate"
     - if: $operation == "config"
     - if: $GENERATE_SUGGESTIONS == "false"
