@@ -47,7 +47,9 @@ if __name__=="__main__":
    
     json_file = artifacts_dir / "sc_tasks.json"
    
-    task3_sys_id = snow.create_sctask(ritm_sys_id, "AOBManual-Config residual", "Manual task description")
+    task3_sys_id = snow.create_sctask(ritm_sys_id, "AOBManual-{}", "Manual task description")
     if task3_sys_id:
         logger.info(f"SC Task {task3_sys_id} created successfully")      
         update_json(json_file, "createSCTasks", task3_sys_id)
+
+    # if job name as argument CI_JOB_NAME

@@ -56,7 +56,7 @@ scheduledDataExtract:
     # Reset remote URL to use CI_JOB_TOKEN for authentication
     - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
     - pip install -r requirements.txt
-    - python3 src/jobs/extractDB.py 
+    #- python3 src/jobs/extractDB.py 
     - python3 src/jobs/polling.py   
 
     - git add artifacts/*
@@ -185,12 +185,65 @@ configResidual:
   rules:
   - if: '$operation == "config"'
   script:
+    - apt-get update && apt-get install -y git
+    # Configure Git identity for CI commits
+    - git config --global user.email "ci-bot@example.com"
+    - git config --global user.name "CI Bot"
+    # Reset remote URL to use CI_JOB_TOKEN for authentication
+    - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
     - pip install -r requirements.txt
-    - python3 src/jobs/snowtask.py
+    - python3 src/jobs/snowtask.py  
+
+    - git add artifacts/*
+
+    # Commit & push only if changes are present
+    - |
+      if ! git diff --cached --quiet; then
+        git commit -m "update extracted artifacts"
+        git push origin HEAD:refs/heads/Developnment
+
+      else
+        echo "No changes detected in artifacts, skipping commit."
+      fi
+    
   artifacts:
-    paths: [sc_tasks.json]
+    paths: 
+      - artifacts/*.json
     expire_in: 30 days
   when: always
+
+batTesting:
+  stage: ServiceNow
+  needs: [configResidual]
+  image: python:3.11-slim
+  rules:
+  - if: '$operation == "config"'
+  script:
+    - apt-get update && apt-get install -y git
+    # Configure Git identity for CI commits
+    - git config --global user.email "ci-bot@example.com"
+    - git config --global user.name "CI Bot"
+    # Reset remote URL to use CI_JOB_TOKEN for authentication
+    - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
+    - pip install -r requirements.txt
+    - python3 src/jobs/snowtask.py  
+
+    - git add artifacts/*
+
+    # Commit & push only if changes are present
+    - |
+      if ! git diff --cached --quiet; then
+        git commit -m "update extracted artifacts"
+        git push origin HEAD:refs/heads/Developnment
+
+      else
+        echo "No changes detected in artifacts, skipping commit."
+      fi
+  artifacts:
+    paths: 
+      - artifacts/*.json
+    expire_in: 30 days
+  when: manual
 
 signOff:
   stage: Post Prod Sign Off
@@ -200,7 +253,8 @@ signOff:
     - pip install -r requirements.txt
     - python3 src/jobs/reports.py
   artifacts:
-    paths: [task_status.json]
+    paths:
+      - artifacts/*.json
     expire_in: 30 days
   rules:
   - if: '$operation == "config"'
