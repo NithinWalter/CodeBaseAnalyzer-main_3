@@ -40,5 +40,11 @@
         "sc_task_sys_id": "b3a5d92cc320b610d0d2f64d050131c8",
         "Time_stamp": "2025-10-09 09:03:51",
         "status": "Closed"
+    },
+    {
+        "task_name": "batTesting",
+        "pipeline_id": "2090130372",
+        "sc_task_sys_id": "100d29ecc360b610d0d2f64d05013123",
+        "Time_stamp": "2025-10-09 10:45:45"
     }
 ]
