@@ -34,7 +34,6 @@ extractFiles:
   rules:
     - if: $operation == "validate"
   script:
-    - pip install -r requirements.txt
     - python3 src/jobs/extract.py
   artifacts:
     paths:
@@ -43,9 +42,9 @@ extractFiles:
     expire_in: 30 days
   when: always
 
-scheduledDataExtract:
+scheduledDataExtractandPolling:
   stage: Pre-Processing
-  image: python:latest
+  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
   rules:
     - if: $scheduleJob =="true"
   script:
@@ -55,9 +54,7 @@ scheduledDataExtract:
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
     - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
-    - pip install -r requirements.txt
-    #- python3 src/jobs/extractDB.py 
-      
+    - python3 src/jobs/extractDB.py 
     - git checkout Developnment 
     - git pull origin Developnment
     - python3 src/jobs/polling.py 
@@ -120,7 +117,7 @@ generateRoleRecommendation:
       optional: true 
   rules:
     - if: $ROLE_MINING == "true"
-  image: python:3.11-slim
+  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
   artifacts:
     paths:
       - logs/
@@ -143,7 +140,7 @@ configureSaviynt:
     - job: validateFile
       artifacts: true
       optional: true
-  image: python:3.11-slim
+  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
   artifacts:
     paths:
       - logs/
@@ -168,7 +165,7 @@ generateReports:
 
   rules:
   - if: $operation == "config"
-  image: python:3.11-slim
+  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
   script:
     - pip install -r requirements.txt
     - python3 src/jobs/reports.py
@@ -183,7 +180,7 @@ generateReports:
 configResidual:
   stage: ServiceNow
   needs: [generateReports]
-  image: python:3.11-slim
+  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
   rules:
   - if: '$operation == "config"'
   script:
@@ -219,7 +216,7 @@ configResidual:
 batTesting:
   stage: ServiceNow
   needs: [configResidual]
-  image: python:3.11-slim
+  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
   rules:
   - if: '$operation == "config"'
   script:
@@ -254,7 +251,7 @@ batTesting:
 signOff:
   stage: Post Prod Sign Off
   needs: [batTesting]
-  image: python:3.11-slim
+  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
   script:
     - pip install -r requirements.txt
   artifacts:

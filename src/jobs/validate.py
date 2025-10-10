@@ -16,8 +16,7 @@ if __name__=="__main__":
     artifacts_dir.mkdir(parents=True, exist_ok=True)
 
     #API initialize
-    sav = SaviyntAPI() 
-    snow = ServicenowAPI()
+    sav = SaviyntAPI()
 
     #Get pipeline ID
     pipeline_id=os.getenv("CI_PIPELINE_ID","local")
