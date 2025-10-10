@@ -1,8 +1,8 @@
 variables:
   scheduleJob: "false"
   operation: "validate"
-  GENERATE_SUGGESTIONS: ""
-  ROLE_MINING: ""
+  GENERATE_SUGGESTIONS: "true"
+  ROLE_MINING: "true"
   
 
 workflow:
@@ -63,6 +63,7 @@ scheduledDataExtractandPolling:
 
 validateFile:
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
+  needs: [extractFiles]
   rules:
     - if: $operation == "validate"
   script:
@@ -77,7 +78,7 @@ validateFile:
   when: always
 
 generateSuggestions:
-  needs: [validateFile,extractFiles]
+  needs: [validateFile]
   rules:
     - if: '$GENERATE_SUGGESTIONS == "true"'
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
@@ -93,11 +94,7 @@ generateSuggestions:
   when: always
 
 generateRoleRecommendation:
-  needs:  
-    - job: validateFile
-    - job: extractFiles
-    - job: generateSuggestions
-      optional: true 
+  needs: [generateSuggestions]
   rules:
     - if: $ROLE_MINING == "true"
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
