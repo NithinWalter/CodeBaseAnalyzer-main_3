@@ -16,21 +16,8 @@ workflow:
     - if: $scheduleJob =="true"
     - when: never
 
-stages:
-  - Pre-Processing
-  - Validation
-  - AI Suggestions
-  - AI Role Mining 
-  - Configuration
-  - Reports
-  - ServiceNow
-  - Post Prod Sign Off
-
-  
-
 extractFiles:
-  stage: Pre-Processing
-  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   rules:
     - if: $operation == "validate"
   script:
@@ -43,8 +30,7 @@ extractFiles:
   when: always
 
 scheduledDataExtractandPolling:
-  stage: Pre-Processing
-  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   rules:
     - if: $scheduleJob =="true"
   script:
@@ -76,8 +62,7 @@ scheduledDataExtractandPolling:
   when: always
 
 validateFile:
-  stage: Validation
-  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   rules:
     - if: $operation == "validate"
   script:
@@ -92,11 +77,10 @@ validateFile:
   when: always
 
 generateSuggestions:
-  stage: AI Suggestions
   needs: [validateFile,extractFiles]
   rules:
     - if: '$GENERATE_SUGGESTIONS == "true"'
-  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   artifacts:
     paths:
       - logs/
@@ -109,7 +93,6 @@ generateSuggestions:
   when: always
 
 generateRoleRecommendation:
-  stage: AI Role Mining
   needs:  
     - job: validateFile
     - job: extractFiles
@@ -117,7 +100,7 @@ generateRoleRecommendation:
       optional: true 
   rules:
     - if: $ROLE_MINING == "true"
-  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   artifacts:
     paths:
       - logs/
@@ -129,7 +112,6 @@ generateRoleRecommendation:
     - python3 src/jobs/roleMining.py
 
 configureSaviynt:
-  stage: Configuration
   rules:
   - if: '$operation == "config"'
   - when: never
@@ -140,7 +122,7 @@ configureSaviynt:
     - job: validateFile
       artifacts: true
       optional: true
-  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   artifacts:
     paths:
       - logs/
@@ -152,7 +134,6 @@ configureSaviynt:
   when: always
 
 generateReports:
-  stage: Reports
   needs:
   - job: extractFiles
     artifacts: true
@@ -165,7 +146,7 @@ generateReports:
 
   rules:
   - if: $operation == "config"
-  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   script:
     - pip install -r requirements.txt
     - python3 src/jobs/reports.py
@@ -178,9 +159,8 @@ generateReports:
 
 
 configResidual:
-  stage: ServiceNow
   needs: [generateReports]
-  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   rules:
   - if: '$operation == "config"'
   script:
@@ -214,9 +194,8 @@ configResidual:
   when: always
 
 batTesting:
-  stage: ServiceNow
   needs: [configResidual]
-  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   rules:
   - if: '$operation == "config"'
   script:
@@ -248,9 +227,8 @@ batTesting:
   when: manual
 
 signOff:
-  stage: Post Prod Sign Off
   needs: [batTesting]
-  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   script:
     - pip install -r requirements.txt
   artifacts:
