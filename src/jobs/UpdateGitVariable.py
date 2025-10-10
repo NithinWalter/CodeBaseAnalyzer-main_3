@@ -10,7 +10,7 @@ def update_gitlab_variable(key, value, append=False):
     Update or create a GitLab CI/CD variable.
     If append=True, the new value will be appended to existing JSON list.
     """
-    project_id = "74778875"
+    project_id = "75200173"
     token = "glpat-wHe150FpKb06wJICGp1cfW86MQp1Omc0OXNxCw.01.120nsrzri" 
     base_url = f"https://gitlab.com/api/v4/projects/{project_id}/variables"
     headers = {"PRIVATE-TOKEN": token, "Content-Type": "application/json"}

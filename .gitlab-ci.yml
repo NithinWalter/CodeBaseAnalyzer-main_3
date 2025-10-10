@@ -53,7 +53,7 @@ scheduledDataExtractandPolling:
     - git config --global user.email "ci-bot@example.com"
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
-    - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
+    - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
     - python3 src/jobs/extractDB.py 
     - git checkout Developnment 
     - git pull origin Developnment
@@ -189,7 +189,7 @@ configResidual:
     - git config --global user.email "ci-bot@example.com"
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
-    - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
+    - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
     - export nextjob="batTesting"
     - pip install -r requirements.txt  
     - git checkout Developnment 
@@ -225,9 +225,8 @@ batTesting:
     - git config --global user.email "ci-bot@example.com"
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
-    - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/seleniumautomation9702015/iga-saviynt-factory.git
+    - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
     - export nextjob="signOff"
-    - pip install -r requirements.txt 
     - git checkout Developnment 
     - git pull origin Developnment
     - python3 src/jobs/snowtask.py 
