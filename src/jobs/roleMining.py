@@ -100,7 +100,7 @@ def generate_roles_from_json(json_path, validation_json_path, pipeline_id,
     update_gitlab_variable(
         f"ValidationResult_{pipeline_id}",
         validation_data,
-        True
+        False
     )
 
     logger.info("Appended MRVS role mining results to ValidationResult.json and updated GitLab variable.")
