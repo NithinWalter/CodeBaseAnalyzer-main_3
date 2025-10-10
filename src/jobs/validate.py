@@ -116,8 +116,8 @@ if __name__=="__main__":
    
     role_summary = (
         f"Total number of Roles : {len(Extracted_data.get('Roles', []))}.\n"
-        f"Roles already present in Saviynt : {valid_roles}.\n"
-        f"Roles not present in Saviynt : {invalid_roles}\n"
+        f"Roles already present in Saviynt : {valid_roles}\n"
+        f"Roles not present in Saviynt : {invalid_roles}.\n"
     )
 
     if invalid_roles:
