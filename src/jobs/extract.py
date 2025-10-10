@@ -123,7 +123,7 @@ def getExcelRoles(excel_path):
     user_authorization_sheet = pd.read_excel(excel_path, sheet_name="3.a. User authorization matrix", header=2)
     pd.set_option("display.max_columns", None)
     headers = user_authorization_sheet.iloc[0]
-    headers = [h for h in headers if pd.notna(h)]
+    headers = [h for h in headers if pd.notna(h) and str(h).strip().lower() != "roles"]
     
     return headers
 

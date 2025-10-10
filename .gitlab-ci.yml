@@ -107,6 +107,27 @@ generateRoleRecommendation:
     - pip install -r requirements.txt
     - pip install scikit-learn
     - python3 src/jobs/roleMining.py
+  
+JiraTaskCreation-config:
+  rules:
+  - if: '$operation == "config"'
+  - when: never
+  needs:
+    - job: extractFiles
+      artifacts: true
+      optional: true
+    - job: validateFile
+      artifacts: true
+      optional: true
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
+  artifacts:
+    paths:
+      - logs/
+      - artifacts/
+    expire_in: 30 days
+  script:
+    - echo " Jira task creation"
+  when: always
 
 configureSaviynt:
   rules:
@@ -128,6 +149,27 @@ configureSaviynt:
   script:
     - pip install -r requirements.txt
     - python3 src/jobs/config.py
+  when: always
+
+JiraTaskClosure-config:
+  rules:
+  - if: '$operation == "config"'
+  - when: never
+  needs:
+    - job: extractFiles
+      artifacts: true
+      optional: true
+    - job: validateFile
+      artifacts: true
+      optional: true
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
+  artifacts:
+    paths:
+      - logs/
+      - artifacts/
+    expire_in: 30 days
+  script:
+    - echo " Jira task closed"
   when: always
 
 generateReports:
