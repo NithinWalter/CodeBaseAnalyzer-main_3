@@ -96,7 +96,7 @@ generateSuggestions:
   needs: [validateFile,extractFiles]
   rules:
     - if: '$GENERATE_SUGGESTIONS == "true"'
-  image: python:3.11-slim
+  image: registry.gitlab.com/seleniumautomation9702015/iga-saviynt-factory:latest
   artifacts:
     paths:
       - logs/
