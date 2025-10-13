@@ -34,6 +34,7 @@ extractFiles:
   when: always
 
 scheduledDataExtractandPolling:
+  stage: validation
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   rules:
     - if: $scheduleJob =="true"
@@ -83,6 +84,7 @@ validateFile:
   when: always
 
 generateSuggestions:
+  stage: validation
   needs: [validateFile]
   rules:
     - if: '$GENERATE_SUGGESTIONS == "true"'
@@ -118,8 +120,8 @@ generateRoleRecommendation:
 auto_Validate_Onboarding_Sheet_Prod_Onboarding_Sheet:
   stage: configuration
   rules:
-  - if: $operation == "config"
-  - when: never
+    - if: $operation == "config"
+    - when: never
   needs:
     - job: extractFiles
       artifacts: true
@@ -134,7 +136,7 @@ auto_Validate_Onboarding_Sheet_Prod_Onboarding_Sheet:
       - artifacts/
     expire_in: 30 days
   script:
-    - echo "Validate Onboarding Sheet : Prod Onboarding Sheet"
+    - echo "Validate Onboarding Sheet_Prod Onboarding Sheet"
   when: always
   
 config_CreateJiraTask:
