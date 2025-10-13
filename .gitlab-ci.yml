@@ -118,7 +118,7 @@ generateRoleRecommendation:
 auto_Validate_Onboarding_Sheet_Prod_Onboarding_Sheet:
   stage: configuration
   rules:
-  - if: '$operation == "config"'
+  - if: $operation == "config"
   - when: never
   needs:
     - job: extractFiles
@@ -140,7 +140,7 @@ auto_Validate_Onboarding_Sheet_Prod_Onboarding_Sheet:
 config_CreateJiraTask:
   stage: configuration
   rules:
-  - if: '$operation == "config"'
+  - if: $operation == "config"
   - when: never
   needs:
     - job: extractFiles
@@ -162,7 +162,7 @@ config_CreateJiraTask:
 auto_Configure_Prod_LISA:
   stage: configuration
   rules:
-  - if: '$operation == "config"'
+  - if: $operation == "config"
   - when: never
   needs:
     - job: extractFiles
@@ -185,7 +185,7 @@ auto_Configure_Prod_LISA:
 config_closeJiraTask:
   stage: configuration
   rules:
-  - if: '$operation == "config"'
+  - if: $operation == "config"
   - when: never
   needs:
     - job: extractFiles
@@ -235,7 +235,7 @@ factory_Residual_Configuration_Prod_LISA:
   needs: [auto_Selenium_Reconciliation_Report_Prod_LISA]
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   rules:
-  - if: '$operation == "config"'
+  - if: $operation == "config"
   script:
     - apt-get update && apt-get install -y git
     # Configure Git identity for CI commits
@@ -271,7 +271,7 @@ factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA:
   needs: [factory_Residual_Configuration_Prod_LISA]
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   rules:
-  - if: '$operation == "config"'
+  - if: $operation == "config"
   script:
     - apt-get update && apt-get install -y git
     # Configure Git identity for CI commits
@@ -311,6 +311,6 @@ factory_Go-Live_Hyper_Care:
       - artifacts/*.json
     expire_in: 30 days
   rules:
-  - if: '$operation == "config"'
+  - if: $operation == "config"
   when: manual
 
