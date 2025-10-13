@@ -245,7 +245,7 @@ factory_Residual_Configuration_Prod_LISA:
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
     - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
-    - export nextjob="batTesting"
+    - export nextjob="factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA"
     - pip install -r requirements.txt  
     - git checkout Developnment 
     - git pull origin Developnment
@@ -281,7 +281,7 @@ factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA:
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
     - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
-    - export nextjob="signOff"
+    - export nextjob="factory_Go-Live_Hyper_Care"
     - git checkout Developnment 
     - git pull origin Developnment
     - python3 src/jobs/snowtask.py 
