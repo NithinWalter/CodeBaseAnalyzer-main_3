@@ -3,7 +3,10 @@ variables:
   operation: "validate"
   GENERATE_SUGGESTIONS: "true"
   ROLE_MINING: "true"
-  
+
+stages:
+  - validation
+  - configuration
 
 workflow:
   name: "$APPLICAION PipeLine"
@@ -17,6 +20,7 @@ workflow:
     - when: never
 
 extractFiles:
+  stage: validation
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   rules:
     - if: $operation == "validate"
@@ -62,6 +66,7 @@ scheduledDataExtractandPolling:
   when: always
 
 validateFile:
+  stage: validation
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   needs: [extractFiles]
   rules:
@@ -94,6 +99,7 @@ generateSuggestions:
   when: always
 
 generateRoleRecommendation:
+  stage: validation
   needs: [generateSuggestions]
   rules:
     - if: $ROLE_MINING == "true"
@@ -107,8 +113,10 @@ generateRoleRecommendation:
     - pip install -r requirements.txt
     - pip install scikit-learn
     - python3 src/jobs/roleMining.py
-  
-JiraTaskCreation-config:
+
+
+auto_Validate_Onboarding_Sheet_Prod_Onboarding_Sheet:
+  stage: configuration
   rules:
   - if: '$operation == "config"'
   - when: never
@@ -119,7 +127,29 @@ JiraTaskCreation-config:
     - job: validateFile
       artifacts: true
       optional: true
-  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
+  image: alpine:latest
+  artifacts:
+    paths:
+      - logs/
+      - artifacts/
+    expire_in: 30 days
+  script:
+    - echo "Validate Onboarding Sheet : Prod Onboarding Sheet"
+  when: always
+  
+config_CreateJiraTask:
+  stage: configuration
+  rules:
+  - if: '$operation == "config"'
+  - when: never
+  needs:
+    - job: extractFiles
+      artifacts: true
+      optional: true
+    - job: auto_Validate_Onboarding_Sheet_Prod_Onboarding_Sheet
+      artifacts: true
+      optional: true
+  image: alpine:latest
   artifacts:
     paths:
       - logs/
@@ -129,7 +159,8 @@ JiraTaskCreation-config:
     - echo " Jira task creation"
   when: always
 
-configureSaviynt:
+auto_Configure_Prod_LISA:
+  stage: configuration
   rules:
   - if: '$operation == "config"'
   - when: never
@@ -137,7 +168,7 @@ configureSaviynt:
     - job: extractFiles
       artifacts: true
       optional: true
-    - job: validateFile
+    - job: config_CreateJiraTask
       artifacts: true
       optional: true
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
@@ -151,7 +182,8 @@ configureSaviynt:
     - python3 src/jobs/config.py
   when: always
 
-JiraTaskClosure-config:
+config_closeJiraTask:
+  stage: configuration
   rules:
   - if: '$operation == "config"'
   - when: never
@@ -159,10 +191,10 @@ JiraTaskClosure-config:
     - job: extractFiles
       artifacts: true
       optional: true
-    - job: validateFile
+    - job: auto_Configure_Prod_LISA
       artifacts: true
       optional: true
-  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
+  image: alpine:latest
   artifacts:
     paths:
       - logs/
@@ -172,15 +204,16 @@ JiraTaskClosure-config:
     - echo " Jira task closed"
   when: always
 
-generateReports:
+auto_Selenium_Reconciliation_Report_Prod_LISA:
+  stage: configuration
   needs:
   - job: extractFiles
     artifacts: true
     optional: true
-  - job: validateFile
+  - job: config_closeJiraTask
     artifacts: true
     optional: true
-  - job: configureSaviynt
+  - job: auto_Configure_Prod_LISA
     artifacts: true
 
   rules:
@@ -197,8 +230,9 @@ generateReports:
   when: always
 
 
-configResidual:
-  needs: [generateReports]
+factory_Residual_Configuration_Prod_LISA:
+  stage: configuration
+  needs: [auto_Selenium_Reconciliation_Report_Prod_LISA]
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   rules:
   - if: '$operation == "config"'
@@ -232,8 +266,9 @@ configResidual:
     expire_in: 30 days
   when: always
 
-batTesting:
-  needs: [configResidual]
+factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA:
+  stage: configuration
+  needs: [factory_Residual_Configuration_Prod_LISA]
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   rules:
   - if: '$operation == "config"'
@@ -265,8 +300,9 @@ batTesting:
     expire_in: 30 days
   when: manual
 
-signOff:
-  needs: [batTesting]
+factory_Go-Live_Hyper_Care:
+  stage: configuration
+  needs: [factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA]
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   script:
     - pip install -r requirements.txt
