@@ -45,6 +45,7 @@ scheduledDataExtractandPolling:
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
     - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
+    - git stash push -m "pre-snowtask stash"
     - git checkout Developnment
     - git pull origin Developnment
     - git stash pop || echo "Nothing to pop"
@@ -254,7 +255,6 @@ factory_Residual_Configuration_Prod_LISA:
     - git checkout Developnment
     - git pull origin Developnment
     - git stash pop || echo "Nothing to pop"
-    
     - python3 src/jobs/snowtask.py
     - git add artifacts/*
     
@@ -287,6 +287,7 @@ factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA:
     # Reset remote URL to use CI_JOB_TOKEN for authentication
     - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
     - export nextjob="factory_Go-Live_Hyper_Care" 
+    - git stash push -m "pre-snowtask stash"
     - git checkout Developnment
     - git pull origin Developnment
     - git stash pop || echo "Nothing to pop"
@@ -311,7 +312,7 @@ factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA:
 factory_Go-Live_Hyper_Care:
   stage: configuration
   needs: [factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA]
-  image: alphine:latest
+  image: alpine:latest
   script:
     - echo "Final stage completed"
   artifacts:
