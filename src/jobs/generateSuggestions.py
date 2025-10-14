@@ -1,11 +1,9 @@
-import os, sys, logging, requests
-import pandas as pd
-from io import BytesIO
-import json, base64, urllib3
-# from sentence_transformers import SentenceTransformer
-# import torch
-# from sentence_transformers.util import cos_sim
+import os, sys, logging, json
+import torch
 from pathlib import Path
+from sentence_transformers import SentenceTransformer
+from sentence_transformers.util import cos_sim
+
 
 # class file imports 
 sys.path.append(str(Path(__file__).resolve().parents[2]))
@@ -17,7 +15,7 @@ from src.jobs.UpdateGitVariable import update_gitlab_variable
 logger = logging.getLogger("configuration")
 
 # Commented out model load since we’re using static results
-# model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
 if __name__ == "__main__":
 
@@ -50,28 +48,11 @@ if __name__ == "__main__":
         sys.exit(0)
 
     # --- SKIPPING embedding and similarity calculation ---
-    # embeddings = model.encode(entitlements, convert_to_tensor=True)
+    embeddings = model.encode(entitlements, convert_to_tensor=True)
 
-    results = {
-        "R02_UG_DEEP_User_BusApp_MDM_Consumer": {
-            "match": "App Engine Admins",
-            "score": 28.100621700286865,
-            "index": 43
-        },
-        "DIA-MDM-EBXAdmin": {
-            "match": "Database",
-            "score": 28.569304943084717,
-            "index": 39
-        },
-        "R02_UG_DEEP_SDLC_MDM-mdm-PRD_Analyst_SPI": {
-            "match": "Nimsoft desk",
-            "score": 23.72710108757019,
-            "index": 30
-        }
-    }
-
+    
     # --- COMMENTING out embedding + similarity loop ---
-    """
+   
     extracted_file = artifacts_dir / "ExtractedData.json"
     if not extracted_file.exists():
         logger.error("ExtractedData.json not found. Cannot load AD groups.")
@@ -90,6 +71,7 @@ if __name__ == "__main__":
         logger.warning("No AD groups found in ExtractedData.json. Nothing to process.")
         sys.exit(0)
 
+    results = {}
     for ent in ad_groups:
         query_embedding = model.encode(ent, convert_to_tensor=True)
         cos_scores = cos_sim(query_embedding, embeddings)[0]
@@ -100,8 +82,7 @@ if __name__ == "__main__":
             "score": (top_score.float().item()) * 100, 
             "index": (top_idx.int()).item()
         }
-    """
-
+    
     print(json.dumps(results, indent=4))
 
     # Path to ValidationResult.json

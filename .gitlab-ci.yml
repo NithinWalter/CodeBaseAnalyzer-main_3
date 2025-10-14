@@ -1,6 +1,6 @@
 variables:
   scheduleJob: "false"
-  operation: "config"
+  operation: "validate"
   GENERATE_SUGGESTIONS: "false"
   ROLE_MINING: "false"
 
@@ -73,7 +73,6 @@ validateFile:
   rules:
     - if: $operation == "validate"
   script:
-    - pip install -r requirements.txt
     - python3 src/jobs/extractDB.py
     - python3 src/jobs/validate.py
   artifacts:
@@ -95,7 +94,6 @@ generateSuggestions:
       - artifacts/
     expire_in: 30 days
   script:
-    - pip install -r requirements.txt
     # pip install sentence-transformers  torch
     - python3 src/jobs/generateSuggestions.py
   when: always
@@ -112,10 +110,30 @@ generateRoleRecommendation:
       - artifacts/
     expire_in: 30 days
   script:
-    - pip install -r requirements.txt
     - pip install scikit-learn
     - python3 src/jobs/roleMining.py
 
+updateValidationFlag:
+  stage: validation
+  needs:
+    - job: generateRoleRecommendation
+      artifacts: true
+      optional: true
+    - job: generateSuggestions
+      artifacts: true
+      optional: true
+    - job: validateFile
+      artifacts: true
+      optional: true
+  rules:
+    - if: $operation == "validate"
+  image: python:3.11-slim
+  script:
+    - pip install requests
+    - python3 src/jobs/updateValidationFlag.py
+  when: always
+
+#--------------configuration------------------------
 
 auto_Validate_Onboarding_Sheet_Prod_Onboarding_Sheet:
   stage: configuration
@@ -123,9 +141,6 @@ auto_Validate_Onboarding_Sheet_Prod_Onboarding_Sheet:
     - if: $operation == "config"
     - when: never
   needs:
-    - job: extractFiles
-      artifacts: true
-      optional: true
     - job: validateFile
       artifacts: true
       optional: true
@@ -145,9 +160,6 @@ config_CreateJiraTask:
   - if: $operation == "config"
   - when: never
   needs:
-    - job: extractFiles
-      artifacts: true
-      optional: true
     - job: auto_Validate_Onboarding_Sheet_Prod_Onboarding_Sheet
       artifacts: true
       optional: true
@@ -167,9 +179,6 @@ auto_Configure_Prod_LISA:
   - if: $operation == "config"
   - when: never
   needs:
-    - job: extractFiles
-      artifacts: true
-      optional: true
     - job: config_CreateJiraTask
       artifacts: true
       optional: true
@@ -180,7 +189,6 @@ auto_Configure_Prod_LISA:
       - artifacts/
     expire_in: 30 days
   script:
-    - pip install -r requirements.txt
     - python3 src/jobs/config.py
   when: always
 
@@ -190,9 +198,6 @@ config_closeJiraTask:
   - if: $operation == "config"
   - when: never
   needs:
-    - job: extractFiles
-      artifacts: true
-      optional: true
     - job: auto_Configure_Prod_LISA
       artifacts: true
       optional: true
@@ -209,9 +214,6 @@ config_closeJiraTask:
 auto_Selenium_Reconciliation_Report_Prod_LISA:
   stage: configuration
   needs:
-  - job: extractFiles
-    artifacts: true
-    optional: true
   - job: config_closeJiraTask
     artifacts: true
     optional: true
@@ -222,7 +224,6 @@ auto_Selenium_Reconciliation_Report_Prod_LISA:
   - if: $operation == "config"
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   script:
-    - pip install -r requirements.txt
     - python3 src/jobs/reports.py
   artifacts:
     paths:
@@ -245,8 +246,7 @@ factory_Residual_Configuration_Prod_LISA:
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
     - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
-    - export nextjob="factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA"
-    - pip install -r requirements.txt  
+    - export nextjob="factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA" 
     - git checkout Developnment 
     - git pull origin Developnment
     - python3 src/jobs/snowtask.py
@@ -305,9 +305,9 @@ factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA:
 factory_Go-Live_Hyper_Care:
   stage: configuration
   needs: [factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA]
-  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
+  image: alphine:latest
   script:
-    - pip install -r requirements.txt
+    - echo "Final stage completed"
   artifacts:
     paths:
       - artifacts/*.json
