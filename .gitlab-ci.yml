@@ -222,6 +222,7 @@ auto_Selenium_Reconciliation_Report_Prod_LISA:
   - if: $operation == "config"
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   script:
+    - pip install junit-xml
     - python3 src/jobs/reports.py
   artifacts:
     paths:
