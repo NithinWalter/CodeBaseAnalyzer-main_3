@@ -21,7 +21,7 @@ def validate_api(sav):
     test_case = TestCase("API Validation")
     print(res)
     if res["message"] == "Success":
-        test_case.add_failure_info(f"Expected Success, got {res["Message"]}")
+        test_case.add_failure_info(f"Expected Success, got {res["message"]}")
     return test_case
 
 
