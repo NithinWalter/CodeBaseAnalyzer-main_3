@@ -1,6 +1,6 @@
 variables:
   scheduleJob: "false"
-  operation: "validate"
+  operation: "config"
   GENERATE_SUGGESTIONS: "false"
   ROLE_MINING: "false"
 
