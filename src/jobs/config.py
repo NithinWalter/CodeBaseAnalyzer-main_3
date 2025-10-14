@@ -66,7 +66,18 @@ if __name__ == "__main__":
     artifacts_dir = repo_root / "artifacts"
     artifacts_dir.mkdir(parents=True, exist_ok=True)
     sav = SaviyntAPI() 
-    data = os.environ.get("FORM_DATA")
+    #data = os.environ.get("FORM_DATA")
+    data = {
+     "application_name": "Axiom",
+     "application_owner": "test test",
+     "technical_service_owner": "test test",
+     "requesting_entity": "axa",
+     "ad_groups": [
+         {"group_name": "IT", "group_technical_name": "", "group_description": "test description", "group_owner": "some owner"},
+         {"group_name": "HR Manager", "group_technical_name": "", "group_description": "test description", "group_owner": "some owner"},
+         {"group_name": "Finance Officer", "group_technical_name": "", "group_description": "test description", "group_owner": "some owner"}
+     ]
+    }
     username = "admin"
     password = "jSsW$6aRd$E8"
     ritm_sys_id = os.getenv("RITM_SYS_ID")

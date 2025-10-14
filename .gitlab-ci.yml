@@ -218,7 +218,6 @@ auto_Selenium_Reconciliation_Report_Prod_LISA:
     optional: true
   - job: auto_Configure_Prod_LISA
     artifacts: true
-
   rules:
   - if: $operation == "config"
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
@@ -228,6 +227,8 @@ auto_Selenium_Reconciliation_Report_Prod_LISA:
     paths:
       - logs/
       - artifacts/
+    reports:
+      junit: artifacts/report.xml
     expire_in: 90 days
   when: always
 
