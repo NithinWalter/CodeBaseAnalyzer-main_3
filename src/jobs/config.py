@@ -82,11 +82,12 @@ if __name__ == "__main__":
     password = "jSsW$6aRd$E8"
     ritm_sys_id = os.getenv("RITM_SYS_ID")
     snow = ServicenowAPI(username, password)
+    job_name = os.getenv("CI_JOB_NAME")
    
     
     
     # --- First SC Task ---
-    task1_sys_id = snow.create_sctask(ritm_sys_id, "AOBAuto Configuration", "Configuration SC Task description")
+    task1_sys_id = snow.create_sctask(ritm_sys_id, f"{job_name}", "Configuration SC Task description")
     if task1_sys_id:
         logger.info(f"SC Task created Successfully with sys id: {task1_sys_id}")
         res = configADBased(sav, data)        

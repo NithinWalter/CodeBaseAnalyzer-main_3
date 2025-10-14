@@ -33,6 +33,7 @@ if __name__=="__main__":
     username = "admin"
     password = "jSsW$6aRd$E8"
     ritm_sys_id = os.getenv("RITM_SYS_ID")
+    job_name = os.getenv("CI_JOB_NAME")
 
     snow = ServicenowAPI(username, password)
    
@@ -41,7 +42,7 @@ if __name__=="__main__":
     test_case = validate_api(sav)
     test_suite = TestSuite("ValidationSuite", [test_case])
 
-    task2_sys_id = snow.create_sctask(ritm_sys_id, "AOBAuto Recon", "Reconcile SC Task description")
+    task2_sys_id = snow.create_sctask(ritm_sys_id, f"{job_name}", "Reconcile SC Task description")
     if task2_sys_id:
         logger.info(f"SC Task {task2_sys_id} created successfully")
         with open(report_file, "w") as f:
