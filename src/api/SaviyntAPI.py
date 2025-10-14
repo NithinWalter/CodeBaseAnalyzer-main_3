@@ -1,5 +1,6 @@
 import urllib3, base64, requests, json, yaml, os, sys, logging
 from pathlib import Path
+from collections import defaultdict
 
 sys.path.append(str(Path(__file__).resolve().parents[2]))
 from src.api.BaseAPI import BaseAPI 
@@ -68,6 +69,9 @@ class SaviyntAPI(BaseAPI):
     def createEndPoint(self, payload: dict):
         return self._request("POST", "create_endpoint", json=payload)
     
+    def getEndPoint(self, payload: dict):
+        return self._request("POST", "get_endpoint", json=payload)
+    
     def updateEndPoint(self, payload: dict):    
         return self._request("POST", "update_endpoint", json=payload)
 
@@ -95,11 +99,41 @@ class SaviyntAPI(BaseAPI):
     def getRoles(self, payload={}, **kwargs):
         return self._request("POST", "list_roles", json=payload,**kwargs)
     
+    def testConnection(self, payload: dict, **kwargs): 
+        return self._request("POST","testConnection",json=payload, **kwargs)
+    
+    def getEntDetailsforUsers(self, page_size=100, **kwargs):
+        user_entitlements = defaultdict(set)
+        all_entitlements = set()
+        users_ordered = []
+        offset = 0
+        total_count = None
 
-if __name__=="__main__":
-    api = SaviyntAPI()
-    trigger = {
-                "connectionname":"Active Directory Rapid"
-    }
-    # res = api.getUser()
-    # print(res)
+        while True:
+            params = {"max": page_size, "offset": offset}
+            data = self._request("GET", "getEntUserDetails", params=params, **kwargs)
+
+            if not data or "accessDetails" not in data:
+                break  # failsafe
+
+            if total_count is None:
+                total_count = int(data.get("totalCount", 0))
+
+            display_count = int(data.get("displayCount", 0))
+
+            for record in data["accessDetails"]:
+                username = record.get("username")
+                ent = record.get("entitlement_value")
+
+                if username and ent:
+                    if username not in users_ordered:
+                        users_ordered.append(username)  # Preserve order
+                    user_entitlements[username].add(ent)
+                    all_entitlements.add(ent)
+
+            offset += display_count
+
+            if offset >= total_count:
+                break
+        return users_ordered, user_entitlements, sorted(all_entitlements)
+    
