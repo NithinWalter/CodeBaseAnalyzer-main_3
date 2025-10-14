@@ -31,66 +31,77 @@
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2097744323",
         "sc_task_sys_id": "e41ff54ac3687e10d0d2f64d050131fd",
-        "Time_stamp": "2025-10-14 03:55:34"
+        "Time_stamp": "2025-10-14 03:55:34",
+        "status": "Open"
     },
     {
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2097872510",
         "sc_task_sys_id": "46fb5e82c3687e10d0d2f64d050131f1",
-        "Time_stamp": "2025-10-14 06:01:50"
+        "Time_stamp": "2025-10-14 06:01:50",
+        "status": "Open"
     },
     {
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2097877934",
         "sc_task_sys_id": "0eec5e4ec3a87e10d0d2f64d0501312d",
-        "Time_stamp": "2025-10-14 06:05:55"
+        "Time_stamp": "2025-10-14 06:05:55",
+        "status": "Open"
     },
     {
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2097889483",
         "sc_task_sys_id": "681e568ec3e87e10d0d2f64d0501315d",
-        "Time_stamp": "2025-10-14 06:11:00"
+        "Time_stamp": "2025-10-14 06:11:00",
+        "status": "Open"
     },
     {
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2097898289",
         "sc_task_sys_id": "b09f5242c32c7e10d0d2f64d05013160",
-        "Time_stamp": "2025-10-14 06:17:35"
+        "Time_stamp": "2025-10-14 06:17:35",
+        "status": "Open"
     },
     {
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2097907141",
         "sc_task_sys_id": "ca51ee8ec3e87e10d0d2f64d0501316a",
-        "Time_stamp": "2025-10-14 06:25:18"
+        "Time_stamp": "2025-10-14 06:25:18",
+        "status": "Open"
     },
     {
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2097919254",
         "sc_task_sys_id": "ecb3e286c32c7e10d0d2f64d05013149",
-        "Time_stamp": "2025-10-14 06:35:35"
+        "Time_stamp": "2025-10-14 06:35:35",
+        "status": "Open"
     },
     {
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2097927112",
         "sc_task_sys_id": "6915aec6c32c7e10d0d2f64d05013140",
-        "Time_stamp": "2025-10-14 06:41:39"
+        "Time_stamp": "2025-10-14 06:41:39",
+        "status": "Open"
     },
     {
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2097932605",
         "sc_task_sys_id": "8b2666c2c32c7e10d0d2f64d05013196",
-        "Time_stamp": "2025-10-14 06:46:24"
+        "Time_stamp": "2025-10-14 06:46:24",
+        "status": "Open"
     },
     {
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2097943463",
         "sc_task_sys_id": "8d28664ac32c7e10d0d2f64d0501318b",
-        "Time_stamp": "2025-10-14 06:55:01"
+        "Time_stamp": "2025-10-14 06:55:01",
+        "status": "Open"
     },
     {
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2097972869",
         "sc_task_sys_id": "93eb2282c36c7e10d0d2f64d05013179",
-        "Time_stamp": "2025-10-14 07:11:33"
+        "Time_stamp": "2025-10-14 07:11:33",
+        "status": "Open"
     }
 ]
