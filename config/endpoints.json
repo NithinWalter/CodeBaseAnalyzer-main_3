@@ -5,6 +5,7 @@
     "get_user": "/ECM/api/v5/getUser",
     "get_connection_details":"/ECM/api/v5/getConnectionDetails",
     "create_endpoint":"/ECM/api/v5/createEndpoint",
+    "get_endpoint":"/ECM/api/v5/getEndpoints",
     "create_security_system":"/ECM/api/v5/createSecuritySystem",
     "run_job_trigger":"/ECM/api/v5/runJobTrigger",
     "update_endpoint":"/ECM/api/v5/updateEndpoint",
@@ -17,7 +18,9 @@
     "remove_role": "/ECM/api/v5/removeRole",
     "get_entitlements": "/ECM/api/v5/getEntitlements",
     "add_entitlement": "/ECM/api/v5/addEntitlement",
-    "remove_entitlement": "/ECM/api/v5/removeEntitlement"
+    "remove_entitlement": "/ECM/api/v5/removeEntitlement",
+    "getEntUserDetails":"/ECM/api/v5/getEntDetailsforUsers",
+    "testConnection":"/ECM/api/v5/testConnection"
   },
   "servicenow": {
     "login": "/api/now/v2/table/sys_user_session",
