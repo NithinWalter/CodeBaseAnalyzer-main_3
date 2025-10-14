@@ -20,7 +20,7 @@ def validate_api(sav):
     # Create a test case entry
     test_case = TestCase("API Validation")
     print(res)
-    if res["Message"] == "Success":
+    if res["message"] == "Success":
         test_case.add_failure_info(f"Expected Success, got {res["Message"]}")
     return test_case
 
