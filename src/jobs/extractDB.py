@@ -62,6 +62,8 @@ if __name__=="__main__":
     ent_fields = [
         "endpoint",
         "entitlement_value",
+        "entitlement_glossary",
+        "Custom Property 13",
         "displayname",
         "description",
         "entitlementOwner",

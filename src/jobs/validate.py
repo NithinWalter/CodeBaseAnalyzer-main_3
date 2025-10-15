@@ -58,7 +58,7 @@ if __name__=="__main__":
     invalid_entitlements = []
 
     ad_groups_entitlements = [
-    group.get("Group name")
+    group.get("Group Technical Name (As per GAD/LAD)")
     for group in Extracted_data.get("AllADGroupsInformation", [])
     ]
 
