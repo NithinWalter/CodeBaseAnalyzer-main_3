@@ -18,7 +18,7 @@ def validate_api(sav):
     res = sav.getEndPoint(payload)
 
     # Create a test case entry
-    test_case = TestCase("API Validation")
+    test_case = TestCase("Check if Endpoint Exists")
     print(res)
     if res["message"] == "Success":
         test_case.add_failure_info(f"Expected Success,got {res["message"]}")
@@ -34,7 +34,7 @@ if __name__=="__main__":
     password = "jSsW$6aRd$E8"
     ritm_sys_id = os.getenv("RITM_SYS_ID")
     job_name = os.getenv("CI_JOB_NAME")
-
+    os.getenv
     snow = ServicenowAPI(username, password)
    
     json_file = artifacts_dir / "sc_tasks.json"
