@@ -76,7 +76,7 @@ class SaviyntAPI(BaseAPI):
         return self._request("POST", "update_endpoint", json=payload)
 
     def trigger_job(self, payload: dict):
-        return self._request("POST", "trigger_job", json=payload)
+        return self._request("POST", "run_job_trigger", json=payload)
     
     def getConnection(self, payload: dict, **kwargs): 
         return self._request("POST","get_connection_details",json=payload, **kwargs)
