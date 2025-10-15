@@ -63,7 +63,7 @@ if __name__=="__main__":
     ]
 
     for entitlement in ad_groups_entitlements:
-        if any(entitlement == e["Entitlement value"] for e in all_entitlements):
+        if any(entitlement == e["entitlement_value"] for e in all_entitlements):
             valid_entitlements.append(entitlement)
             logger.debug(f"Entitlement valid: {entitlement}")
         else:
