@@ -34,11 +34,7 @@ if __name__=="__main__":
 
     sav = SaviyntAPI() 
     userJson = sav.getUsers()
-    payload = {
-    "entitlementType": "uniqueMember"
-    }
-
-    entJson = sav.getEntitlements(payload)
+    entJson = sav.getEntitlements()
     roleJson=sav.getRoles()
     user_details = userJson.get("userdetails", [])
     logger.info(f"Fetched {len(user_details)} users from Saviynt")
