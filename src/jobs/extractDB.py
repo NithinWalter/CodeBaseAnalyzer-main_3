@@ -16,6 +16,17 @@ def filter_fields(data_list, required_keys):
         filtered.append({k: item.get(k) for k in required_keys if k in item})
     return filtered
 
+def generateRoleMiningMatrix(sav):
+    users, user_entitlements, all_entitlements = sav.getEntDetailsforUsers()
+    matrix = {}
+    for ent in all_entitlements:
+        matrix[ent] = [1 if ent in user_entitlements.get(user, []) else 0 for user in users]
+    return {
+        "users": users,
+        "matrix": matrix
+    }
+
+
 if __name__=="__main__":
     repo_root = Path(__file__).resolve().parents[2]
     artifacts_dir = repo_root / "artifacts"
@@ -52,7 +63,6 @@ if __name__=="__main__":
         "endpoint",
         "entitlement_value",
         "displayname",
-        "entitlementType",
         "description",
         "entitlementOwner",
         "status",
@@ -67,8 +77,28 @@ if __name__=="__main__":
         json.dump(filtered_entitlements, f, ensure_ascii=False, indent=2)
     logger.info("Entitlement data saved successfully.")
 
-    
+    #------------ROLES---------------------
+    role_details = roleJson.get("Roledetails", roleJson)
+    role_fields = [
+        "role_name",
+        "displayname",
+        "description",
+        "owner",
+        "risk",
+        "requestable",
+        "status",
+        "endpoint"
+    ]
+    filtered_roles = filter_fields(role_details, role_fields)
+    logger.info(f"Filtered {len(filtered_roles)} role records.")
+
     role_path = artifacts_dir / "rolesData.json"
     with role_path.open("w", encoding="utf-8") as f:
-        json.dump(roleJson, f, ensure_ascii=False, indent=2)
-    logger.info(f"Role data are Loaded")
+        json.dump(filtered_roles, f, ensure_ascii=False, indent=2)
+    logger.info("Filtered role data saved successfully.")
+
+
+    entMatrix = generateRoleMiningMatrix(sav)
+    entMatrixPath = artifacts_dir / "userEntitlementsMatrix.json"
+    with entMatrixPath.open("w", encoding="utf-8") as f:
+        json.dump(entMatrix, f, ensure_ascii=False, indent=2)
