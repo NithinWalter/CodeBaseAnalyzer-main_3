@@ -129,6 +129,7 @@
         "task_name": "factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA",
         "pipeline_id": "2101032521",
         "sc_task_sys_id": "43f6c9eac32cfe10d0d2f64d0501312b",
-        "Time_stamp": "2025-10-15 13:07:29"
+        "Time_stamp": "2025-10-15 13:07:29",
+        "status": "Closed"
     }
 ]
