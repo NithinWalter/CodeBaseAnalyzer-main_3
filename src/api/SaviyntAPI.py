@@ -93,7 +93,7 @@ class SaviyntAPI(BaseAPI):
     def getUsers(self, payload={}, **kwargs):
         return self._request("POST","get_user", **kwargs)
     
-    def getEntitlements(self, payload={}, **kwargs):
+    def getEntitlements(self, payload={"entitlementType": "uniqueMember"}, **kwargs):
         return self._request("POST","get_entitlements", **kwargs)
     
     def getRoles(self, payload={}, **kwargs):

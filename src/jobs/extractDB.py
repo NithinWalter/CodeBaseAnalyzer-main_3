@@ -39,7 +39,6 @@ if __name__=="__main__":
     }
 
     entJson = sav.getEntitlements(payload)
-    print(entJson)
     roleJson=sav.getRoles()
     user_details = userJson.get("userdetails", [])
     logger.info(f"Fetched {len(user_details)} users from Saviynt")
