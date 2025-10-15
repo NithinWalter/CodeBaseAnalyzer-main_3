@@ -48,21 +48,8 @@ if __name__=="__main__":
 
     #specific json format
     with open(entitlement_data_file, "r") as f:
-        all_entitlements_full = json.load(f)
+        all_entitlements = json.load(f)
     
-    all_entitlements = [
-        {
-            "Entitlement value": ent.get("entitlement_value"),
-            "Entitlement type": ent.get("entitlementType"),
-            "Entitlement ID" : ent.get("entitlementID"),
-            "DisplayName" : ent.get("displayname"),
-            "Status" :ent.get("status"),
-            "Entitlement owner": ent.get("entitlementOwner", [])
-        }
-        for ent in all_entitlements_full.get("Entitlementdetails", [])
-    ]
-
-
     with open(roles_data_file, "r") as f:
         all_roles = json.load(f)    
 
