@@ -62,9 +62,9 @@ if __name__ == "__main__":
         extracted_data = json.load(f)
 
     ad_groups = [
-        group.get("Group Technical Name (As per GAD/LAD)")
+        group.get("Group name")
         for group in extracted_data.get("AllADGroupsInformation", [])
-        if isinstance(group, dict) and group.get("Group Technical Name (As per GAD/LAD)")
+        if isinstance(group, dict) and group.get("Group name")
     ]
 
     if not ad_groups:

@@ -58,12 +58,12 @@ if __name__=="__main__":
     invalid_entitlements = []
 
     ad_groups_entitlements = [
-    group.get("Group Technical Name (As per GAD/LAD)")
+    group.get("Group name")
     for group in Extracted_data.get("AllADGroupsInformation", [])
     ]
 
     for entitlement in ad_groups_entitlements:
-        if any(entitlement == e["entitlement_value"] for e in all_entitlements):
+        if any(entitlement == e["Custom Property 13"] for e in all_entitlements):
             valid_entitlements.append(entitlement)
             logger.debug(f"Entitlement valid: {entitlement}")
         else:
