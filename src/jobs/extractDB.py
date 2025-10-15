@@ -47,16 +47,16 @@ if __name__=="__main__":
         json.dump(filtered_users, f, ensure_ascii=False, indent=2)
     logger.info("Filtered user data saved successfully.")
 
-    ent_details = entJson.get("entitlementdetails", entJson)
+    ent_details = entJson.get("Entitlementdetails", entJson)
     ent_fields = [
-        "endpointname",
+        "endpoint",
         "entitlement_value",
         "displayname",
-        "entitlementtype",
+        "entitlementType",
         "description",
-        "owner",
-        "soxcritical",
-        "systemcritical"
+        "entitlementOwner",
+        "status",
+        "entitlementType"
     ]
     filtered_entitlements = filter_fields(ent_details, ent_fields)
     logger.info(f"Filtered {len(filtered_entitlements)} entitlement records.")
