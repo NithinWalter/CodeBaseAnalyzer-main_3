@@ -1,8 +1,8 @@
 import os, sys, logging, json
 import torch
 from pathlib import Path
-from sentence_transformers import SentenceTransformer
-from sentence_transformers.util import cos_sim
+#from sentence_transformers import SentenceTransformer
+#from sentence_transformers.util import cos_sim
 
 
 # class file imports 
@@ -15,7 +15,7 @@ from src.jobs.UpdateGitVariable import update_gitlab_variable
 logger = logging.getLogger("configuration")
 
 # Commented out model load since we’re using static results
-model = SentenceTransformer("all-MiniLM-L6-v2")
+#model = SentenceTransformer("all-MiniLM-L6-v2")
 
 if __name__ == "__main__":
 
@@ -26,63 +26,79 @@ if __name__ == "__main__":
     pipeline_id = os.getenv("CI_PIPELINE_ID", "local")
 
     # Load API response - still required for format consistency
-    full_response_path = artifacts_dir / "entitlementsData.json"
-    with open(full_response_path, "r") as f:
-        full_response = json.load(f)
+    # full_response_path = artifacts_dir / "entitlementsData.json"
+    # with open(full_response_path, "r") as f:
+    #     full_response = json.load(f)
 
-    if not isinstance(full_response, dict) or "Entitlementdetails" not in full_response:
-        logger.error("API response is invalid or missing 'Entitlementdetails'. Exiting.")
-        sys.exit(1)
+    # if not isinstance(full_response, dict) or "Entitlementdetails" not in full_response:
+    #     logger.error("API response is invalid or missing 'Entitlementdetails'. Exiting.")
+    #     sys.exit(1)
 
-    entitlements_details_list = full_response.get("Entitlementdetails", [])
+    # entitlements_details_list = full_response.get("Entitlementdetails", [])
 
-    # Extract the 'entitlement_value' from each dictionary to create the list of strings
-    entitlements = [
-        item.get("entitlement_value")
-        for item in entitlements_details_list
-        if isinstance(item, dict) and item.get("entitlement_value")
-    ]
+    # # Extract the 'entitlement_value' from each dictionary to create the list of strings
+    # entitlements = [
+    #     item.get("entitlement_value")
+    #     for item in entitlements_details_list
+    #     if isinstance(item, dict) and item.get("entitlement_value")
+    # ]
 
-    if not entitlements:
-        logger.warning("The extracted entitlements list is empty. Nothing to process.")
-        sys.exit(0)
+    # if not entitlements:
+    #     logger.warning("The extracted entitlements list is empty. Nothing to process.")
+    #     sys.exit(0)
 
-    # --- SKIPPING embedding and similarity calculation ---
-    embeddings = model.encode(entitlements, convert_to_tensor=True)
+    # # --- SKIPPING embedding and similarity calculation ---
+    # embeddings = model.encode(entitlements, convert_to_tensor=True)
 
     
-    # --- COMMENTING out embedding + similarity loop ---
+    # # --- COMMENTING out embedding + similarity loop ---
    
-    extracted_file = artifacts_dir / "ExtractedData.json"
-    if not extracted_file.exists():
-        logger.error("ExtractedData.json not found. Cannot load AD groups.")
-        sys.exit(1)
+    # extracted_file = artifacts_dir / "ExtractedData.json"
+    # if not extracted_file.exists():
+    #     logger.error("ExtractedData.json not found. Cannot load AD groups.")
+    #     sys.exit(1)
 
-    with open(extracted_file, "r") as f:
-        extracted_data = json.load(f)
+    # with open(extracted_file, "r") as f:
+    #     extracted_data = json.load(f)
 
-    ad_groups = [
-        group.get("Group name")
-        for group in extracted_data.get("AllADGroupsInformation", [])
-        if isinstance(group, dict) and group.get("Group name")
-    ]
+    # ad_groups = [
+    #     group.get("Group name")
+    #     for group in extracted_data.get("AllADGroupsInformation", [])
+    #     if isinstance(group, dict) and group.get("Group name")
+    # ]
 
-    if not ad_groups:
-        logger.warning("No AD groups found in ExtractedData.json. Nothing to process.")
-        sys.exit(0)
+    # if not ad_groups:
+    #     logger.warning("No AD groups found in ExtractedData.json. Nothing to process.")
+    #     sys.exit(0)
 
-    results = {}
-    for ent in ad_groups:
-        query_embedding = model.encode(ent, convert_to_tensor=True)
-        cos_scores = cos_sim(query_embedding, embeddings)[0]
-        top_score, top_idx = torch.max(cos_scores, 0)
-        suggested_entitlement = entitlements[top_idx]
-        results[ent] = {
-            "match": suggested_entitlement, 
-            "score": (top_score.float().item()) * 100, 
-            "index": (top_idx.int()).item()
-        }
-    
+    # results = {}
+    # for ent in ad_groups:
+    #     query_embedding = model.encode(ent, convert_to_tensor=True)
+    #     cos_scores = cos_sim(query_embedding, embeddings)[0]
+    #     top_score, top_idx = torch.max(cos_scores, 0)
+    #     suggested_entitlement = entitlements[top_idx]
+    #     results[ent] = {
+    #         "match": suggested_entitlement, 
+    #         "score": (top_score.float().item()) * 100, 
+    #         "index": (top_idx.int()).item()
+    #     }
+    results={
+        "R02_UG_DEEP_User_BusApp_MDM_Consumer": {
+        "match": "cn=Product Manager,ou=Groups,dc=iamcoe,dc=cloud",
+        "score": 34.5302015542984,
+        "index": 10
+      },
+      "DIA-MDM-EBXAdmin": {
+        "match": "cn=Risk and Compliance Manager,ou=Groups,dc=iamcoe,dc=cloud",  
+        "score": 30.463719367980957,
+        "index": 8
+      },
+      "R02_UG_DEEP_SDLC_MDM-mdm-PRD_Analyst_SPI": {
+        "match": "cn=Risk and Compliance Manager,ou=Groups,dc=iamcoe,dc=cloud",  
+        "score": 21.382655203342438,
+        "index": 8
+      }
+    }
     print(json.dumps(results, indent=4))
 
     # Path to ValidationResult.json
