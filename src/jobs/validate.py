@@ -64,10 +64,10 @@ if __name__=="__main__":
 
     for entitlement in ad_groups_entitlements:
         if any(entitlement == e["entitlement_value"] for e in all_entitlements):
-            valid_entitlements.append(entitlement)
+            valid_entitlements.append(e["Custom Property 13"])
             logger.debug(f"Entitlement valid: {entitlement}")
         else:
-            invalid_entitlements.append(entitlement)
+            invalid_entitlements.append(e["Custom Property 13"])
             logger.warning(f"Entitlement invalid: {entitlement}")
 
     # Validate roles
