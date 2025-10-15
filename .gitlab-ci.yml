@@ -25,6 +25,7 @@ extractFiles:
   rules:
     - if: $operation == "validate"
   script:
+    - python3 src/jobs/updateValidationFlag.py not_completed
     - python3 src/jobs/extract.py
   artifacts:
     paths:
@@ -138,7 +139,7 @@ updateValidationFlag:
   image: python:3.11-slim
   script:
     - pip install requests
-    - python3 src/jobs/updateValidationFlag.py
+    - python3 src/jobs/updateValidationFlag.py completed
   when: always
 
 #--------------configuration------------------------
