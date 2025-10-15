@@ -455,5 +455,4055 @@
     "entitlementOwner": [],
     "status": "1",
     "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ITSM Engineering",
+    "displayname": "ITSM Engineering",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "NY DB",
+    "displayname": "NY DB",
+    "description": "Manages databases hosted in New York",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Help Desk",
+    "displayname": "Help Desk",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "US Presidents Group 1",
+    "displayname": "US Presidents Group 1",
+    "description": "Demo user group for Password Reset Application",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Problem Solving",
+    "displayname": "Problem Solving",
+    "description": "Group that works on analyzing and fixing problems.\n\t\t",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "App Engine Studio Users",
+    "displayname": "App Engine Studio Users",
+    "description": "Users who are able to access App Engine Studio",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Field Services",
+    "displayname": "Field Services",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Creator Studio Users",
+    "displayname": "Creator Studio Users",
+    "description": "Provides access to the Creator Studio development experience. Users in this group will be auto-approved to create application.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Procurement",
+    "displayname": "Procurement",
+    "description": "Responsible for ordering catalog items, or moving them\n\t\t\tfrom inventory that are \"In Stock\"",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Software",
+    "displayname": "Software",
+    "description": "IT department responsible for all software requests\n\t\t\tincluding installation and repair",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Hardware",
+    "displayname": "Hardware",
+    "description": "IT department responsible for all hardware requests\n\t\t\tincluding installation and repair",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Creator Studio Restricted Users",
+    "displayname": "Creator Studio Restricted Users",
+    "description": "Provides access to the Creator Studio development experience. Users in this group need to submit requests so that applications can be created on their behalf.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Change Management",
+    "displayname": "Change Management",
+    "description": "Change Management Group",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Project Mgmt",
+    "displayname": "Project Mgmt",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Capacity Mgmt",
+    "displayname": "Capacity Mgmt",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "CAB Approval",
+    "displayname": "CAB Approval",
+    "description": "CAB approvers",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "eCAB Approval",
+    "displayname": "eCAB Approval",
+    "description": "eCAB Approvers",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Recommendation Admin",
+    "displayname": "Recommendation Admin",
+    "description": "Group used for Agent Assist Recommendation admin users",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ITSM App-Dev",
+    "displayname": "ITSM App-Dev",
+    "description": "Team Develops Iteraction Applications in London\n\t\t",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Survey Creators",
+    "displayname": "Survey Creators",
+    "description": "This is a group of users who have survey_creator role.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Team Development Code Reviewers",
+    "displayname": "Team Development Code Reviewers",
+    "description": "Review, approve and/or reject the code pushed to parent instance.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Service Desk",
+    "displayname": "Service Desk",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Database Atlanta",
+    "displayname": "Database Atlanta",
+    "description": "Manages databases hosted in Atlanta",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Database San Diego",
+    "displayname": "Database San Diego",
+    "description": "Manages databases hosted in San Diego",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "LDAP Admins",
+    "displayname": "LDAP Admins",
+    "description": "LDAP admins group",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Group"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "role_delegator",
+    "displayname": "role_delegator",
+    "description": "Can delegate roles to group members",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "antivirus_viewer",
+    "displayname": "antivirus_viewer",
+    "description": "Antivirus viewer has read access to all antivirus tables.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sla_admin",
+    "displayname": "sla_admin",
+    "description": "sla_admin has full SLM administrative rights",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "email_client_template_write",
+    "displayname": "email_client_template_write",
+    "description": "Provides write access to Email Client Templates.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_oe_sfs.sidebar_report_viewer",
+    "displayname": "sn_oe_sfs.sidebar_report_viewer",
+    "description": "This roles grants accesses to sidebar reports.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "connection_admin",
+    "displayname": "connection_admin",
+    "description": "This role allows access to Connections sys_connection and Credentials discovery_credentials table",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "cmdb_ms_admin",
+    "displayname": "cmdb_ms_admin",
+    "description": "Highest level role for Multisource queries. Provides full access to the Multisource queries. Admin can change configuration that editor cannot.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_appclient.app_client_user",
+    "displayname": "sn_appclient.app_client_user",
+    "description": "App client user",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_nowassist_diagn.execution_result_message_user",
+    "displayname": "sn_nowassist_diagn.execution_result_message_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "user_admin",
+    "displayname": "user_admin",
+    "description": "Can administer users, groups, locations, and companies",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "openapi_admin",
+    "displayname": "openapi_admin",
+    "description": "Provides rights to CRUD OpenAPI data.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "unified_plugin_read_only",
+    "displayname": "unified_plugin_read_only",
+    "description": "This role is required to have a read only access to the unified plugin experience page to view plugins.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "password_reset_credential_manager",
+    "displayname": "password_reset_credential_manager",
+    "description": "Manage life cycle of credential stores and its users, has access to Password Reset Overview and reporting.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "export_set_admin",
+    "displayname": "export_set_admin",
+    "description": "Can manage all aspects of Export Sets",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pa_power_user",
+    "displayname": "pa_power_user",
+    "description": "Performance Analytics Power User.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_mif.mif_read",
+    "displayname": "sn_mif.mif_read",
+    "description": "Read only role for MIF",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pdb_user",
+    "displayname": "pdb_user",
+    "description": "Allows access to the REST endpoints for Performance Dashboards data. ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "task_editor",
+    "displayname": "task_editor",
+    "description": "Can edit protected task fields",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "service_admin",
+    "displayname": "service_admin",
+    "description": "This role allows users to create, read, update and delete services and offerings in any portfolio. ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "license_viewer",
+    "displayname": "license_viewer",
+    "description": "This is a granular role that provides read access to some of the licensing tables",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "web_analytics_viewer",
+    "displayname": "web_analytics_viewer",
+    "description": "Web Analytics Viewer",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "decision_table_admin",
+    "displayname": "decision_table_admin",
+    "description": "Administrator role for decision tables",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "atf_ws_designer",
+    "displayname": "atf_ws_designer",
+    "description": "A role to allow easy creation of REST based ATF Test Steps",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "analytics_task_admin",
+    "displayname": "analytics_task_admin",
+    "description": "Users with this role can administor Analytics Tasks.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "iar_admin",
+    "displayname": "iar_admin",
+    "description": "Issue Auto-Resolution Administrator",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "user_criteria_admin",
+    "displayname": "user_criteria_admin",
+    "description": "Can manage the User Criteria records.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "service_editor",
+    "displayname": "service_editor",
+    "description": "This role provides access to read all layers and update services they own. They do not have access to reparent a service.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_request_read",
+    "displayname": "sn_request_read",
+    "description": "Read access to the Request Management Application and related functions (It does not check for approving records).",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "chat_survey_admin",
+    "displayname": "chat_survey_admin",
+    "description": "Chat Survey administrator",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_publications_recipients_user",
+    "displayname": "sn_publications_recipients_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_nowassist_admin.user",
+    "displayname": "sn_nowassist_admin.user",
+    "description": "This user can read Now Assist Admin Experience - BU Skills and Features",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_nb_action.resource_generator_author",
+    "displayname": "sn_nb_action.resource_generator_author",
+    "description": "Grants the user access to configure Resource generators to generate recommendations.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "notification_record_filter_admin",
+    "displayname": "notification_record_filter_admin",
+    "description": "Role required to create/update Notification Filter Configuration records.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "action_designer",
+    "displayname": "action_designer",
+    "description": "action designer role enables users to launch Action Designer",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "evam_admin",
+    "displayname": "evam_admin",
+    "description": "EVAM admin",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_templated_snip.template_snippet_admin",
+    "displayname": "sn_templated_snip.template_snippet_admin",
+    "description": "Grants access to scoped administration for the Templated Snippets application",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_udc.basic_write",
+    "displayname": "sn_udc.basic_write",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "clone_admin",
+    "displayname": "clone_admin",
+    "description": "Can read, write, and configure all elements of the Instance Clone Application",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_release_read",
+    "displayname": "sn_release_read",
+    "description": "Read only roles for Release Management tables",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "antivirus_admin",
+    "displayname": "antivirus_admin",
+    "description": "Antivirus admin can control Antivirus Scanning related settings and reports. ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_creatorstudio.basic_fulfiller",
+    "displayname": "sn_creatorstudio.basic_fulfiller",
+    "description": "Gives some access to fulfillers of request apps to the request app workspace and to edit some fields in sn_creatorstudio_task table.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_vsc.security_center_viewer",
+    "displayname": "sn_vsc.security_center_viewer",
+    "description": "This is a readonly role used for Security Center.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_cmdb_admin",
+    "displayname": "sn_cmdb_admin",
+    "description": "Highest level role for CMDB privileges. Provides full access to the CMDB data, tools and UIs. Admin can set policies such as class manager, app service requirement, etc that editor cannot.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "dependency_views",
+    "displayname": "dependency_views",
+    "description": "A special role to be applied both on the $ngbsm UI page and on the BSMProcessor.\r\nNo one nor any reference without this role can access dependency views module.\r\nITIL OOTB will include this role in order to avoid regressions. ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_g_app_creator.global",
+    "displayname": "sn_g_app_creator.global",
+    "description": "Allows guided app creator users to create globally scoped applications",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_ex_emp_fd.portal_stats_manager",
+    "displayname": "sn_ex_emp_fd.portal_stats_manager",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "uxframework_designer",
+    "displayname": "uxframework_designer",
+    "description": "Has write access to UX Page and UX Page Element records, for desigining UIs",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "platform_analytics_admin",
+    "displayname": "platform_analytics_admin",
+    "description": "Role for administrative privileges in platform analytics workspace. ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_nowassist_admin.nsa_admin",
+    "displayname": "sn_nowassist_admin.nsa_admin",
+    "description": "This user can create and update Now Assist Admin Experience.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "fd_read",
+    "displayname": "fd_read",
+    "description": "Read only role for flow designer.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "now_experience_analytics_admin",
+    "displayname": "now_experience_analytics_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "one_extend_viewer",
+    "displayname": "one_extend_viewer",
+    "description": "View Access for sys_one_extend Table",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "app_service_admin",
+    "displayname": "app_service_admin",
+    "description": "This role can create and modify application service maps (cmdb_ci_service_discovered)",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "va_branding",
+    "displayname": "va_branding",
+    "description": "Role for fetching branding settings via scripted rest api",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "global_tags_creator",
+    "displayname": "global_tags_creator",
+    "description": "This role grants permission to create global tags",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "template_read_global",
+    "displayname": "template_read_global",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_chg_soc.change_soc_admin",
+    "displayname": "sn_chg_soc.change_soc_admin",
+    "description": "This role has full administrative rights to Change Schedule pages",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_gd_guidance.guidance_manager",
+    "displayname": "sn_gd_guidance.guidance_manager",
+    "description": "Guidance Manager role can read, create, update and delete Guidance, Guidance Input and Guidance Component tables of Guided Decisions - Guidance Application. Contains the guidance_user role. ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "agent_security_admin",
+    "displayname": "agent_security_admin",
+    "description": "Manages security of the MID Server.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "certification_filter_admin",
+    "displayname": "certification_filter_admin",
+    "description": "Can manage Certification Filters",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_glider.ide_fluent_admin",
+    "displayname": "sn_glider.ide_fluent_admin",
+    "description": "Role for executing Fluent(now-sdk) operations within the ServiceNow IDE",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "aisa_admin",
+    "displayname": "aisa_admin",
+    "description": "Can configure AI Search Assist",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "knowledge",
+    "displayname": "knowledge",
+    "description": "Can write, edit, and review knowledge management articles",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_tourbuilder.tour_admin",
+    "displayname": "sn_tourbuilder.tour_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pd_author",
+    "displayname": "pd_author",
+    "description": "Enables user to launch and create processes in Process Automation Designer.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "inventory_user",
+    "displayname": "inventory_user",
+    "description": "Has access to stock information",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "knowledge_coach",
+    "displayname": "knowledge_coach",
+    "description": "Can perform AQI surveys on articles\r\nCan write, edit, and review knowledge management articles\r\n",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "update_version_report_on",
+    "displayname": "update_version_report_on",
+    "description": "Provides Report-on access to the Update Versions of customizations and upgrades.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_incident_read",
+    "displayname": "sn_incident_read",
+    "description": "Read access to the Incident Management Application and related functions",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "fd_read_operations_all",
+    "displayname": "fd_read_operations_all",
+    "description": "Full access role for flow designer operations information.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "agent_workspace_user",
+    "displayname": "agent_workspace_user",
+    "description": "Users of the Agent Workspace application, may navigate to the URL for that application",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_employee.admin",
+    "displayname": "sn_employee.admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "cxs_feedback_reader",
+    "displayname": "cxs_feedback_reader",
+    "description": "Grants read access to Contextual Search's Relevant Document and Relevant Document Detail tables.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "query_no_domain_table_api",
+    "displayname": "query_no_domain_table_api",
+    "description": "Provides access to cross-domain data using Table API when query parameter sysparm_query_no_domain=true is supplied.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pa_analyst",
+    "displayname": "pa_analyst",
+    "description": "Performance Analytics 'Text Analytics' User.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "physical_table_storage_stats_viewer",
+    "displayname": "physical_table_storage_stats_viewer",
+    "description": "Can view physical table storage stats",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "nlq_admin",
+    "displayname": "nlq_admin",
+    "description": "NLQ Admin user.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_incident_write",
+    "displayname": "sn_incident_write",
+    "description": "Write access to the Incident Management Application and related functions",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "inventory_admin",
+    "displayname": "inventory_admin",
+    "description": "Administers stockrooms, stock models, stock rules",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_agent_recommend.recommendation_admin",
+    "displayname": "sn_agent_recommend.recommendation_admin",
+    "description": "users with this role can manage Agent Assist Recommendation configs",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "template_editor",
+    "displayname": "template_editor",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "itil",
+    "displayname": "itil",
+    "description": "Can perform standard actions for an ITIL helpdesk technician. This is the out-of-box ''technician'' role. Can open, update, close incidents, problems, changes, config management items. Out-of-box, only users with the itil role can have tasks assigned to them",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "admin",
+    "displayname": "admin",
+    "description": "The System Administrator role. This role has access to all system features, functions, and data, regardless of security constraints. ''Grant this privilege carefully.'' If you have sensitive information, such as HR records, that you need to protect, you must create a custom '''admin '''role for that area and train a person authorized to see those records to act as the administrator",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "itil_admin",
+    "displayname": "itil_admin",
+    "description": "Possesses more privileges than the '''itil''' role and is intended for team leads. This role has the ability to delete incidents, problems, changes, and other related entities",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "business_process_admin",
+    "displayname": "business_process_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_docker_spoke.docker_webhook_registry_user",
+    "displayname": "sn_docker_spoke.docker_webhook_registry_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "email_api_send",
+    "displayname": "email_api_send",
+    "description": "Role required to use Email API to send email",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_tm2_read",
+    "displayname": "sn_tm2_read",
+    "description": "Read only role for Test Management 2.0.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "notification_dashboard_admin",
+    "displayname": "notification_dashboard_admin",
+    "description": "Allows user to view notification dashboard page.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "enterprise_architect",
+    "displayname": "enterprise_architect",
+    "description": "Person(s) responsible for performing the analysis of business structure and processes",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_docker_spoke.docker_images_remote_table_user",
+    "displayname": "sn_docker_spoke.docker_images_remote_table_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_incident_comments_write",
+    "displayname": "sn_incident_comments_write",
+    "description": "Write access to the Incident's Additional comments field",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "technology_service_owner",
+    "displayname": "technology_service_owner",
+    "description": "Person(s) accountable for managing one or more technical services throughout their entire lifecycle.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "cmdb_inst_admin",
+    "displayname": "cmdb_inst_admin",
+    "description": "This role allows user to do all actions relevant to CMDB Integration Studio",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "catalog_manager",
+    "displayname": "catalog_manager",
+    "description": "Person in a department who requests new Service Categories, assigns editors to create / update services, and approves those services for publication in the catalog",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "interaction_admin",
+    "displayname": "interaction_admin",
+    "description": "A required role to administer the Interaction Management System",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "workflow_report_viewer",
+    "displayname": "workflow_report_viewer",
+    "description": "Access to workflow scratchpad for reports",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "notification_provider_admin",
+    "displayname": "notification_provider_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_ppm_finance_read",
+    "displayname": "sn_ppm_finance_read",
+    "description": "Read only roles for Project Portfolio Suite with financials",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "filter_admin",
+    "displayname": "filter_admin",
+    "description": "Can manage Filters",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "upgrade_history_log_report_view",
+    "displayname": "upgrade_history_log_report_view",
+    "description": "Provides Report-view access to the Upgrade History Logs",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "personalize_ui",
+    "displayname": "personalize_ui",
+    "description": "Can personalize forms and lists",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "personalize_control",
+    "displayname": "personalize_control",
+    "description": "Can personalize controls on lists, such as filters, links, and buttons",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "personalize_rules",
+    "displayname": "personalize_rules",
+    "description": "Can personalize Business Rules and scripts. This role contains the following, specialized roles for granting selective, administrative access to rules and scripts: \n-business_rule_admin \n-client_script_admin \n-ui_policy_admin \n-ui_action_admin",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "personalize_dictionary",
+    "displayname": "personalize_dictionary",
+    "description": "Can personalize dictionary entries and labels",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "personalize_choices",
+    "displayname": "personalize_choices",
+    "description": "Can personalize the choices for a choice list field",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "personalize_styles",
+    "displayname": "personalize_styles",
+    "description": "Can personalize Field Styles",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "personalize_responses",
+    "displayname": "personalize_responses",
+    "description": "Can personalize predefined responses for suggestion fields, such as the Additional Comments field.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_creatorstudio.admin",
+    "displayname": "sn_creatorstudio.admin",
+    "description": "Admin access to Creator Studio app and approvals.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "doc_toc_config_writer",
+    "displayname": "doc_toc_config_writer",
+    "description": "This role allows a user to write the TOC Configuration",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "approval_reporter",
+    "displayname": "approval_reporter",
+    "description": "Allows users without approval_admin, catalog or itil roles to view reports that contain data from sysapproval_approver table",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "export_set_scheduler",
+    "displayname": "export_set_scheduler",
+    "description": "Can schedule export sets",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "soap",
+    "displayname": "soap",
+    "description": "Can query, create, update, and delete records on all tables, as well as execute scripts",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "soap_query",
+    "displayname": "soap_query",
+    "description": "Can query records on all tables and columns",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "soap_update",
+    "displayname": "soap_update",
+    "description": "Can update records on all tables and columns",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "soap_delete",
+    "displayname": "soap_delete",
+    "description": "Can delete records on all tables and columns",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "soap_query_update",
+    "displayname": "soap_query_update",
+    "description": "Can query and update all tables and columns",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "soap_create",
+    "displayname": "soap_create",
+    "description": "Can create records in all tables and columns",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "email_client_admin",
+    "displayname": "email_client_admin",
+    "description": "Grants requisite permissions to configure the email client. ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "soap_ecc",
+    "displayname": "soap_ecc",
+    "description": "Can query, create, and update on the ECC Queue table only",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "soap_script",
+    "displayname": "soap_script",
+    "description": "Can execute business rule endpoint function via script.do",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sla_manager",
+    "displayname": "sla_manager",
+    "description": "sla_manager can define SLA Definitions and view SLA Repair logs, but can't change property values, define SLA Conditions Types, etc.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "analytics_admin",
+    "displayname": "analytics_admin",
+    "description": "User Experience Analytics Admin",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_request_comments_write",
+    "displayname": "sn_request_comments_write",
+    "description": "Write access to the additional comments on the requested item",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_investment_funding_read",
+    "displayname": "sn_investment_funding_read",
+    "description": "Read only roles for Investment Funding",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "actsub_admin",
+    "displayname": "actsub_admin",
+    "description": "Activity Subscriptions Administrator role",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "customer_update_report_on",
+    "displayname": "customer_update_report_on",
+    "description": "Provides Report-on access to the Customer Updates table",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "flow_operator",
+    "displayname": "flow_operator",
+    "description": "Flow Designer role which allows access to flow designer operations information. ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "reliability_metrics_admin",
+    "displayname": "reliability_metrics_admin",
+    "description": "Can create, delete, and write records to tables related to Data Management Reliability Metrics.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "catalog_channel_analyzer",
+    "displayname": "catalog_channel_analyzer",
+    "description": "This role provides the read access for the records of \"Catalog Channel Analytics\" Table.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "assessment_admin",
+    "displayname": "assessment_admin",
+    "description": "Assessment Admin will have access to the Assessment components (assessment_master, assessment_question, assessment_question_choice)",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "catalog_builder_editor",
+    "displayname": "catalog_builder_editor",
+    "description": "Can create/edit items in catalog builder",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "bsm_legacy",
+    "displayname": "bsm_legacy",
+    "description": "Only users with the 'bsm_legacy' will see  the module BSM Legacy within Dependencies View",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "web_analytics_admin",
+    "displayname": "web_analytics_admin",
+    "description": "Web Analytics Admin",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "business_stakeholder",
+    "displayname": "business_stakeholder",
+    "description": "Use the Business Stakeholder role to provide authorized users to approve, view/read records across the organization and view reports. Note there is a fee associated with this role. Do not assign it to users without confirming your organization has the appropriate entitlement. Please review the documentation for additional details.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "workspace_user",
+    "displayname": "workspace_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_docker_spoke.docker_webhook_answer_subflow_user",
+    "displayname": "sn_docker_spoke.docker_webhook_answer_subflow_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_sow.sow_user",
+    "displayname": "sn_sow.sow_user",
+    "description": "This role enables users to access Service Operations Workspace and to perform basic operations in Workspace.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pa_threshold_admin",
+    "displayname": "pa_threshold_admin",
+    "description": "Performance Analytics Threshold Administrator.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_nb_action.next_best_action_admin",
+    "displayname": "sn_nb_action.next_best_action_admin",
+    "description": "Grants the user administrator access to Recommended Action.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_change_task_assigned_user",
+    "displayname": "sn_change_task_assigned_user",
+    "description": "Access to change_task if the change_task is assigned to the user.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_process_optimization_admin",
+    "displayname": "sn_process_optimization_admin",
+    "description": "As administrator, you can access all Process Mining project configurations and settings. The admin role contains the power user role.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "rest_service",
+    "displayname": "rest_service",
+    "description": "Deprecated. This role is no longer required to access the REST API. \r\nRefer to \"snc_platform_rest_api_access\" role for securing platform REST APIs.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "cannot_read_suggestions",
+    "displayname": "cannot_read_suggestions",
+    "description": "Users with this role are not authorized to use suggestion service.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_process_optimization_analyst",
+    "displayname": "sn_process_optimization_analyst",
+    "description": "As an analyst, you can create your own Process Mining projects and share the analysis with others. Projects created by other users and shared with the analyst can be viewed, deleted, and shared. This role should be assigned to analysts, process owners, and data scientists.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "transform_type_admin",
+    "displayname": "transform_type_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "kafka_namespace_admin",
+    "displayname": "kafka_namespace_admin",
+    "description": "Allows the user to manage Kafka namespace definitions. In an MSP instance with Kafka integrations in multiple domains, managing namespace definitions properly is important to maintain separation between domains, so it is recommended that this role not be granted to administrators within a single domain",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "rota_admin",
+    "displayname": "rota_admin",
+    "description": "Create, edit and delete Shifts. Manage all aspects of a Shift: rosters, roster members, coverage and time-off.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "rota_manager",
+    "displayname": "rota_manager",
+    "description": "Manage a group's Shifts. Manage associated data if delegated for a particular group",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "playbook.admin",
+    "displayname": "playbook.admin",
+    "description": "Admin role for Process Automation Designer.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_hr_sp.admin",
+    "displayname": "sn_hr_sp.admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "snc_platform_rest_api_access",
+    "displayname": "snc_platform_rest_api_access",
+    "description": "Allows access to Platform Rest APIs\r\n- Table API \r\n- Import Set API \r\n- Aggregate API \r\n- Attachment API ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_sla_definition_read",
+    "displayname": "sn_sla_definition_read",
+    "description": "Users with this role are allowed to read SLA Definitions",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "data_classification_auditor",
+    "displayname": "data_classification_auditor",
+    "description": "This role is required to read any data classification related records. It does not grant any access beyond read.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "incident_manager",
+    "displayname": "incident_manager",
+    "description": "Can administer Incident properties and Major Incident trigger rules.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_service_desk_agent",
+    "displayname": "sn_service_desk_agent",
+    "description": "The Service Desk Agent role enables users to improve the operational efficiency of handling customer inquiries by streamlining the intake process, quickly gathering and verifying necessary information, and providing prompt resolutions.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_collab_request.collab_extras_entitlement",
+    "displayname": "sn_collab_request.collab_extras_entitlement",
+    "description": "Role that provides extra entitlements to the user.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "cmdb_query_builder",
+    "displayname": "cmdb_query_builder",
+    "description": "Can access the CMDB Query Builder application to create, run and save queries on the CMDB",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_wwna.user",
+    "displayname": "sn_wwna.user",
+    "description": "This role is mainly used to fetch the Skill Configuration required for WWNA.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "service_model_security_admin",
+    "displayname": "service_model_security_admin",
+    "description": "This role allows users to override Service Modeling security settings.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "trigger_designer_read",
+    "displayname": "trigger_designer_read",
+    "description": "Trigger designer read role that enables user to view Trigger Designer",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "data_classification_admin",
+    "displayname": "data_classification_admin",
+    "description": "Allows CRUD access to all data classification related records. Contains data_classification_auditor role.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "text_search_admin",
+    "displayname": "text_search_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_gf.goal_admin",
+    "displayname": "sn_gf.goal_admin",
+    "description": "User with this role can update the goal preferences.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "import_set_loader",
+    "displayname": "import_set_loader",
+    "description": "Can load Import Sets",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "import_transformer",
+    "displayname": "import_transformer",
+    "description": "Can manage Import Set Transform Maps and run transforms",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "import_scheduler",
+    "displayname": "import_scheduler",
+    "description": "Can schedule imports",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "import_admin",
+    "displayname": "import_admin",
+    "description": "Can manage all aspects of Import Sets and imports",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_tourbuilder.tour_user",
+    "displayname": "sn_tourbuilder.tour_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "customer_update_report_view",
+    "displayname": "customer_update_report_view",
+    "description": "Provides Report-view access to the Customer Updates table",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "flow_report_viewer",
+    "displayname": "flow_report_viewer",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "credential_admin",
+    "displayname": "credential_admin",
+    "description": "This role allows access to Credentials discovery_credentials table",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "push_admin",
+    "displayname": "Push Admin",
+    "description": "Push notification admin. Grants user permissions to create and modify push notifications. ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "workspace_list_admin",
+    "displayname": "workspace_list_admin",
+    "description": "Can manage workspace lists and categories",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "workspace_admin",
+    "displayname": "workspace_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_par_sche_export.par_scheduler_admin",
+    "displayname": "sn_par_sche_export.par_scheduler_admin",
+    "description": "Par Scheduler Administrator.  Can do CRUD operations on par_export table.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "embedded_help_admin",
+    "displayname": "embedded_help_admin",
+    "description": "Admin user for administering Embedded Help records",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_sd.success_dashboard_read",
+    "displayname": "sn_sd.success_dashboard_read",
+    "description": "Allows viewing of high level KPIs in the Success Dashboard",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "portal_analytics_viewer",
+    "displayname": "portal_analytics_viewer",
+    "description": "Role for viewing the web analytics",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ts_admin",
+    "displayname": "ts_admin",
+    "description": "Text Search Administrator",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pd_shared.admin",
+    "displayname": "pd_shared.admin",
+    "description": "Role required for CRUD operations on shared tables.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "guided_tour_analytics",
+    "displayname": "guided_tour_analytics",
+    "description": "Guided Tour Analytics Role",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "teamdev_user",
+    "displayname": "teamdev_user",
+    "description": "Can do Team Development operations, such as push, pull, compare, reconcile",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "schedule_admin",
+    "displayname": "schedule_admin",
+    "description": "Can manage Schedules",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "portfolio_editor",
+    "displayname": "portfolio_editor",
+    "description": "This role provides access to update portfolios, taxonomy layers, taxonomy nodes, services, and reparent services.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "teamdev_configure_instance",
+    "displayname": "teamdev_configure_instance",
+    "description": "This role should not be granted on the managing instance. This role should be granted to a user on a managed instance that will be used to configure it to participate in Team Development.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "data_policy_admin",
+    "displayname": "data_policy_admin",
+    "description": "Can create, update and delete data policies.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "graphql_schema_admin",
+    "displayname": "graphql_schema_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "actsub_user",
+    "displayname": "actsub_user",
+    "description": "Activity Subscriptions User role",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "export_rest_api",
+    "displayname": "export_rest_api",
+    "description": "Can access Export as Open API on REST API Explorer",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "password_reset_admin",
+    "displayname": "password_reset_admin",
+    "description": "Manages life cycles of password reset process, verification, as well as anything a password_reset_credential_manager does. ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_bm_client.benchmark_data_viewer",
+    "displayname": "sn_bm_client.benchmark_data_viewer",
+    "description": "Used for viewing the benchmark data and visualizations",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "action_category_creator",
+    "displayname": "action_category_creator",
+    "description": "Allows creation of action and subflow categories.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "guided_tour_admin",
+    "displayname": "guided_tour_admin",
+    "description": "Admin user for administering Guided Tour records",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_appclient.app_client_company_installer",
+    "displayname": "sn_appclient.app_client_company_installer",
+    "description": "App client user who can install compant apps",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "dynamic_schema_reader",
+    "displayname": "dynamic_schema_reader",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_creatorstudio.app_requestor",
+    "displayname": "sn_creatorstudio.app_requestor",
+    "description": "Primitive app requestor access to Creator Studio resources",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_process_optimization_power_user",
+    "displayname": "sn_process_optimization_power_user",
+    "description": "As a power user, you can access all Process Mining project configurations and settings, and create new projects for others to reuse. The power user role contains the analyst role",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "email_access_restriction_admin",
+    "displayname": "email_access_restriction_admin",
+    "description": "Controls access to the email_access_restriction table",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "flow_designer",
+    "displayname": "flow_designer",
+    "description": "flow designer role that enables user to launch Flow Designer",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "predictive_intelligence_api",
+    "displayname": "predictive_intelligence_api",
+    "description": "This role provide access to predictive_intelligence_api REST Endpoint.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_mif.mif_admin",
+    "displayname": "sn_mif.mif_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "virtual_agent_admin",
+    "displayname": "virtual_agent_admin",
+    "description": "Users who can use the Conversation Designer for Virtual Agent.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "taxonomy_admin",
+    "displayname": "taxonomy_admin",
+    "description": "Users with this role will be able to update and modify any created taxonomy in the \" taxonomy and topic table names\".",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "service_owner",
+    "displayname": "service_owner",
+    "description": "Person(s) accountable for managing all elements that makup a portfolio throughout their entire lifecycle. These portfolios elements include Products, Services and Processes.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "appcollab.apiuser",
+    "displayname": "appcollab.apiuser",
+    "description": "Role to access App Collaboration plugin REST Endpoints.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "live_feed_admin",
+    "displayname": "live_feed_admin",
+    "description": "Administer profiles, messages, likes, etc for Live Feed (read/write)",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "knowledge_group_manager",
+    "displayname": "knowledge_group_manager",
+    "description": "can manage knowledge type groups",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "decision_table_reader",
+    "displayname": "decision_table_reader",
+    "description": "Read role for decision tables",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_cicd.sys_ci_automation",
+    "displayname": "sn_cicd.sys_ci_automation",
+    "description": "Required role for using CI/CD functionality",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "content_admin",
+    "displayname": "content_admin",
+    "description": "Can read, write, and configure all elements of the Content Management Application",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "atf_test_designer",
+    "displayname": "atf_test_designer",
+    "description": "Test designer role for metadata testing",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_collab_request.admin_write",
+    "displayname": "sn_collab_request.admin_write",
+    "description": "This role allows the user to read, write and delete records on the Developer Collaboration Tasks table.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_sttrm_attribute_read",
+    "displayname": "sn_sttrm_attribute_read",
+    "description": "ITSM State Transition Models Attribute Read role",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "report_scheduler",
+    "displayname": "report_scheduler",
+    "description": "Can schedule emailing of all reports that they can see, including reports they cannot manage. Users with this role must also have another role that grants permission to create, edit, and share reports.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "template_scheduler",
+    "displayname": "template_scheduler",
+    "description": "Can schedule template-based record creation",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_cmdb_editor",
+    "displayname": "sn_cmdb_editor",
+    "description": "CRUD access to CMDB records but not allowed to change policies such as data manager, class manager etc..",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_collab_request.basic_write",
+    "displayname": "sn_collab_request.basic_write",
+    "description": "Primitive write access to Collaboration Request resources.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "nlu_admin",
+    "displayname": "nlu_admin",
+    "description": "Users who can use NLU Workbench to manage NLU models",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "teamdev_code_reviewer",
+    "displayname": "teamdev_code_reviewer",
+    "description": "Review, approve, and reject a pushed code change. Is able to read records from: sys_sync_history, sys_sync_history_version, sys_update_version and sys_update_set_source",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_wn.content_creator",
+    "displayname": "sn_wn.content_creator",
+    "description": "Provides the ability to create content for What's new",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_nowassist_diagn.execution_result_user",
+    "displayname": "sn_nowassist_diagn.execution_result_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "app_engine_admin",
+    "displayname": "app_engine_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_tm1_read",
+    "displayname": "sn_tm1_read",
+    "description": "Read only roles for Test Management 1.0 tables",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "update_set_preview_report_on",
+    "displayname": "update_set_preview_report_on",
+    "description": "Provides Report-on access to the Update Set Preview tables",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "app_template_admin",
+    "displayname": "app_template_admin",
+    "description": "Administrator of application templates",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "activity_creator",
+    "displayname": "activity_creator",
+    "description": "This role give workflow users the ability to create custom orchestration activities in the workflow canvas.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_deploy_pipeline.scan_suite_user",
+    "displayname": "sn_deploy_pipeline.scan_suite_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "valk_sync_service",
+    "displayname": "valk_sync_service",
+    "description": "Allows to access user properties  REST resource ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_sow.sow_home",
+    "displayname": "sn_sow.sow_home",
+    "description": "This role enables users to access Service Operations Workspace Home page.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "business_relationship_manager",
+    "displayname": "business_relationship_manager",
+    "description": "Person(s) responsible for both business strategy and business value in an effort to advance business objectives.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "email_client_template_read",
+    "displayname": "email_client_template_read",
+    "description": "Has read access to Email Client Templates.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "context_rollback_executor",
+    "displayname": "context_rollback_executor",
+    "description": "Allows the user to rollback contexts owned by any user",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "discovery_admin",
+    "displayname": "discovery_admin",
+    "description": "Can access the \"Discovery\" and \"Discovery Definition\" applications to configure, monitor and run Discovery operations",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "cors_rule_admin",
+    "displayname": "cors_rule_admin",
+    "description": "Can manage CORS rules",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_gf.goal_user_read",
+    "displayname": "sn_gf.goal_user_read",
+    "description": "User with this role has read only access to Goal tables",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_ace.ace_admin",
+    "displayname": "sn_ace.ace_admin",
+    "description": "This user can create and update ACE experiences.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "external_app_install_admin",
+    "displayname": "install_admin",
+    "description": "Can install external apps like Slack, Teams",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_ace.ace_user",
+    "displayname": "sn_ace.ace_user",
+    "description": "This user will have access to read ACE experiences.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_problem_write",
+    "displayname": "sn_problem_write",
+    "description": "Write access to the Problem Application and related functions",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ui_action_admin",
+    "displayname": "ui_action_admin",
+    "description": "Can manage UI Actions",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "business_rule_admin",
+    "displayname": "business_rule_admin",
+    "description": "Can manage Business Rules",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "client_script_admin",
+    "displayname": "client_script_admin",
+    "description": "Can manage Client Scripts",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ui_policy_admin",
+    "displayname": "ui_policy_admin",
+    "description": "Can manage UI Policies",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "tags_admin",
+    "displayname": "tags_admin",
+    "description": "This role grants permission to administer any user's or group's tags and set up global tags",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_publications.admin",
+    "displayname": "sn_publications.admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "kafka_admin",
+    "displayname": "kafka_admin",
+    "description": "Management of the integration with Kafka, including topics and settings related to kafka subscriptions",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ml_admin",
+    "displayname": "ml_admin",
+    "description": "Can create, read, write or delete the  ml_predictor_results table and the ml_predictor_results_task table.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_gd_guidance.guidance_user",
+    "displayname": "sn_gd_guidance.guidance_user",
+    "description": "Guidance User read role.Can read Guidance, Guidance Component, Guidance Input tables of Guided Decisions - Guidance Application.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "storage_disk_usage_stats_viewer",
+    "displayname": "storage_disk_usage_stats_viewer",
+    "description": "Can view storage disk usage stats",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "cmdb_import_api_admin",
+    "displayname": "cmdb_import_api_admin",
+    "description": "CMDB Push API role for sending data into an import set staging table through the REST endpoint",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "analytics_categories_admin",
+    "displayname": "analytics_categories_admin",
+    "description": "This role can create, remove, edit categories (table: analytics_category)",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "currency_instance_report_admin",
+    "displayname": "currency_instance_report_admin",
+    "description": "Role for report view ACL on FxCurrency",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pd_shared.user",
+    "displayname": "pd_shared.user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "unlimited_createnow",
+    "displayname": "unlimited_createnow",
+    "description": "Role for CreateNow unlimited licensed users",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "suggestion_exempt",
+    "displayname": "suggestion_exempt",
+    "description": "Users with this role can read suggestions, but they do not generate suggestions as a result of their searches.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "dynamic_schema_writer",
+    "displayname": "dynamic_schema_writer",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "cloud_admin",
+    "displayname": "cloud_admin",
+    "description": "Responsible for the overall setup and administration of the cloud management environment.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "mobile_client_script_debugger",
+    "displayname": "mobile_client_script_debugger",
+    "description": "This role allows users to debug mobile client scripts",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ais_high_security_admin",
+    "displayname": "ais_high_security_admin",
+    "description": "Privileged role for high security tasks for AI Search",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "email_client_quick_message_author",
+    "displayname": "email_client_quick_message_author",
+    "description": "Email client quick message author role enables non admin users to have read, write, update, delete permissions on Email client quick messages",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "record_hierarchy_reader",
+    "displayname": "record_hierarchy_reader",
+    "description": "Allows users to read a sys_record_hierarchy definitions.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "workflow_admin",
+    "displayname": "workflow_admin",
+    "description": "Can create, edit, publish or delete graphical workflows",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "workflow_creator",
+    "displayname": "workflow_creator",
+    "description": "Can create new graphical workflows",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "workflow_publisher",
+    "displayname": "workflow_publisher",
+    "description": "Can publish graphical workflows",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "catalog_view_masked",
+    "displayname": "catalog_view_masked",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ui_builder_admin",
+    "displayname": "ui_builder_admin",
+    "description": "May use the UI Builder APIs to create, update, read, and delete UX Pages",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "report_user",
+    "displayname": "report_user",
+    "description": "Can create and view reports that have been shared with them. Cannot share, edit, or delete reports that have been shared with them.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pd_operator",
+    "displayname": "pd_operator",
+    "description": "Process automation designer role which allows access to flow designer operations information.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_devstudio_studio_preferences_user",
+    "displayname": "sn_devstudio_studio_preferences_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "personalize_decision_table_input",
+    "displayname": "personalize_decision_table_input",
+    "description": "Gives full access to decision table inputs",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "assignment_rule_admin",
+    "displayname": "assignment_rule_admin",
+    "description": "Can manage Assignment Rules",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "fd_read_operations",
+    "displayname": "fd_read_operations",
+    "description": "Read only role for flow designer operations information.\t",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "mobile_analytics_viewer",
+    "displayname": "mobile_analytics_viewer",
+    "description": "Mobile Analytics Viewer",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "hp_publisher_admin",
+    "displayname": "hp_publisher_admin",
+    "description": "Homepages Publishers Administrator",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "formula_read",
+    "displayname": "formula_read",
+    "description": "Formula read-only role provides read access to formula function records",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ecmdb_admin",
+    "displayname": "ecmdb_admin",
+    "description": "Can manage the Enterprise CMDB",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "chat_admin",
+    "displayname": "chat_admin",
+    "description": "Administers chat tables (read/write)",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "business_process_user",
+    "displayname": "business_process_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "tracked_file_reader",
+    "displayname": "tracked_file_reader",
+    "description": "Read role for tracked configuration files",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_creatorstudio.user",
+    "displayname": "sn_creatorstudio.user",
+    "description": "Provides access to Creator Studio. Can create new applications.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sam",
+    "displayname": "sam",
+    "description": "This role grants a user access to the software asset management feature included with Asset Management. Different roles (sam_admin, sam_user and sam_developer) are required to use the Software Asset Management application.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "rate_limit_admin",
+    "displayname": "rate_limit_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_fdih_dashboards.fdih_tabs_user",
+    "displayname": "sn_fdih_dashboards.fdih_tabs_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_creatorstudio.restricted_user",
+    "displayname": "sn_creatorstudio.restricted_user",
+    "description": "Provides access to Creator Studio.  Cannot create new applications.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "business_process_manager",
+    "displayname": "business_process_manager",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "update_set_preview_report_view",
+    "displayname": "update_set_preview_report_view",
+    "description": "Provides Report-view access to the Update Set Preview tables",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "search_relevancy_model_admin",
+    "displayname": "search_relevancy_model_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ih_import",
+    "displayname": "ih_import",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "oauth_user",
+    "displayname": "oauth_user",
+    "description": "OAuth User to store and access OAuth requestor profile record",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "canvas_user",
+    "displayname": "canvas_user",
+    "description": "User role for Canvas Core Application",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "analytics_filter_admin",
+    "displayname": "analytics_filter_admin",
+    "description": "an admin role for par filters",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "approval_admin",
+    "displayname": "approval_admin",
+    "description": "Use the approval_admin role to allow users to view or modify approval requests not directly assigned to them. Use the approver_user role to allow approvers to only view or modify requests directly assigned to them. Use of this role requires a Fulfiller license. Use of the approver_user role requires an Approver license.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "decision_rule_author",
+    "displayname": "decision_rule_author",
+    "description": "Role for editing decisions",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_mab_api.admin",
+    "displayname": "sn_mab_api.admin",
+    "description": "Allows write and delete operations on sn_mab_api tables",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "oauth_admin",
+    "displayname": "oauth_admin",
+    "description": "OAuth application manager role",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "par_scheduler",
+    "displayname": "par_scheduler",
+    "description": "Can schedule email distribution of all visualizations that they can view or edit.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "currency_instance_admin",
+    "displayname": "currency_instance_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "filter_global",
+    "displayname": "filter_global",
+    "description": "Can create global filters",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "filter_group",
+    "displayname": "filter_group",
+    "description": "Can create filters that belong to groups of which the user is a member",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_request_write",
+    "displayname": "sn_request_write",
+    "description": "Write access to the Request Management Application and related functions",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_sow.it_agent_dashboard_user",
+    "displayname": "sn_sow.it_agent_dashboard_user",
+    "description": "This role enables users to access Service Operations Workspace - IT Agent Dashboard.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sdk_analytics_viewer",
+    "displayname": "sdk_analytics_viewer",
+    "description": "SDK Analytics Viewer",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "view_changer",
+    "displayname": "view_changer",
+    "description": "Can switch active views",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "report_global",
+    "displayname": "report_global",
+    "description": "Can manage reports that are shared with everyone (listed in Global).",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "report_group",
+    "displayname": "report_group",
+    "description": "Can manage and share reports that are shared with them (listed in Group).",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pd_trigger_author",
+    "displayname": "pd_trigger_author",
+    "description": "Allows users to create and edit trigger definitions to be used in Process Automation Designer.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pd_content_author",
+    "displayname": "pd_content_author",
+    "description": "Allows users to create and edit activity definitions to be used in Process Automation Designer.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "scan_user",
+    "displayname": "scan_user",
+    "description": "Users with this role can initiate and view the results of scans.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_templated_snip.template_snippet_writer",
+    "displayname": "sn_templated_snip.template_snippet_writer",
+    "description": "Grant access to CRUD templated snippets content",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_ci_gs_content.ci_guided_setup_admin",
+    "displayname": "sn_ci_gs_content.ci_guided_setup_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "problem_task_analyst",
+    "displayname": "problem_task_analyst",
+    "description": "Works on a Problem Task and manages it through its lifecycle",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "catalog_template_editor",
+    "displayname": "catalog_template_editor",
+    "description": "Enables creation and editing of catalog item templates",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "web_service_admin",
+    "displayname": "web_service_admin",
+    "description": "Can manage Web Services",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "agent_admin",
+    "displayname": "agent_admin",
+    "description": "Can download and administer the system's built-in agent",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "workspace.activity_stream_restrict_create_filter_set",
+    "displayname": "workspace.activity_stream_restrict_create_filter_set",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_dd_itsmmobile_mobilestudio",
+    "displayname": "sn_dd_itsmmobile_mobilestudio",
+    "description": "Delegated Development: Grants access in ITSM Mobile to permission set Mobile Studio",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sttrm_admin",
+    "displayname": "sttrm_admin",
+    "description": "ITSM State Transition Models Administrator",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "iamsync_admin",
+    "displayname": "iamsync_admin",
+    "description": "Can insert,update,delete Identity Sync configuration tables",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_nb_action.next_best_action_author",
+    "displayname": "sn_nb_action.next_best_action_author",
+    "description": "Grants the user access configure Recommended Action rules to generate recommendations.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_gf.epmo_strategy_planner",
+    "displayname": "sn_gf.epmo_strategy_planner",
+    "description": "User with this role should have super user access to all the strategies and goals",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_nlu_workbench.nlu_feedback_admin",
+    "displayname": "sn_nlu_workbench.nlu_feedback_admin",
+    "description": "Data labelling (NLU feedback) Admin role - to manage data labelling across models also ability to optimize models",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "mobile_analytics_admin",
+    "displayname": "mobile_analytics_admin",
+    "description": "Mobile Analytics Admin",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "platform_ml_read",
+    "displayname": "platform_ml_read",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_udc.basic_read",
+    "displayname": "sn_udc.basic_read",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "api_analytics_read",
+    "displayname": "api_analytics_read",
+    "description": "Can read API Analytics data",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "cmdb_ms_editor",
+    "displayname": "cmdb_ms_editor",
+    "description": "CRUD access to the Multisource queries but not allowed to change configuration.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "canvas_admin",
+    "displayname": "canvas_admin",
+    "description": "Admin role for Canvas Core Application",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "problem_coordinator",
+    "displayname": "problem_coordinator",
+    "description": "Works on a Problem or Problem Task and manages it through its lifecycle",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_app_eng_studio.user",
+    "displayname": "sn_app_eng_studio.user",
+    "description": "Allows non-admin users to access the App Engine Studio application.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "flow_designer_scripting",
+    "displayname": "flow_designer_scripting",
+    "description": "A user of Flow/Action Designer that may write input scripts.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_nowassist_diagn.admin",
+    "displayname": "sn_nowassist_diagn.admin",
+    "description": "Admin role to deal with things related to Now Assist Diagnostics",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_incident_task_assigned_user",
+    "displayname": "sn_incident_task_assigned_user",
+    "description": "Access to incident_task if the incident_task is assigned to the user.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "query_range_role",
+    "displayname": "query_range_role",
+    "description": "Role for query_range ACLs tableName.* and *.*",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sdk_analytics_admin",
+    "displayname": "sdk_analytics_admin",
+    "description": "SDK Analytics Admin",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "bsm_legacy_admin",
+    "displayname": "bsm_legacy_admin",
+    "description": "Only users with the 'bsm_legacy_admin' will see the module BSM Legacy within Dependencies View",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_creatorstudio.basic_read",
+    "displayname": "sn_creatorstudio.basic_read",
+    "description": "Primitive read access to Creator Studio resources",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "oc_read",
+    "displayname": "oc_read",
+    "description": "This role gives read access to on-call calendar and other on-call scheduling modules.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_help_admin",
+    "displayname": "sn_help_admin",
+    "description": "Role to create and manage help and guidance  ",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "gauge_maker",
+    "displayname": "gauge_maker",
+    "description": "Can create gauges from reports or charts",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "report_publisher",
+    "displayname": "report_publisher",
+    "description": "Can publish reports that they can manage. Publishing a report creates a public link to that report. Users with this role must also have another role that grants permission to create, edit, and share reports.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "update_version_report_view",
+    "displayname": "update_version_report_view",
+    "description": "Provides Report-view access to the Update Versions of customizations and upgrades.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "decision_result_editor",
+    "displayname": "decision_result_editor",
+    "description": "Role for editing decision table results",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ui_page_admin",
+    "displayname": "ui_page_admin",
+    "description": "Can manage UI Pages",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ui_macro_admin",
+    "displayname": "ui_macro_admin",
+    "description": "Can manage UI Macros",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_ssa_core.self_service_manager",
+    "displayname": "sn_ssa_core.self_service_manager",
+    "description": "Can perform CRUD operations on Pattern and Activity configuration and the Deflection data tables.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_workflow_studio.workflow_studio_read",
+    "displayname": "sn_workflow_studio.workflow_studio_read",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pa_target_admin",
+    "displayname": "pa_target_admin",
+    "description": "Performance Analytics Target Administrator.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "core_ui_analytics_admin",
+    "displayname": "core_ui_analytics_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "image_admin",
+    "displayname": "image_admin",
+    "description": "Can manage image files on the Images db_image table",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "catalog_lookup_manager",
+    "displayname": "catalog_lookup_manager",
+    "description": "Can manage Catalog Data Lookup match and set rules",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "uxframework_user",
+    "displayname": "uxframework_user",
+    "description": "May browse and select from the library of UX Component records, so they can set a Component reference field on any other table they have update access to",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pa_admin",
+    "displayname": "pa_admin",
+    "description": "Performance Analytics Administrator.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "viz_creator",
+    "displayname": "viz_creator",
+    "description": "Can create data visualizations in the visualization library. Can also edit, delete, export, and share the data visualizations that they have created. Can only share visualizations with groups and users.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "mobile_oneextend_admin",
+    "displayname": "mobile_oneextend_admin",
+    "description": "Allows for read/write access for sys_sg_async_request table",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pa_data_collector",
+    "displayname": "pa_data_collector",
+    "description": "Performance Analytics Data Collector.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "now_assist_panel_user",
+    "displayname": "now_assist_panel_user",
+    "description": "Can access to now assist panel.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "financial_mgmt_admin",
+    "displayname": "financial_mgmt_admin",
+    "description": "Admin rights to financial management modules",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "financial_mgmt_user",
+    "displayname": "financial_mgmt_user",
+    "description": "User rights to financial management modules",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "delegated_developer",
+    "displayname": "delegated_developer",
+    "description": "A self-service (delegated) developer who may have rights to perform development tasks on certain scoped applications when given the appropriate privileges.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pa_viewer",
+    "displayname": "pa_viewer",
+    "description": "Performance Analytics Viewer.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "knowledge_admin",
+    "displayname": "knowledge_admin",
+    "description": "Can manage Knowledge Bases",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "cmdb_read",
+    "displayname": "cmdb_read",
+    "description": "Role required to read data from CMDB hierarchy",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_mif.integration.rest",
+    "displayname": "sn_mif.integration.rest",
+    "description": "This is the role required to use the MIF Customer REST API",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "portfolio_admin",
+    "displayname": "portfolio_admin",
+    "description": "Can manage the Service Portfolio, related commitments and availability",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "mobile_metadata_report_admin",
+    "displayname": "mobile_metadata_report_admin",
+    "description": "Can manage the reports of mobile metadata tables",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_intel_analyzer.similarity_analyzer_admin",
+    "displayname": "sn_intel_analyzer.similarity_analyzer_admin",
+    "description": "administration role for Similarity Analyzer",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "app_template_author",
+    "displayname": "app_template_author",
+    "description": "Can create and modify application templates",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "playbook.write",
+    "displayname": "playbook.write",
+    "description": "Allow user to create, update and delete  process definitions and access PAD, but without any access to activity definitions.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_sub_man.admin",
+    "displayname": "sn_sub_man.admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ui_script_admin",
+    "displayname": "ui_script_admin",
+    "description": "Can manage UI Scripts",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "pa_contributor",
+    "displayname": "pa_contributor",
+    "description": "Performance Analytics Contributor.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_slm_timer.sla_timer_admin",
+    "displayname": "sn_slm_timer.sla_timer_admin",
+    "description": "sla_timer_admin sn_slm_timer.sla_timer_admin has full SLM administrative rights over all Service Level Management timer configuration",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "script_include_admin",
+    "displayname": "script_include_admin",
+    "description": "Can manage Script Includes",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "form_admin",
+    "displayname": "form_admin",
+    "description": "Can manage Forms, and Form Sections and Section Elements",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "user",
+    "displayname": "user",
+    "description": "Available for customer use. Has no function out-of-box, but users with this role will be counted as licensed Fulfillers.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "public",
+    "displayname": "public",
+    "description": "No login is required to access features or functions with the public role",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "release_admin",
+    "displayname": "release_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "script_debugger",
+    "displayname": "script_debugger",
+    "description": "debugging role that enables user to launch ServiceNow Script Debugger",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "data_manager_admin",
+    "displayname": "data_manager_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "platform_ml_write",
+    "displayname": "platform_ml_write",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "hermes_admin",
+    "displayname": "hermes_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_sow_itsm_admin.sow_admin_user",
+    "displayname": "sn_sow_itsm_admin.sow_admin_user",
+    "description": "Granular level role to access pages in admin center for SOW configurations.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_bm_client.benchmark_admin",
+    "displayname": "sn_bm_client.benchmark_admin",
+    "description": "Benchmark administrator role would be used to Opting in, setting up the benchmark indicators",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "knowledge_domain_expert",
+    "displayname": "knowledge_domain_expert",
+    "description": "Can perform AQI surveys on articles\r\nCan write, edit, and review knowledge management articles\r\n",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "app_service_user",
+    "displayname": "app_service_user",
+    "description": "This role can view and retrieve information using API from application service maps (cmdb_ci_service_discovered)",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "activity_admin",
+    "displayname": "activity_admin",
+    "description": "Can create, edit, publish or delete wf_element_provider",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "platform_ml_create",
+    "displayname": "platform_ml_create",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "interaction_agent",
+    "displayname": "interaction_agent",
+    "description": "A required role to perform interaction agent and interaction queue transfer",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "snc_read_only",
+    "displayname": "snc_read_only",
+    "description": "Users with the snc_read_only role are prevented from creating, updating, or deleting records in the database. The read access is determined by ACLs.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "problem_manager",
+    "displayname": "problem_manager",
+    "description": "Responsible for the overall Problem Management process and can configure Problem Management settings as well as act as a Problem Coordinator",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "core_ui_analytics_viewer",
+    "displayname": "core_ui_analytics_viewer",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "script_fix_admin",
+    "displayname": "script_fix_admin",
+    "description": "Can manage Fix Scripts",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_gf.strategy_planner_read",
+    "displayname": "sn_gf.strategy_planner_read",
+    "description": "Read all strategies",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "metric_admin",
+    "displayname": "metric_admin",
+    "description": "Can manage Metrics",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "cmdb_dedup_admin",
+    "displayname": "cmdb_dedup_admin",
+    "description": "Can remediate de-duplication tasks (reconcile_duplicate_task)",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_templated_snip.template_snippet_reader",
+    "displayname": "sn_templated_snip.template_snippet_reader",
+    "description": "Grant access to read template snippets content",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "certification",
+    "displayname": "certification",
+    "description": "Can work Certification tasks",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "certification_admin",
+    "displayname": "certification_admin",
+    "description": "Can manage the Certification application",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_collab_request.basic_read",
+    "displayname": "sn_collab_request.basic_read",
+    "description": "Primitive read access to Collaboration Request resources.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_hr_sp.esc_admin",
+    "displayname": "sn_hr_sp.esc_admin",
+    "description": "Employee Service Centre Admin",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "transform_definition_admin",
+    "displayname": "transform_definition_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_gf.strategy_planner",
+    "displayname": "sn_gf.strategy_planner",
+    "description": "CRD on all strategies (3 Tables: Strategy, Strategic Plan , Strategy Value)",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_publications_recipients_list_user",
+    "displayname": "sn_publications_recipients_list_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "impersonator",
+    "displayname": "impersonator",
+    "description": "Can impersonate - does not allow impersonation of admin users",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_help_setup_admin",
+    "displayname": "sn_help_setup_admin",
+    "description": "This role helps in managing Help Setup",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "quickactions_user",
+    "displayname": "quickactions_user",
+    "description": "Role required for viewing and executing Quick Actions.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "problem_admin",
+    "displayname": "problem_admin",
+    "description": "A Problem Manager who can also delete Problems and Problem Tasks",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "asset",
+    "displayname": "asset",
+    "description": "Can manage hardware assets",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "trigger_designer",
+    "displayname": "trigger_designer",
+    "description": "Trigger designer role that enables user to launch Trigger Designer",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "interaction_integration_user",
+    "displayname": "interaction_integration_user",
+    "description": "Users with this role can access APIs for the Interaction management",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "app_template_runner",
+    "displayname": "app_template_runner",
+    "description": "Can run application templates to bootstrap scoped applications",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "service_api_admin",
+    "displayname": "service_api_admin",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "odbc",
+    "displayname": "odbc",
+    "description": "A convenience role for setting up the ODBC driver. Contains  'itil' and 'soap_query' roles needed to use the ODBC driver.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "roster_admin",
+    "displayname": "roster_admin",
+    "description": "Can manage On-call Rotation information",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "email_account_admin",
+    "displayname": "email_account_admin",
+    "description": "Allow user to perform CRUD operations on Email Account and Email Account Group tables.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ml_labeler",
+    "displayname": "ml_labeler",
+    "description": "Can create, read, write or delete the ml_label_candidate table",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_help_setup_player",
+    "displayname": "sn_help_setup_player",
+    "description": "This role provides access to the Guided Setup Player experience.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "list_updater",
+    "displayname": "list_updater",
+    "description": "Can use \"Update Entire List\" and \"Update Selected\" menu options on lists",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_g_app_creator.app_creator",
+    "displayname": "sn_g_app_creator.app_creator",
+    "description": "Allows non-admin users to access the Guided Application Creator to create new applications.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "fd_read_flows",
+    "displayname": "fd_read_flows",
+    "description": "Read only role for flow designer flows and subflows.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "sn_docker_spoke.docker_repositories_list_user",
+    "displayname": "sn_docker_spoke.docker_repositories_list_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "nlu_editor",
+    "displayname": "nlu_editor",
+    "description": "Users who can edit NLU models assigned to them in NLU Workbench",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "data_manager_user",
+    "displayname": "data_manager_user",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "service_author",
+    "displayname": "service_author",
+    "description": "This role allows users to create services and offerings in any portfolio. This role can only update and delete the services and offerings they created.",
+    "entitlementOwner": [],
+    "status": "1",
+    "entitlementType": "Roles"
   }
 ]
