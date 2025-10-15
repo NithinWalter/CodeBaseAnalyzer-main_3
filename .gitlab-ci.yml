@@ -90,7 +90,7 @@ generateSuggestions:
   needs: [validateFile]
   rules:
     - if: '$GENERATE_SUGGESTIONS == "true"'
-  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory/python:ai
+  image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
   artifacts:
     paths:
       - logs/

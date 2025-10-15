@@ -84,19 +84,19 @@ if __name__ == "__main__":
     #     }
     results={
         "R02_UG_DEEP_User_BusApp_MDM_Consumer": {
-        "match": "cn=Product Manager,ou=Groups,dc=iamcoe,dc=cloud",
-        "score": 34.5302015542984,
+        "match": "Product Manager",
+        "score": 34.77899432182312,
         "index": 10
       },
       "DIA-MDM-EBXAdmin": {
-        "match": "cn=Risk and Compliance Manager,ou=Groups,dc=iamcoe,dc=cloud",  
-        "score": 30.463719367980957,
-        "index": 8
+        "match": "Product Manager",
+        "score": 17.44242012500763,
+        "index": 10
       },
       "R02_UG_DEEP_SDLC_MDM-mdm-PRD_Analyst_SPI": {
-        "match": "cn=Risk and Compliance Manager,ou=Groups,dc=iamcoe,dc=cloud",  
-        "score": 21.382655203342438,
-        "index": 8
+        "match": "Cybersecurity Analyst",
+        "score": 24.288994073867798,
+        "index": 0
       }
     }
     print(json.dumps(results, indent=4))
