@@ -66,8 +66,8 @@ if __name__ == "__main__":
     artifacts_dir = repo_root / "artifacts"
     artifacts_dir.mkdir(parents=True, exist_ok=True)
     sav = SaviyntAPI() 
-    data = os.environ.get("FORM_DATA")
-
+    # data = os.environ.get("FORM_DATA")
+    data = json.loads(os.environ.get("FORM_DATA"))
     username = "admin"
     password = "jSsW$6aRd$E8"
     ritm_sys_id = os.getenv("RITM_SYS_ID")
