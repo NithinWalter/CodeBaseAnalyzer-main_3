@@ -102,7 +102,13 @@ generateSuggestions:
 
 generateRoleRecommendation:
   stage: validation
-  needs: [generateSuggestions]
+  needs:
+    - job: generateSuggestions
+      artifacts: true
+      optional: true
+    - job: validateFile
+      artifacts: true
+      optional: true
   rules:
     - if: $ROLE_MINING == "true"
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory:latest
