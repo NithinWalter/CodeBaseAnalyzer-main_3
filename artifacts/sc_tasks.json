@@ -11,5 +11,11 @@
         "pipeline_id": "2101255269",
         "sc_task_sys_id": "fdcc99e6c3acfe10d0d2f64d0501312e",
         "Time_stamp": "2025-10-15 14:42:42"
+    },
+    {
+        "task_name": "factory_Go-Live_Hyper_Care",
+        "pipeline_id": "2101255269",
+        "sc_task_sys_id": "239d916ac3acfe10d0d2f64d050131db",
+        "Time_stamp": "2025-10-15 14:46:22"
     }
 ]
