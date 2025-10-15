@@ -1,7 +1,459 @@
 [
-  {},
-  {},
-  {},
-  {},
-  {}
+  {
+    "endpoint": "BeyondTrust",
+    "entitlement_value": "BasicAccess",
+    "displayname": "",
+    "entitlementType": "ReadOnly Access",
+    "description": "",
+    "entitlementOwner": [
+      "Ruchi2024"
+    ],
+    "status": "1"
+  },
+  {
+    "endpoint": "Salesforce",
+    "entitlement_value": "BasicAccess",
+    "displayname": "",
+    "entitlementType": "Salesforce II",
+    "description": "",
+    "entitlementOwner": [
+      "Deepak",
+      "Yaadvik"
+    ],
+    "status": "1"
+  },
+  {
+    "endpoint": "Amigopod",
+    "entitlement_value": "IT Administrators",
+    "displayname": "",
+    "entitlementType": "Role",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Amigopod",
+    "entitlement_value": "IT Administrators",
+    "displayname": "",
+    "entitlementType": "Access",
+    "description": "",
+    "entitlementOwner": [
+      "vibhutisinha"
+    ],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphaGDelimited",
+    "entitlement_value": "WU Accountant",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Accounting only",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphaGDelimited",
+    "entitlement_value": "WU Admin",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Support only",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphaGDelimited",
+    "entitlement_value": "WU Admin Log (Support only)",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Gives admin the additional log view privilege",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphaGDelimited",
+    "entitlement_value": "WU Admin Upload (Support only)",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Allows a user with additional access that enables uploading data to system if you have the right database access rights",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphaDisconnected1",
+    "entitlement_value": "manager",
+    "displayname": "",
+    "entitlementType": "role",
+    "description": "Support only",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphaDisconnected1",
+    "entitlement_value": "printer",
+    "displayname": "",
+    "entitlementType": "resource",
+    "description": "Support only",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphaDisconnected_New",
+    "entitlement_value": "manager",
+    "displayname": "",
+    "entitlementType": "role",
+    "description": "Support only",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphaDisconnected_New",
+    "entitlement_value": "printer",
+    "displayname": "",
+    "entitlementType": "resource",
+    "description": "Support only",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphabDisconnected",
+    "entitlement_value": "WU Accountant",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Accounting only",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphabDisconnected",
+    "entitlement_value": "WU Admin",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Support only",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphabDisconnected",
+    "entitlement_value": "WU Admin Log (Support only)",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Gives admin the additional log view privilege",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "AlphabDisconnected",
+    "entitlement_value": "WU Admin Upload (Support only)",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Allows a user with additional access that enables uploading data to system if you have the right database access rights",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha Disconnected",
+    "entitlement_value": "Salesforce_Admin1",
+    "displayname": "",
+    "entitlementType": "Security-Groups1",
+    "description": "test",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Disconnected_App",
+    "entitlement_value": "ReadOnly",
+    "displayname": "",
+    "entitlementType": "ROLE",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Disconnected_App",
+    "entitlement_value": "IT Administrators",
+    "displayname": "",
+    "entitlementType": "ROLE",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Disconnected_App",
+    "entitlement_value": "IT Administrators",
+    "displayname": "",
+    "entitlementType": "Access",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Disconnected_App",
+    "entitlement_value": "ReadOnly",
+    "displayname": "",
+    "entitlementType": "Access",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Custom_Test_App",
+    "entitlement_value": "WU Accountant",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Accounting only",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Custom_Test_App",
+    "entitlement_value": "WU Admin",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Support only",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Custom_Test_App",
+    "entitlement_value": "WU Admin Log (Support only)",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Gives admin the additional log view privilege",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Custom_Test_App",
+    "entitlement_value": "WU Admin Upload (Support only)",
+    "displayname": "",
+    "entitlementType": "Responsibility",
+    "description": "Allows a user with additional access that enables uploading data to system if you have the right database access rights",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha Disconnected",
+    "entitlement_value": "Salesforce_Admin2",
+    "displayname": "",
+    "entitlementType": "Security-Groups2",
+    "description": "test",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Analytics Settings Managers",
+    "displayname": "Analytics Settings Managers",
+    "entitlementType": "Group",
+    "description": "\n\t\tGroup for all people who have the Analytics Admin role\n\t",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Application Development",
+    "displayname": "Application Development",
+    "entitlementType": "Group",
+    "description": "Team Develops ITSM Applications in London",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Problem Analyzers",
+    "displayname": "Problem Analyzers",
+    "entitlementType": "Group",
+    "description": "Group that works on analyzing and fixing problems.\n\t\t",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Business Application Registration Approval Group",
+    "displayname": "Business Application Registration Approval Group",
+    "entitlementType": "Group",
+    "description": "Approval group for Business Application lifecycle management service requests for Registering a new Business Application",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Nimsoft desk",
+    "displayname": "Nimsoft desk",
+    "entitlementType": "Group",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Incident Management",
+    "displayname": "Incident Management",
+    "entitlementType": "Group",
+    "description": "Incident Management Group",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "US Presidents Group 2",
+    "displayname": "US Presidents Group 2",
+    "entitlementType": "Group",
+    "description": "Demo user group for Password Reset Application.",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "RMA Approvers",
+    "displayname": "RMA Approvers",
+    "entitlementType": "Group",
+    "description": "Responsible for Return Material Authorization approvals\n\t\t\tand RMA number allocations in Inventory Management",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Mobile Analytics Settings Managers",
+    "displayname": "Mobile Analytics Settings Managers",
+    "entitlementType": "Group",
+    "description": "Group for all people who have the Mobile Analytics Admin role",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ATF_TestGroup_ServiceDesk",
+    "displayname": "ATF_TestGroup_ServiceDesk",
+    "entitlementType": "Group",
+    "description": "ATF_TestGroup_ServiceDesk",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Catalog Request Approvers > $1000",
+    "displayname": "Catalog Request Approvers > $1000",
+    "entitlementType": "Group",
+    "description": "This is the group of users that need to approve a Service\n\t\t\tCatalog request that is greater than $1000\n\t\t",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Catalog Request Approvers for Sales",
+    "displayname": "Catalog Request Approvers for Sales",
+    "entitlementType": "Group",
+    "description": "This is a group of users that need to approve Service\n\t\t\tCatalog requests from the Sales department\n\t\t",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Network",
+    "displayname": "Network",
+    "entitlementType": "Group",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Database",
+    "displayname": "Database",
+    "entitlementType": "Group",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Openspace",
+    "displayname": "Openspace",
+    "entitlementType": "Group",
+    "description": "Openspace approvers.",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ATF_TestGroup_Network",
+    "displayname": "ATF_TestGroup_Network",
+    "entitlementType": "Group",
+    "description": "ATF_TestGroup_Network",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "MFA Exempted User Group",
+    "displayname": "MFA Exempted User Group",
+    "entitlementType": "Group",
+    "description": "Add the users into this group for which MFA has to be exempted.",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "App Engine Admins",
+    "displayname": "App Engine Admins",
+    "entitlementType": "Group",
+    "description": "Users who can review and approve tasks related to custom application development",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Network CAB Managers",
+    "displayname": "Network CAB Managers",
+    "entitlementType": "Group",
+    "description": "Group to represent the CAB Managers for Network related\n\t\t\tchanges",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "App Engine Studio User Limited",
+    "displayname": "App Engine Studio User Limited",
+    "entitlementType": "Group",
+    "description": "Users who are able to edit applications in App Engine Studio",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "ATF Service Level Management  Group",
+    "displayname": "ATF Service Level Management  Group",
+    "entitlementType": "Group",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "Report Access Request Approvers",
+    "displayname": "Report Access Request Approvers",
+    "entitlementType": "Group",
+    "description": "Default group for approvers of Report Access Requests",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "IT Finance CAB",
+    "displayname": "IT Finance CAB",
+    "entitlementType": "Group",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1"
+  },
+  {
+    "endpoint": "Alpha0_Authoritative_ServiceNow",
+    "entitlement_value": "IT Securities",
+    "displayname": "IT Securities",
+    "entitlementType": "Group",
+    "description": "",
+    "entitlementOwner": [],
+    "status": "1"
+  }
 ]
