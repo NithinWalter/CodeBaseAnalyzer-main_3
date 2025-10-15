@@ -1,6 +1,7 @@
 import os, sys
 from pathlib import Path
 
+
 sys.path.append(str(Path(__file__).resolve().parents[2]))
 from src.jobs.UpdateGitVariable import update_gitlab_variable
 
