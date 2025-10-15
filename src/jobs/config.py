@@ -18,7 +18,7 @@ def configADBased(sav, formData):
         "connectionname": "IAMCOE LDAP SERVER",
         "connectiontype": "AD"
     }
-    logger.debug("Checking for existing EndPoints")
+    logger.info("Checking for existing EndPoints")
     res1 = sav.getConnection(con1)
 
     endpoint_filter = json.loads(res1['connectionattributes']['ENDPOINTS_FILTER'])
@@ -37,7 +37,7 @@ def configADBased(sav, formData):
                 "uniqueMember": group_dn
             }
         ]
-    logger.debug("ENDPOINTS_FILTER : " + str(endpoint_filter))
+    logger.info("ENDPOINTS_FILTER : " + str(endpoint_filter))
     # Update the EndpointFilter
     con2 = {
         "connectionName": "IAMCOE LDAP SERVER",
@@ -45,7 +45,7 @@ def configADBased(sav, formData):
         "saveconnection": "Y",
         "ENDPOINTS_FILTER":json.dumps(endpoint_filter)
     }
-    logger.debug("Updaing Connection EnpointFileter")
+    logger.info("Updaing Connection EnpointFileter")
     sav.testConnection(con2)
     payload = json.dumps({
             "triggername": "Alpha_SequentialChainJob",
@@ -66,18 +66,8 @@ if __name__ == "__main__":
     artifacts_dir = repo_root / "artifacts"
     artifacts_dir.mkdir(parents=True, exist_ok=True)
     sav = SaviyntAPI() 
-    #data = os.environ.get("FORM_DATA")
-    data = {
-     "application_name": "Axiom",
-     "application_owner": "test test",
-     "technical_service_owner": "test test",
-     "requesting_entity": "axa",
-     "ad_groups": [
-         {"group_name": "IT", "group_technical_name": "", "group_description": "test description", "group_owner": "some owner"},
-         {"group_name": "HR Manager", "group_technical_name": "", "group_description": "test description", "group_owner": "some owner"},
-         {"group_name": "Finance Officer", "group_technical_name": "", "group_description": "test description", "group_owner": "some owner"}
-     ]
-    }
+    data = os.environ.get("FORM_DATA")
+
     username = "admin"
     password = "jSsW$6aRd$E8"
     ritm_sys_id = os.getenv("RITM_SYS_ID")
