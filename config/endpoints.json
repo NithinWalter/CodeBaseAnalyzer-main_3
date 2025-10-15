@@ -16,7 +16,7 @@
     "list_roles": "/ECM/api/v5/getRoles",
     "assign_role": "/ECM/api/v5/assignRole",
     "remove_role": "/ECM/api/v5/removeRole",
-    "get_entitlements": "/ECM/api/v5/getEntitlements",
+    "get_entitlements": "/ECM/api/v5/getEntitlements?max=9999",
     "add_entitlement": "/ECM/api/v5/addEntitlement",
     "remove_entitlement": "/ECM/api/v5/removeEntitlement",
     "getEntUserDetails":"/ECM/api/v5/getEntDetailsforUsers",
