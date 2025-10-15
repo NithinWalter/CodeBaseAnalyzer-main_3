@@ -74,7 +74,7 @@ if __name__=="__main__":
     valid_roles = []
     invalid_roles = []
 
-    all_role_names = [role.get("role_name") for role in all_roles.get("Roledetails", [])]
+    all_role_names = [role.get("role_name") for role in all_roles]
 
     for role in Extracted_data.get("Roles", []):
         if role in all_role_names:
