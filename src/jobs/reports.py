@@ -20,7 +20,7 @@ def validate_api(sav):
     # Create a test case entry
     test_case = TestCase("Check if Endpoint Exists")
     print(res)
-    if res["message"] == "Success":
+    if not res["message"] == "Success":
         test_case.add_failure_info(f"Expected Success,got {res["message"]}")
     return test_case
 
