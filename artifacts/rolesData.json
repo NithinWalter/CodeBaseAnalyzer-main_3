@@ -1,0 +1,20 @@
+[
+  {
+    "role_name": "ApplicationRole",
+    "displayname": "Application_Role",
+    "description": "",
+    "owner": "",
+    "risk": "",
+    "requestable": "true",
+    "status": "2"
+  },
+  {
+    "role_name": "Test_Role",
+    "displayname": "",
+    "description": "",
+    "owner": "",
+    "risk": "",
+    "requestable": "true",
+    "status": "2"
+  }
+]
