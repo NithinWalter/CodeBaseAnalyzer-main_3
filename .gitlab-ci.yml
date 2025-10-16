@@ -233,7 +233,7 @@ auto_Selenium_Reconciliation_Report_Prod_LISA:
   script:
     - pip install junit-xml pytest pytest-html
     - python3 src/jobs/reports.py
-    - pytest src/jobs/reports.py --html=artifacts/report.html --self-contained-html
+    - pytest src/jobs/reports.py --html=artifacts/report.html --self-contained-html --html-report-title="Reconciliation Report"
   artifacts:
     paths:
       - logs/

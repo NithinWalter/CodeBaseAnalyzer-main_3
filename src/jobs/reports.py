@@ -23,7 +23,7 @@ def validate_api(sav):
     logger.debug(f"Response received from SaviyntAPI: {res}")
 
     test_case = TestCase("Check if Endpoint Exists")
-    if not res["message"] == "Success" or True:
+    if res["message"] == "Success" or True:
         logger.error(f"Validation failed. Expected 'Success', got '{res['message']}'")
         test_case.add_failure_info(f"Expected Success, got {res['message']}")
     else:
@@ -32,18 +32,15 @@ def validate_api(sav):
     return test_case
 
 
-def test_dummy_validation():
+def endpoint_validate():
     """
     Pytest test case that consumes the dummy function.
     """
-    res = dummy_validate_api()
+    logger.info("EndPoint Validaion")
+    res = validate_api()
+    logger.info("Endpoint validation success")
     assert res["message"] == "Success"
 
-def test_always_pass():
-    """
-    Additional modular dummy test.
-    """
-    assert True
 
 if __name__=="__main__":
     repo_root = Path(__file__).resolve().parents[2]
