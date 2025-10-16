@@ -23,7 +23,7 @@ def validate_api(sav):
     logger.debug(f"Response received from SaviyntAPI: {res}")
 
     test_case = TestCase("Check if Endpoint Exists")
-    if res["message"] == "Success" or True:
+    if not res["message"] == "Success":
         logger.error(f"Validation failed. Expected 'Success', got '{res['message']}'")
         test_case.add_failure_info(f"Expected Success, got {res['message']}")
     else:
