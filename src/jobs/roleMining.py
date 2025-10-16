@@ -63,20 +63,37 @@ def generate_roles_from_json(json_path, validation_json_path, pipeline_id,
         role_entitlements = density_series[density_series >= role_granularity]
 
         if not role_entitlements.empty:
-            # Format like "EntitlementA (85%)"
+        # Format like "EntitlementA (85%)"
             entitlement_with_density = [
                 f"{ent_name} ({round(density * 100)}%)"
                 for ent_name, density in role_entitlements.items()
             ]
 
+            # ✅ Generate role description dynamically
+            top_entitlements = list(role_entitlements.index[:3])  # pick top 3 for summary
+            if len(role_entitlements) > 3:
+                role_description = (
+                    f"This role includes key entitlements like {', '.join(top_entitlements)}, "
+                    f"and covers {len(role_entitlements)} total entitlements. "
+                    f"It is assigned to {total_users} users with similar access patterns."
+                )
+            else:
+                role_description = (
+                    f"This role grants access to {', '.join(top_entitlements)} "
+                    f"and is shared by {total_users} users."
+                )
+
+            # ✅ Create role object
             role_obj = {
                 "role_name": role_name,
-                "role_description": "Null",
+                "role_description": role_description,
                 "entitlements with density": entitlement_with_density,
                 "users": cluster_users.index.tolist(),
                 "popularity": total_users
             }
+
             mined_roles.append(role_obj)
+
 
     # Load or create ValidationResult.json
     if validation_json_path.exists():
@@ -123,7 +140,7 @@ if __name__ == "__main__":
         entitlement_matrix_path,
         validation_result_path,
         pipeline_id,
-        role_granularity=0.3,
+        role_granularity=0.5,
         popularity=1,
         max_k=10
     )
