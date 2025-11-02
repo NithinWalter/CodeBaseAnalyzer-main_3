@@ -11,7 +11,7 @@ def update_gitlab_variable(key, value, append=False):
     If append=True, the new value will be appended to existing JSON list.
     """
     project_id = "75200173"
-    token = "glpat-wHe150FpKb06wJICGp1cfW86MQp1Omc0OXNxCw.01.120nsrzri" 
+    token = "glpat-IsTp9BKWN_CyPq7Gf4KCw286MQp1Omc0OXNxCw.01.120ql49tm" 
     base_url = f"https://gitlab.com/api/v4/projects/{project_id}/variables"
     headers = {"PRIVATE-TOKEN": token, "Content-Type": "application/json"}
 
