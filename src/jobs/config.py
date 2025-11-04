@@ -57,7 +57,7 @@ def configADBased(sav, formData):
                 "onFailureForm": "Continue"
             }
         })
-    sav.trigger_job(payload)
+    # sav.trigger_job(payload)
     return True
 
 
