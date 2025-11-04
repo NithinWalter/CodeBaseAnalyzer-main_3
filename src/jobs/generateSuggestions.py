@@ -1,8 +1,8 @@
 import os, sys, logging, json
-#import torch
+import torch
 from pathlib import Path
-#from sentence_transformers import SentenceTransformer
-#from sentence_transformers.util import cos_sim
+from sentence_transformers import SentenceTransformer
+from sentence_transformers.util import cos_sim
 
 
 # class file imports 
