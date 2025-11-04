@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     if not isinstance(full_response, list) or "Entitlementdetails" not in full_response:
         logger.error("API response is invalid or missing 'Entitlementdetails'. Exiting.")
-        sys.exit(1)
+        #sys.exit(1)
 
     entitlements_details_list = full_response
 
