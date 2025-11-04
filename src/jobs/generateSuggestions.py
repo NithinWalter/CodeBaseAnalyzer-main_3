@@ -15,7 +15,7 @@ from src.jobs.UpdateGitVariable import update_gitlab_variable
 logger = logging.getLogger("configuration")
 
 # Commented out model load since we’re using static results
-#model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
 if __name__ == "__main__":
 
@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     pipeline_id = os.getenv("CI_PIPELINE_ID", "local")
 
-    Load API response - still required for format consistency
+   # Load API response - still required for format consistency
     full_response_path = artifacts_dir / "entitlementsData.json"
     with open(full_response_path, "r") as f:
         full_response = json.load(f)
