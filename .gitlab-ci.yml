@@ -261,8 +261,8 @@ factory_Residual_Configuration_Prod_LISA:
     # Configure Git identity for CI commits
     - git config --global user.email "ci-bot@example.com"
     - git config --global user.name "CI Bot"
-    # Reset remote URL to use CI_JOB_TOKEN for authentication
-    - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
+    # Reset remote URL to use CI_JOB_TOKEN for authentication glpat-IsTp9BKWN_CyPq7Gf4KCw286MQp1Omc0OXNxCw.01.120ql49tm
+    - git remote set-url origin https://haribalanofficial:glpat-IsTp9BKWN_CyPq7Gf4KCw286MQp1Omc0OXNxCw.01.120ql49tm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
     - export nextjob="factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA" 
     - git stash push -m "pre-snowtask stash"
     - git checkout Developnment
@@ -298,7 +298,7 @@ factory_Receive_Post_Prod_Implementation_Sign_Off_Prod_LISA:
     - git config --global user.email "ci-bot@example.com"
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
-    - git remote set-url origin https://haribalanofficial:glpat-mRvT2HLveY111B5TLKjOY286MQp1Omc0OXNxCw.01.120xpphbm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
+    - git remote set-url origin https://haribalanofficial:glpat-IsTp9BKWN_CyPq7Gf4KCw286MQp1Omc0OXNxCw.01.120ql49tm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
     - export nextjob="factory_Go-Live_Hyper_Care" 
     - git stash push -m "pre-snowtask stash"
     - git checkout Developnment
