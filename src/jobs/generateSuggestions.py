@@ -30,11 +30,11 @@ if __name__ == "__main__":
     with open(full_response_path, "r") as f:
         full_response = json.load(f)
 
-    if not isinstance(full_response, dict) or "Entitlementdetails" not in full_response:
+    if not isinstance(full_response, list) or "Entitlementdetails" not in full_response:
         logger.error("API response is invalid or missing 'Entitlementdetails'. Exiting.")
         sys.exit(1)
 
-    entitlements_details_list = full_response.get("Entitlementdetails", [])
+    entitlements_details_list = full_response
 
     # Extract the 'entitlement_value' from each dictionary to create the list of strings
     entitlements = [
