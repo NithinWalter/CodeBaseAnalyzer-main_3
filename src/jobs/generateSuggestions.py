@@ -38,9 +38,9 @@ if __name__ == "__main__":
 
     # Extract the 'entitlement_value' from each dictionary to create the list of strings
     entitlements = [
-        item.get("entitlement_value")
+        item.get("Custom Property 13")
         for item in entitlements_details_list
-        if isinstance(item, dict) and item.get("entitlement_value")
+        if isinstance(item, dict) and item.get("Custom Property 13")
     ]
 
     if not entitlements:
