@@ -45,7 +45,7 @@ scheduledDataExtractandPolling:
     - git config --global user.email "ci-bot@example.com"
     - git config --global user.name "CI Bot"
     # Reset remote URL to use CI_JOB_TOKEN for authentication
-    - git remote set-url origin https://haribalanofficial:glpat-J7UC1QQbmghpVBUJiCQleG86MQp1Omc0OXNxCw.01.121k2w2is@gitlab.com/haribalanofficial/iga-saviynt-factory.git
+    - git remote set-url origin https://haribalanofficial:glpat-IsTp9BKWN_CyPq7Gf4KCw286MQp1Omc0OXNxCw.01.120ql49tm@gitlab.com/haribalanofficial/iga-saviynt-factory.git
     - git stash push -m "pre-snowtask stash"
     - git checkout Developnment
     - git pull origin Developnment
