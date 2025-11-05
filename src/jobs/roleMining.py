@@ -140,7 +140,7 @@ if __name__ == "__main__":
         entitlement_matrix_path,
         validation_result_path,
         pipeline_id,
-        role_granularity=0.5,
+        role_granularity=0.6,
         popularity=1,
         max_k=10
     )
