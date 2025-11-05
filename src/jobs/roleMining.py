@@ -141,6 +141,6 @@ if __name__ == "__main__":
         validation_result_path,
         pipeline_id,
         role_granularity=0.5,
-        popularity=10,
+        popularity=2,
         max_k=10
     )
