@@ -88,9 +88,6 @@ validateFile:
 generateSuggestions:
   stage: validation
   needs: [validateFile]
-  tags:
-    - linux
-    - gcp
   rules:
     - if: '$GENERATE_SUGGESTIONS == "true"'
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory/python:ai
@@ -105,9 +102,6 @@ generateSuggestions:
 
 generateRoleRecommendation:
   stage: validation
-  tags:
-    - linux
-    - gcp
   needs:
     - job: generateSuggestions
       artifacts: true
