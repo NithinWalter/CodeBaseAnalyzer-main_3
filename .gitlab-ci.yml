@@ -95,6 +95,7 @@ generateSuggestions:
   rules:
     - if: '$GENERATE_SUGGESTIONS == "true"'
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory/python:ai
+  pull_policy: if-not-present
   artifacts:
     paths:
       - logs/
@@ -119,6 +120,7 @@ generateRoleRecommendation:
   rules:
     - if: $ROLE_MINING == "true"
   image: registry.gitlab.com/haribalanofficial/iga-saviynt-factory/python:ai
+  pull_policy: if-not-present
   artifacts:
     paths:
       - logs/
