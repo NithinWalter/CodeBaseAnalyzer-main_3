@@ -133,7 +133,7 @@ if __name__ == "__main__":
 
     pipeline_id = os.getenv("CI_PIPELINE_ID", "local")
 
-    entitlement_matrix_path = artifacts_dir / "userEntitlementMatrix2.json"
+    entitlement_matrix_path = artifacts_dir / "userEntitlementsMatrix.json"
     validation_result_path = artifacts_dir / "ValidationResult.json"
 
     generate_roles_from_json(
