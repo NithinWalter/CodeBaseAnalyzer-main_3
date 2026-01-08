@@ -17,6 +17,7 @@ def generate_roles_from_json(json_path, validation_json_path, pipeline_id,
     # Load entitlement matrix JSON
     with open(json_path, "r") as f:
         data = json.load(f)
+    print(data)
 
     users = data["users"]
     matrix_dict = data["matrix"]
