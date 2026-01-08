@@ -13,76 +13,76 @@ from src.jobs.UpdateGitVariable import update_gitlab_variable
 logger = logging.getLogger("role_mining")
 
 def generate_roles_from_json(json_path, validation_json_path, pipeline_id,
-                              role_granularity=0.5, popularity=3, max_k=10):
+                              role_granularity=0.5, popularity=10, max_k=10):
 
     # Load entitlement matrix JSON
     test_string ="""
         {
-        "users": [
-            "admin",
-            "vibhutisinha",
-            "Harsh123",
-            "Mukul123",
-            "Geetha123",
-            "Luke123",
-            "JDoe09",
-            "AvantiShukla54",
-            "Samrat879",
-            "Rohit928",
-            "Ankit317",
-            "SameerS806",
-            "Ruchika154",
-            "Geet31",
-            "Nikhil699",
-            "Mohit937",
-            "Aditya089",
-            "Grok801",
-            "Pro670",
-            "Lace284",
-            "Sam578",
-            "Trope57",
-            "Worn535",
-            "Sneh639",
-            "Mark572",
-            "Zoya84",
-            "Ritik439",
-            "New076",
-            "Tryg633",
-            "Saurav474",
-            "Crew841",
-            "Virk534",
-            "Ak864",
-            "Mohit07",
-            "Mike896",
-            "Jonn421",
-            "Deep445",
-            "Saloni21",
-            "Sarah957",
-            "Kavya92",
-            "Eram725",
-            "Sunil575",
-            "Sandeep09",
-            "Gill542",
-            "Clark962"
-        ],
-        "matrix": {
-            "IT": [
-                1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 
-                1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 
-                0, 0, 1, 0, 1, 0, 1, 0, 1
-            ],
-            "Cybersecurity and Risk Management": [
-                0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 
-                0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 
-                1, 0, 1, 0, 1, 0, 0, 1, 1
-            ],
-            "Marketing Specialist": [
-                1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 
-                1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 
-                1, 0, 1, 1, 0, 1, 0, 0, 1
-            ]
-        }
-        }
+  "users": [
+      "admin",
+      "vibhutisinha",
+      "Harsh123",
+      "Mukul123",
+      "Geetha123",
+      "Luke123",
+      "JDoe09",
+      "AvantiShukla54",
+      "Samrat879",
+      "Rohit928",
+      "Ankit317",
+      "SameerS806",
+      "Ruchika154",
+      "Geet31",
+      "Nikhil699",
+      "Mohit937",
+      "Aditya089",
+      "Grok801",
+      "Pro670",
+      "Lace284",
+      "Sam578",
+      "Trope57",
+      "Worn535",
+      "Sneh639",
+      "Mark572",
+      "Zoya84",
+      "Ritik439",
+      "New076",
+      "Tryg633",
+      "Saurav474",
+      "Crew841",
+      "Virk534",
+      "Ak864",
+      "Mohit07",
+      "Mike896",
+      "Jonn421",
+      "Deep445",
+      "Saloni21",
+      "Sarah957",
+      "Kavya92",
+      "Eram725",
+      "Sunil575",
+      "Sandeep09",
+      "Gill542",
+      "Clark962"
+  ],
+  "matrix": {
+      "IT": [
+          1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 
+          1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 
+          1, 0, 1, 0, 1, 0, 1, 1, 1
+      ],
+      "Cybersecurity and Risk Management": [
+          0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 
+          1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 
+          0, 1, 0, 1, 0, 0, 1, 0, 0
+      ],
+      "Marketing Specialist": [
+          1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 
+          1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 
+          1, 0, 1, 0, 1, 1, 1, 0, 1
+      ]
+  }
+}
 
     """
     #with open(json_path, "r") as f:
@@ -214,7 +214,7 @@ if __name__ == "__main__":
         entitlement_matrix_path,
         validation_result_path,
         pipeline_id,
-        role_granularity=0.6,
-        popularity=5,
+        role_granularity=0.5,
+        popularity=10,
         max_k=10
     )
