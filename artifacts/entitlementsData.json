@@ -328,5 +328,16 @@
     "entitlementOwner": "",
     "status": "1",
     "entitlementType": "uniqueMember"
+  },
+  {
+    "endpoint": "IAMCOE LDAP SERVER",
+    "entitlement_value": "cn=Account Manager1,ou=Groups,dc=iamcoe,dc=cloud",
+    "entitlement_glossary": "The Account Manager group is responsible for overseeing clientaccounts, ensuring customer satisfaction, and managing business relationships. Members coordinate with internal teams to deliver solutions, track project progress, and address client needs. They play a key role in retaining customers, identifying growth opportunities, and ensuring smooth client communication channels.",
+    "Custom Property 13": "Account Manager1",
+    "displayname": "",
+    "description": "",
+    "entitlementOwner": "",
+    "status": "1",
+    "entitlementType": "uniqueMember"
   }
 ]
